@@ -1,0 +1,7 @@
+D:\2nd Semester\OOP\Lab week 1\Pizza Points\bin\Debug\Pizza Points.exe.config
+D:\2nd Semester\OOP\Lab week 1\Pizza Points\bin\Debug\Pizza Points.exe
+D:\2nd Semester\OOP\Lab week 1\Pizza Points\bin\Debug\Pizza Points.pdb
+D:\2nd Semester\OOP\Lab week 1\Pizza Points\obj\Debug\Pizza Points.csproj.AssemblyReference.cache
+D:\2nd Semester\OOP\Lab week 1\Pizza Points\obj\Debug\Pizza Points.csproj.CoreCompileInputs.cache
+D:\2nd Semester\OOP\Lab week 1\Pizza Points\obj\Debug\Pizza Points.exe
+D:\2nd Semester\OOP\Lab week 1\Pizza Points\obj\Debug\Pizza Points.pdb
