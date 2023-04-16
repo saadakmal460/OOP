@@ -1,0 +1,7 @@
+D:\2nd Semester\OOP\Lab week 2\bin\Debug\Lab week 2.exe.config
+D:\2nd Semester\OOP\Lab week 2\bin\Debug\Lab week 2.exe
+D:\2nd Semester\OOP\Lab week 2\bin\Debug\Lab week 2.pdb
+D:\2nd Semester\OOP\Lab week 2\obj\Debug\Lab week 2.csproj.AssemblyReference.cache
+D:\2nd Semester\OOP\Lab week 2\obj\Debug\Lab week 2.csproj.CoreCompileInputs.cache
+D:\2nd Semester\OOP\Lab week 2\obj\Debug\Lab week 2.exe
+D:\2nd Semester\OOP\Lab week 2\obj\Debug\Lab week 2.pdb

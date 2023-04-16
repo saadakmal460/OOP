@@ -1,0 +1,7 @@
+D:\2nd Semester\OOP\Lab week 2\SMS\bin\Debug\SMS.exe.config
+D:\2nd Semester\OOP\Lab week 2\SMS\bin\Debug\SMS.exe
+D:\2nd Semester\OOP\Lab week 2\SMS\bin\Debug\SMS.pdb
+D:\2nd Semester\OOP\Lab week 2\SMS\obj\Debug\SMS.csproj.AssemblyReference.cache
+D:\2nd Semester\OOP\Lab week 2\SMS\obj\Debug\SMS.csproj.CoreCompileInputs.cache
+D:\2nd Semester\OOP\Lab week 2\SMS\obj\Debug\SMS.exe
+D:\2nd Semester\OOP\Lab week 2\SMS\obj\Debug\SMS.pdb
