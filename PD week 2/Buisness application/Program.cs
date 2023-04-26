@@ -80,7 +80,7 @@ namespace Login
                                 Console.Write("Enter name of student: ");
                                 student = Console.ReadLine();
                                 UpdateStudent(student, user);
-                                //UpdateInFile(user);
+                                
                             }
 
                             else if(option2 == 4)

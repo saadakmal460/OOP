@@ -1,0 +1,7 @@
+D:\2nd Semester\OOP\Lab week 3\Clock Task\bin\Debug\Clock Task.exe.config
+D:\2nd Semester\OOP\Lab week 3\Clock Task\bin\Debug\Clock Task.exe
+D:\2nd Semester\OOP\Lab week 3\Clock Task\bin\Debug\Clock Task.pdb
+D:\2nd Semester\OOP\Lab week 3\Clock Task\obj\Debug\Clock Task.csproj.AssemblyReference.cache
+D:\2nd Semester\OOP\Lab week 3\Clock Task\obj\Debug\Clock Task.csproj.CoreCompileInputs.cache
+D:\2nd Semester\OOP\Lab week 3\Clock Task\obj\Debug\Clock Task.exe
+D:\2nd Semester\OOP\Lab week 3\Clock Task\obj\Debug\Clock Task.pdb
