@@ -1,0 +1,6 @@
+D:\2nd Semester\OOP\PD week 6\Self Assesment 1b\bin\Debug\Self Assesment 1b.exe.config
+D:\2nd Semester\OOP\PD week 6\Self Assesment 1b\bin\Debug\Self Assesment 1b.exe
+D:\2nd Semester\OOP\PD week 6\Self Assesment 1b\bin\Debug\Self Assesment 1b.pdb
+D:\2nd Semester\OOP\PD week 6\Self Assesment 1b\obj\Debug\Self Assesment 1b.csproj.CoreCompileInputs.cache
+D:\2nd Semester\OOP\PD week 6\Self Assesment 1b\obj\Debug\Self Assesment 1b.exe
+D:\2nd Semester\OOP\PD week 6\Self Assesment 1b\obj\Debug\Self Assesment 1b.pdb

@@ -1,0 +1,14 @@
+D:\2nd Semester\OOP\PD week 6\Self Assesment 2\bin\Debug\Self Assesment 2.exe.config
+D:\2nd Semester\OOP\PD week 6\Self Assesment 2\bin\Debug\Self Assesment 2.exe
+D:\2nd Semester\OOP\PD week 6\Self Assesment 2\bin\Debug\Self Assesment 2.pdb
+D:\2nd Semester\OOP\PD week 6\Self Assesment 2\obj\Debug\Self Assesment 2.csproj.AssemblyReference.cache
+D:\2nd Semester\OOP\PD week 6\Self Assesment 2\obj\Debug\Self Assesment 2.csproj.CoreCompileInputs.cache
+D:\2nd Semester\OOP\PD week 6\Self Assesment 2\obj\Debug\Self Assesment 2.exe
+D:\2nd Semester\OOP\PD week 6\Self Assesment 2\obj\Debug\Self Assesment 2.pdb
+D:\2nd Semester\OOP\Lab week 6\Self Assesment 2\bin\Debug\Self Assesment 2.exe.config
+D:\2nd Semester\OOP\Lab week 6\Self Assesment 2\bin\Debug\Self Assesment 2.exe
+D:\2nd Semester\OOP\Lab week 6\Self Assesment 2\bin\Debug\Self Assesment 2.pdb
+D:\2nd Semester\OOP\Lab week 6\Self Assesment 2\obj\Debug\Self Assesment 2.csproj.AssemblyReference.cache
+D:\2nd Semester\OOP\Lab week 6\Self Assesment 2\obj\Debug\Self Assesment 2.csproj.CoreCompileInputs.cache
+D:\2nd Semester\OOP\Lab week 6\Self Assesment 2\obj\Debug\Self Assesment 2.exe
+D:\2nd Semester\OOP\Lab week 6\Self Assesment 2\obj\Debug\Self Assesment 2.pdb
