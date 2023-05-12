@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C5859348-4E29-4333-8388-D908DEE09BEE}</ProjectGuid>
+    <ProjectGuid>{7C9B55D1-AF83-4FE7-B3D8-0D5217ADAC57}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Challange_1</RootNamespace>
     <AssemblyName>Challange 1</AssemblyName>
@@ -43,11 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\MyLine.cs" />
+    <Compile Include="BL\MyPoint.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\MyLineUI.cs" />
+    <Compile Include="UI\MyPointUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DL\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

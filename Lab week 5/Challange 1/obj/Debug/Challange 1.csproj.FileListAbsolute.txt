@@ -1,7 +1,7 @@
-D:\2nd Semester\OOP\Lab week 5\Challange 1\bin\Debug\Challange 1.exe.config
-D:\2nd Semester\OOP\Lab week 5\Challange 1\bin\Debug\Challange 1.exe
-D:\2nd Semester\OOP\Lab week 5\Challange 1\bin\Debug\Challange 1.pdb
-D:\2nd Semester\OOP\Lab week 5\Challange 1\obj\Debug\Challange 1.csproj.AssemblyReference.cache
-D:\2nd Semester\OOP\Lab week 5\Challange 1\obj\Debug\Challange 1.csproj.CoreCompileInputs.cache
-D:\2nd Semester\OOP\Lab week 5\Challange 1\obj\Debug\Challange 1.exe
-D:\2nd Semester\OOP\Lab week 5\Challange 1\obj\Debug\Challange 1.pdb
+D:\2nd Semester\OOP\Lab week 6\Challange 1\bin\Debug\Challange 1.exe.config
+D:\2nd Semester\OOP\Lab week 6\Challange 1\bin\Debug\Challange 1.exe
+D:\2nd Semester\OOP\Lab week 6\Challange 1\bin\Debug\Challange 1.pdb
+D:\2nd Semester\OOP\Lab week 6\Challange 1\obj\Debug\Challange 1.csproj.AssemblyReference.cache
+D:\2nd Semester\OOP\Lab week 6\Challange 1\obj\Debug\Challange 1.csproj.CoreCompileInputs.cache
+D:\2nd Semester\OOP\Lab week 6\Challange 1\obj\Debug\Challange 1.exe
+D:\2nd Semester\OOP\Lab week 6\Challange 1\obj\Debug\Challange 1.pdb
