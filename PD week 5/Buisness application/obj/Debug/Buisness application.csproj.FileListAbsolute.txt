@@ -1,7 +1,0 @@
-D:\2nd Semester\OOP\PD week 5\Buisness application\bin\Debug\Buisness application.exe.config
-D:\2nd Semester\OOP\PD week 5\Buisness application\bin\Debug\Buisness application.exe
-D:\2nd Semester\OOP\PD week 5\Buisness application\bin\Debug\Buisness application.pdb
-D:\2nd Semester\OOP\PD week 5\Buisness application\obj\Debug\Buisness application.csproj.AssemblyReference.cache
-D:\2nd Semester\OOP\PD week 5\Buisness application\obj\Debug\Buisness application.csproj.CoreCompileInputs.cache
-D:\2nd Semester\OOP\PD week 5\Buisness application\obj\Debug\Buisness application.exe
-D:\2nd Semester\OOP\PD week 5\Buisness application\obj\Debug\Buisness application.pdb
