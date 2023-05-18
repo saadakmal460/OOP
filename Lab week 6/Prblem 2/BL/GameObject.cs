@@ -29,25 +29,59 @@ namespace Prblem_2.BL
             {
                 MoveDiagonal();
             }
+
+            else if(Direction == "Projectile")
+            {
+                Projectile();
+            }
         }
 
 
+        public void Projectile()
+        {
+            if (StartPoint.x >= 0 || StartPoint.x<=0)
+            {
+                if (d2 < 6)
+                {
+                    if (StartPoint.x < Premises.topRight.x)
+                    {
+                        //moving top right
+                        StartPoint.y++;
+                        StartPoint.x--;
+                        d2++;//counting steps
+                    }
 
+                }
+                if (d2 >= 6 && d2 < 9)
+                {
+                    if (StartPoint.y < Premises.topRight.x)
+                    {
+                        //moving right
+                        StartPoint.y++;
+                        d2++;
+                    }
+                }
+                if (d2 >= 9 && d2 < 13)
+                {
+                    if (StartPoint.x <= Premises.bottomRight.y)
+                    {
+                        //moving bottom right
+                        StartPoint.y++;
+                        StartPoint.x++;
+                        d2++;
+                    }
+                }
+
+            }
+        }
         public void MoveDiagonal()
         {
             if (StartPoint.x <= Premises.bottomRight.y)
             {
-                Remove();
+                //moving diagnoaly
                 StartPoint.y++;
                 StartPoint.x++;
-                for (int i = 0; i < Shape.GetLength(0); i++)
-                {
-                    for (int j = 0; j < Shape.GetLength(1); j++)
-                    {
-                        Console.SetCursorPosition(StartPoint.y + j, StartPoint.x + i);
-                        Console.Write(Shape[i, j]);
-                    }
-                }
+                
             }
         }
         public void MovePatrol()
@@ -57,22 +91,11 @@ namespace Prblem_2.BL
             {
                 if (StartPoint.y > Premises.topLeft.x)
                 {
-                    Remove();
-                    StartPoint.y--;
-
-                    for (int i = 0; i < Shape.GetLength(0); i++)
-                    {
-                        for (int j = 0; j < Shape.GetLength(1); j++)
-                        {
-                            Console.SetCursorPosition(StartPoint.y + j, StartPoint.x + i);
-                            Console.Write(Shape[i, j]);
-                        }
-                    }
-                    
+                    StartPoint.y--;//moving left
                 }
                 else
                 {
-                    d = "right";
+                    d = "right";//changing direction
                 }
 
             }
@@ -80,21 +103,11 @@ namespace Prblem_2.BL
             {
                 if (StartPoint.y >= Premises.topLeft.x)
                 {
-                    Remove();
-                    StartPoint.y++;
-
-                    for (int i = 0; i < Shape.GetLength(0); i++)
-                    {
-                        for (int j = 0; j < Shape.GetLength(1); j++)
-                        {
-                            Console.SetCursorPosition(StartPoint.y + j, StartPoint.x + i);
-                            Console.Write(Shape[i, j]);
-                        }
-                    }
+                    StartPoint.y++;//moving right
                 }
                 else
                 {
-                    d = "left";
+                    d = "left";//changing direction
                 }
             }
         }
@@ -102,33 +115,17 @@ namespace Prblem_2.BL
         {
             if (StartPoint.y > Premises.topLeft.x)
             {
-                Remove();                
-                StartPoint.y--;
-
-                for (int i = 0; i < Shape.GetLength(0); i++)
-                {
-                    for (int j = 0; j < Shape.GetLength(1); j++)
-                    {
-                        Console.SetCursorPosition(StartPoint.y + j, StartPoint.x + i);
-                        Console.Write(Shape[i, j]);
-                    }
-                }
+                StartPoint.y--;//moving left
             }
         }
         public void MoveLeftToRight()
         {
-            
-                Remove();                
-                StartPoint.y++;
 
-                for (int i = 0; i < Shape.GetLength(0); i++)
-                {
-                    for (int j = 0; j < Shape.GetLength(1); j++)
-                    {
-                        Console.SetCursorPosition(StartPoint.y + j, StartPoint.x + i);
-                        Console.Write(Shape[i, j]);
-                    }
-                }
+            if (StartPoint.y <= Premises.topRight.x)
+            {
+                StartPoint.y++;//moving right
+            }
+                
             
         }
         public void Remove()
@@ -146,7 +143,14 @@ namespace Prblem_2.BL
 
         public void Draw()
         {
-
+            for (int i = 0; i < Shape.GetLength(0); i++)
+            {
+                for (int j = 0; j < Shape.GetLength(1); j++)
+                {
+                    Console.SetCursorPosition(StartPoint.y + j, StartPoint.x + i);
+                    Console.Write(Shape[i, j]);
+                }
+            }
         }
         public GameObject(char[,] Shape , Point StartPoint , Boundry Premises , string Direction)
         {
@@ -154,23 +158,23 @@ namespace Prblem_2.BL
             this.StartPoint = StartPoint;
             this.Premises = Premises;
             this.Direction = Direction;
-            d = "left";
-
+     
         }
         public GameObject()
         {
             Shape = new char[1, 3] { { '-', '-', '-' }};
-            StartPoint = s;
-            Premises = P;
-            Direction = "Diagonal";
-            d = "left";
+            StartPoint = new Point();
+            Premises = new Boundry();
+            Direction = "LeftToRight";
+           
         }
+
         public char[,] Shape;
         public Point StartPoint;
         public Boundry Premises;
         public string Direction;
-        public string d;
-        Boundry P = new Boundry();
-        Point s = new Point(0,15);
+        public string d = "left";//for patrol direction
+        public int d2 = 0;//for projectile movement
+ 
     }
 }
