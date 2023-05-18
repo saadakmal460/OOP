@@ -17,22 +17,19 @@ namespace Prblem_2.BL
         }
         public Boundry()
         {
-            topLeft = p1;
+            topLeft = new Point();
 
-            topRight = p2;
+            topRight = new Point(30, 90);
 
-            bottomLeft = p3;
+            bottomLeft = new Point(90, 0);
 
-            bottomRight = p4;
+            bottomRight = new Point(90, 90);
         }
 
         public Point topLeft;
         public Point topRight;
         public Point bottomLeft;
         public Point bottomRight;
-        Point p1 = new Point();
-        Point p2 = new Point(60 , 90);
-        Point p3 = new Point(90, 0);
-        Point p4 = new Point(90, 90);
+        
     }
 }
