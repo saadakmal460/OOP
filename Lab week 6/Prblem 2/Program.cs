@@ -12,14 +12,25 @@ namespace Prblem_2
     {
         static void Main(string[] args)
         {
-            GameObject o = new GameObject();
+            char[,] Player = new char[,]
+            {   {' ' , ' ' , 'o' , ' '},
+                {' ' , '/' , '|' , '\\'},
+                {' ' , ' ' , '|' , ' '},
+                { ' ' , '/' , ' ' , '\\'}
+            };
+
+            Boundry b = new Boundry();
+            GameObject o = new GameObject(Player, new Point(6, 0), b, "Projectile");
             while (true)
             {
-                Thread.Sleep(100);
-                
+                Thread.Sleep(1000);
+
+                o.Remove();
                 o.Move();
+                o.Draw();
+                
             }
-            Console.ReadKey();
+           
         }
     }
 }
