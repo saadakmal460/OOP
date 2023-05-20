@@ -1,4 +1,5 @@
 ﻿using System;
+using EZInput;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -9,6 +10,17 @@ namespace Problem_1
 {
     class Grid
     {
+        public bool IsStoppingCondition()
+        {
+            if(Keyboard.IsKeyPressed(Key.Escape))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         public Cell FindGhost(char ghostCharacter)
         {
             for (int x = 0; x < maze.GetLength(0); x++)
