@@ -12,8 +12,9 @@ namespace Problem_1
         static void Main(string[] args)
         {
             bool gameRunning = true;
-
+            int option = 0;
             string path = "maze.txt";
+            string path2 = "pacman.txt";
             
             Grid g = new Grid(path, 24, 71);
             Pacman p = new Pacman(10, 5, 0, g);
@@ -25,27 +26,76 @@ namespace Problem_1
             enemies.Add(g2);
             enemies.Add(g3);
 
-            g.Draw();
-            while (gameRunning)
+            
+            do
             {
-                Thread.Sleep(90);
-                p.Remove();
-                p.Move();
-                p.Draw();
-                p.PrintScore();
-                foreach(Ghost i in enemies)
+                Console.Clear();
+                option = Menu();
+                if (option == 1)
                 {
-                    i.Remove();
-                    i.Move();
-                    i.Draw();
+                    Console.Clear();
+                    g.Draw();
+                    while (gameRunning)
+                    {
+                        Thread.Sleep(90);
+                        p.Remove();
+                        p.Move();
+                        p.Draw();
+                        p.PrintScore();
+                        foreach (Ghost i in enemies)
+                        {
+                            i.Remove();
+                            i.Move();
+                            i.Draw();
 
+                        }
+                        p.SaveData(path2);
+                        if (g.IsStoppingCondition())
+                        {
+                            gameRunning = false;
+                        }
+
+                    }
                 }
-                if(g.IsStoppingCondition())
+                else if(option == 2)
                 {
-                    gameRunning = false;
+                    p.LoadData(path2);
+                    Console.Clear();
+                    g.Draw();
+                    while (gameRunning)
+                    {
+                        Thread.Sleep(90);
+                        p.Remove();
+                        p.Move();
+                        p.Draw();
+                        p.PrintScore();
+                        foreach (Ghost i in enemies)
+                        {
+                            i.Remove();
+                            i.Move();
+                            i.Draw();
+
+                        }
+                        p.SaveData(path2);
+                        if (g.IsStoppingCondition())
+                        {
+                            gameRunning = false;
+                        }
+
+                    }
                 }
 
-            }
+            } while (option != 3);
+           
+        }
+
+        static int Menu()
+        {
+            Console.WriteLine("1.Play Game");
+            Console.WriteLine("2.Continue Game");
+            Console.WriteLine("3.Exit");
+            int option  = int.Parse(Console.ReadLine());
+            return option;
         }
     }
 }

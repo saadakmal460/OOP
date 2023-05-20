@@ -4,12 +4,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Problem_1
 {
     class Pacman
     {
-        
+        public void LoadData(string path)
+        {
+            StreamReader file = new StreamReader(path);
+            string record;
+            while((record = file.ReadLine()) != null)
+            {
+                string[] splitRecord = record.Split(',');
+                px = int.Parse(splitRecord[0]);
+                py = int.Parse(splitRecord[1]);
+                score = int.Parse(splitRecord[2]);
+
+            }
+            file.Close();
+        }
+        public void SaveData(string path)
+        {
+            StreamWriter file = new StreamWriter(path, false);
+            file.Write(px + "," + py  + ","+ score);
+            file.Close();
+        }
         public void IncreaseScore()
         {
             if (mazeGrid.maze[px, py].value == '-')
