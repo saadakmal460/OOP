@@ -8,39 +8,47 @@ namespace Problem_1
 {
     class Ghost
     {
-        public double CalculateDistance()
+        
+        public double CalculateDistance(Cell currrent , Cell Pacman)
         {
-            return Math.Sqrt(Math.Pow((x - X), 2) + Math.Pow((y - Y), 2));
+            return Math.Sqrt(Math.Pow((currrent.x - Pacman.x), 2) + Math.Pow((currrent.y - Pacman.y), 2));
         }
         public void MoveRandom()
         {
             int value = GenerateRandom();
             if (value == 1)
             {
-                if (mazeGrid.maze[x, y + 1].value == ' ')
+                if (mazeGrid.maze[x, y + 1].value == ' ' || mazeGrid.maze[x, y + 1].value == '-' || mazeGrid.maze[x,y+1].value == 'P')
                 {
                     y++;
+                    previousItem = mazeGrid.maze[x, y].value;
                 }
             }
             else if (value == 2)
             {
-                if (mazeGrid.maze[x, y - 1].value == ' ')
+                if (mazeGrid.maze[x, y - 1].value == ' ' || mazeGrid.maze[x, y - 1].value == '-' || mazeGrid.maze[x, y - 1].value == 'P')
                 {
                     y--;
+                    previousItem = mazeGrid.maze[x, y].value;
+
                 }
             }
             else if (value == 3)
             {
-                if (mazeGrid.maze[x + 1, y].value == ' ')
+                if (mazeGrid.maze[x + 1, y].value == ' ' || mazeGrid.maze[x+1, y].value == '-' || mazeGrid.maze[x + 1, y].value == 'P')
                 {
                     x++;
+                    previousItem = mazeGrid.maze[x, y].value;
+
                 }
             }
             else if (value == 4)
             {
-                if (mazeGrid.maze[x-1 , y].value == ' ')
+                if (mazeGrid.maze[x-1 , y].value == ' ' || mazeGrid.maze[x-1, y].value == '-' || mazeGrid.maze[x+1, y].value == 'P')
                 {
                     x--;
+                    previousItem = mazeGrid.maze[x, y].value;
+
                 }
             }
         }
@@ -75,27 +83,29 @@ namespace Problem_1
         {
             if (ghostDirection == "up")
             {
-                if (mazeGrid.maze[x-1, y].value == ' ')
+                if (mazeGrid.maze[x - 1, y].value == ' ' || mazeGrid.maze[x - 1, y].value == '-' || mazeGrid.maze[x + 1, y].value == 'P')
                 {
                     x--;
-
+                    previousItem = mazeGrid.maze[x, y].value;
                 }
-                else if (mazeGrid.maze[x-1, y].value != ' ')
+                else
                 {
 
                     ghostDirection = "down";
+                    
                 }
             }
             if (ghostDirection == "down")
             {
-                if (mazeGrid.maze[x+1, y].value == ' ')
+                if (mazeGrid.maze[x + 1, y].value == ' ' || mazeGrid.maze[x + 1, y].value == '-' || mazeGrid.maze[x + 1, y].value == 'P')
                 {
                     x++;
-
+                    previousItem = mazeGrid.maze[x, y].value;
                 }
-                else if (mazeGrid.maze[x+1, y].value != ' ')
+                else
                 {
                     ghostDirection = "up";
+                    
                 }
             }
         }
@@ -103,25 +113,26 @@ namespace Problem_1
         {
             if (ghostDirection == "left")
             {
-                if (mazeGrid.maze[x, y + 1].value == ' ')
+                if (mazeGrid.maze[x, y + 1].value == ' ' || mazeGrid.maze[x, y + 1].value == '-' || mazeGrid.maze[x, y + 1].value == 'P')
                 {
                     y++;
-
+                    previousItem = mazeGrid.maze[x, y].value;
                 }
-                else if(mazeGrid.maze[x, y + 1].value != ' ')
+                else if(mazeGrid.maze[x, y + 1].value == '|' || mazeGrid.maze[x, y + 1].value != '%' || mazeGrid.maze[x, y + 1].value == '#')
                 {
-                    
+
                     ghostDirection = "right";
+
                 }
             }
             if(ghostDirection == "right")
             {
-                if (mazeGrid.maze[x, y - 1].value == ' ')
+                if (mazeGrid.maze[x, y - 1].value == ' ' || mazeGrid.maze[x, y - 1].value == '-' || mazeGrid.maze[x, y - 1].value == 'P')
                 {
                     y--;
-
+                    previousItem = mazeGrid.maze[x, y].value;
                 }
-                else if (mazeGrid.maze[x, y - 1].value != ' ')
+                else if(mazeGrid.maze[x, y - 1].value == '|' || mazeGrid.maze[x, y - 1].value == '%' || mazeGrid.maze[x, y - 1].value == '#')
                 {
                     ghostDirection = "left";
                 }
@@ -137,8 +148,9 @@ namespace Problem_1
         }
         public void Remove()
         {
+
             Console.SetCursorPosition(y,x);
-            Console.Write(" ");
+            Console.Write(previousItem);
         }
         public void Draw()
         {
