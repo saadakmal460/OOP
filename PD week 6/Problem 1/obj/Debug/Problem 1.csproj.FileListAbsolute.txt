@@ -5,3 +5,6 @@ D:\2nd Semester\OOP\PD week 6\Problem 1\obj\Debug\Problem 1.csproj.AssemblyRefer
 D:\2nd Semester\OOP\PD week 6\Problem 1\obj\Debug\Problem 1.csproj.CoreCompileInputs.cache
 D:\2nd Semester\OOP\PD week 6\Problem 1\obj\Debug\Problem 1.exe
 D:\2nd Semester\OOP\PD week 6\Problem 1\obj\Debug\Problem 1.pdb
+D:\2nd Semester\OOP\PD week 6\Problem 1\bin\Debug\EZInput.dll
+D:\2nd Semester\OOP\PD week 6\Problem 1\bin\Debug\EZInput.xml
+D:\2nd Semester\OOP\PD week 6\Problem 1\obj\Debug\Problem 1.csproj.CopyComplete
