@@ -18,6 +18,7 @@ namespace Lab_week_2
         {
             Task3();
             Console.ReadKey();
+            Console.ReadLi();
         }
 
         static void Task1()
@@ -28,6 +29,7 @@ namespace Lab_week_2
             s1.rollNo = 144;
             s1.cgpa = 3.9F;
             Console.WriteLine("Name:{0} , Roll number:{1} , CGPA:{2} ", s1.name, s1.rollNo, s1.cgpa);
+            
         }
 
         static void Task2()
