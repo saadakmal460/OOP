@@ -15,12 +15,10 @@ namespace Problem_2.BL
             if (flag)
             {
                 score +=5;
-                Console.WriteLine(score);
             }
             else
             {
                 score +=0;
-                Console.WriteLine(score);
             }
             double average = score / count;
             return average;
