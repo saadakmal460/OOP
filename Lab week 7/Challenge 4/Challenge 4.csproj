@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F587F3F6-0550-4ADA-A1CB-A194707BEA9C}</ProjectGuid>
+    <ProjectGuid>{70267563-133F-4060-998B-DCB231814A73}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Challenge_2</RootNamespace>
-    <AssemblyName>Challenge 2</AssemblyName>
+    <RootNamespace>Challenge_4</RootNamespace>
+    <AssemblyName>Challenge 4</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,12 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FireChief.cs" />
-    <Compile Include="FireFighter.cs" />
-    <Compile Include="FireTruck.cs" />
-    <Compile Include="Laddar.cs" />
-    <Compile Include="Person.cs" />
-    <Compile Include="Pipe.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
