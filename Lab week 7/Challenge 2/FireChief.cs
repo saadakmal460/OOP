@@ -8,5 +8,9 @@ namespace Challenge_2
 {
     class FireChief : Person
     {
+       public void DelegateResponsibility()
+       {
+            //Code of the function
+       }
     }
 }
