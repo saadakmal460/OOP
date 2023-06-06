@@ -1,0 +1,7 @@
+D:\2nd Semester\OOP\Lab week 8\Problem 4\bin\Debug\Problem 4.exe.config
+D:\2nd Semester\OOP\Lab week 8\Problem 4\bin\Debug\Problem 4.exe
+D:\2nd Semester\OOP\Lab week 8\Problem 4\bin\Debug\Problem 4.pdb
+D:\2nd Semester\OOP\Lab week 8\Problem 4\obj\Debug\Problem 4.csproj.AssemblyReference.cache
+D:\2nd Semester\OOP\Lab week 8\Problem 4\obj\Debug\Problem 4.csproj.CoreCompileInputs.cache
+D:\2nd Semester\OOP\Lab week 8\Problem 4\obj\Debug\Problem 4.exe
+D:\2nd Semester\OOP\Lab week 8\Problem 4\obj\Debug\Problem 4.pdb
