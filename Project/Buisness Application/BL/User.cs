@@ -44,7 +44,7 @@ namespace Buisness_Application.BL
         }
         public string returnRole()
         {
-            string role = "1";
+            string role = "";
             if (username == "admin" && password == "123")
             {
                 role = "admin";

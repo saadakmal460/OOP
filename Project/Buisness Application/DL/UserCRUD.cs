@@ -15,5 +15,7 @@ namespace Buisness_Application.DL
         {
             u.Add(user);
         }
+
+       
     }
 }
