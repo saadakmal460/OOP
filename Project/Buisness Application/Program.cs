@@ -1,4 +1,5 @@
 ﻿using Buisness_Application.BL;
+using Buisness_Application.DL;
 using Buisness_Application.UI;
 using System;
 using System.Collections.Generic;
@@ -13,8 +14,13 @@ namespace Buisness_Application
         static void Main(string[] args)
         {
             int option = 0;
+            string path = "hostelites.txt";
+            Hostelite.LoadHostelitesFromFile(path);
+
+          
             while(option!=2)
             {
+                Console.Clear();
                 GeneralUI.Header();
                 GeneralUI.Path();
                 option = GeneralUI.LoginScreen();
@@ -31,11 +37,40 @@ namespace Buisness_Application
                         Console.Clear();
                         GeneralUI.Header();
                         GeneralUI.Path();
-                        int optionAdmin = 0;
-                        while(optionAdmin !=14)
+                        string optionAdmin = "0";
+                        while(optionAdmin != "10")
                         {
-                            Console.WriteLine("Hello admin");
-                            option = int.Parse(Console.ReadLine());
+                            Console.Clear();
+                            GeneralUI.Header();
+                            GeneralUI.Path();
+                            optionAdmin = AdminUI.PrintMenuForAdmin();
+                            if(optionAdmin == "1")
+                            {
+                                Console.Clear();
+                                GeneralUI.Header();
+                                GeneralUI.Path();
+                                Hostelite h = HosteliteUI.TakeInputForHostelite();
+                                HosteliteCRUD.AddHosteliteInList(h);
+                                UserCRUD.AdddInList(h);
+                                h.StoreInFile(path);   
+                            }
+                            else if(optionAdmin == "2")
+                            {
+                                Console.Clear();
+                                GeneralUI.Header();
+                                GeneralUI.Path();
+                                string name = HosteliteUI.RemoveHostelite();
+
+                            }
+                            else if(optionAdmin == "4")
+                            {
+                                Console.Clear();
+                                GeneralUI.Header();
+                                GeneralUI.Path();
+                                HosteliteUI.ViewHostelites();
+
+
+                            }
                         }
                     }
                     else
