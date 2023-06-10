@@ -17,10 +17,12 @@ namespace Buisness_Application
             int option = 0;
             string path = "hostelites.txt";
             string pathNotices = "Notices.txt";
+            string messPath = "Mess.txt";
 
             //Loading data
             HosteliteCRUD.LoadHostelitesFromFile(path);
             NoticesCRUD.LoadNoticesFromFile(pathNotices);
+            MessCRUD.LoadMessMenuFromFile(messPath);
           
             //main while loop
             while(option!=2)
@@ -115,6 +117,7 @@ namespace Buisness_Application
                             {
                                 //starting of notices functions
                                 string noticeOption = "0";
+
                                 //starting while loop
                                 while(noticeOption != "4")
                                 {
@@ -163,19 +166,98 @@ namespace Buisness_Application
                                     }
                                 }
                             }
-                            //option 6 start
+                            //option 7 start
                             else if(optionAdmin == "7")
                             {
+                                Console.Clear();
+                                string messOption = "0";
+                                while(messOption != "3")
+                                {
+                                    Console.Clear();
+                                    GeneralUI.Header();
+                                    GeneralUI.Path();
+                                    messOption = MessUI.MessMenu();
+                                    if(messOption == "1")
+                                    {
+                                        Console.Clear();
+                                        GeneralUI.Header();
+                                        GeneralUI.Path();
+                                        MessUI.ViewMess();
+                                       
+                                    }
 
+                                    else if(messOption == "2")
+                                    {
+                                        Console.Clear();
+                                        GeneralUI.Header();
+                                        GeneralUI.Path();
+
+                                        string day = MessUI.TakeDayAsInput();
+                                        bool flag = MessUI.UpdateMenu(day);
+                                        MessCRUD.StoreMessMenuInFile(messPath);
+                                        HosteliteUI.ShowMessage(flag);
+                                    }
+
+                                }
+                            }
+
+                            //option 9 start
+                            else if(optionAdmin == "9")
+                            {
+                                Console.Clear();
+                                GeneralUI.Header();
+                                GeneralUI.Path();
+
+                                //viewing alloted rooms
+                                HosteliteUI.ViewHostelitesRooms();
+                            }
+
+                            //option 10 start
+                            else if(optionAdmin == "10")
+                            {
+                                Console.Clear();
+                                GeneralUI.Header();
+                                GeneralUI.Path();
+
+                                //search menu
+                                string searchOption = "0";
+                                while(searchOption != "3")
+                                {
+                                    searchOption = HosteliteUI.SearchHosteliteOption();
+                                    if(searchOption== "1")
+                                    {
+                                        Console.Clear();
+                                        GeneralUI.Header();
+                                        GeneralUI.Path();
+                                        //searching by name
+                                        string name = HosteliteUI.TakeNameAsInput();
+                                        bool flag = HosteliteUI.SearchByName(name);
+                                        HosteliteUI.ShowMessage(flag);
+
+                                    }
+
+                                    else if(searchOption == "2")
+                                    {
+                                        Console.Clear();
+                                        GeneralUI.Header();
+                                        GeneralUI.Path();
+
+                                        //searching by roll number
+                                        string rollNumber = HosteliteUI.TakeRollNumberAsInput();
+                                        bool flag = HosteliteUI.SearchByRollNumber(rollNumber);
+                                        HosteliteUI.ShowMessage(flag);
+                                    }
+                                }
                             }
                         }
                     }
-                    else
+
+                    else if(role == "hostelite")
                     {
+                        Console.Clear();
                         GeneralUI.Header();
                         GeneralUI.Path();
-                        Console.WriteLine("hello ");
-                        Console.ReadKey();
+                        
                     }
                 }
             }
