@@ -45,14 +45,18 @@
   <ItemGroup>
     <Compile Include="BL\Admin.cs" />
     <Compile Include="BL\Hostelite.cs" />
+    <Compile Include="BL\Notices.cs" />
     <Compile Include="BL\User.cs" />
+    <Compile Include="DL\AdminCRUD.cs" />
     <Compile Include="DL\HosteliteCRUD.cs" />
+    <Compile Include="DL\NoticesCRUD.cs" />
     <Compile Include="DL\UserCRUD.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UI\AdminUI.cs" />
     <Compile Include="UI\GeneralUI.cs" />
     <Compile Include="UI\HosteliteUI.cs" />
+    <Compile Include="UI\NoticesUI.cs" />
     <Compile Include="UI\UserUI.cs" />
   </ItemGroup>
   <ItemGroup>
