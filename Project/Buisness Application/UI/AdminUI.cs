@@ -20,8 +20,9 @@ namespace Buisness_Application.UI
             Console.WriteLine("\t 6.View Complaints");
             Console.WriteLine("\t 7.Mess Information");
             Console.WriteLine("\t 8.Payment records");
-            Console.WriteLine("\t 9.Allot rooms");
-            Console.WriteLine("\t 10.Exit");
+            Console.WriteLine("\t 9.View alloted rooms");
+            Console.WriteLine("\t 10.Search hostelite");
+            Console.WriteLine("\t 11.Exit");
             Console.Write(" \tEnter option: ");
             string option = Console.ReadLine();
             return option;

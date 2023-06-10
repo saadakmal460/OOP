@@ -46,7 +46,7 @@ namespace Buisness_Application.DL
             StreamWriter file = new StreamWriter(path, false);
             foreach (Hostelite i in hostelitesList)
             {
-                file.WriteLine(i.GetUsername() + "," + i.GetRollNumber() + "," + i.GetCnic() + "," + i.GetCity() + "," + i.GetPassword() + "," + i.returnRole());
+                file.WriteLine(i.GetUsername() + "," + i.GetRollNumber() + "," + i.GetCnic() + "," + i.GetCity() + "," + i.GetPassword() + "," + i.GetRoomNumber()+ "," + i.returnRole());
             }
             file.Flush();
             file.Close();
@@ -56,7 +56,7 @@ namespace Buisness_Application.DL
             StreamWriter file = new StreamWriter(path, false);
             foreach (Hostelite i in hostelitesList)
             {
-                file.WriteLine(i.GetUsername() + "," + i.GetRollNumber() + "," + i.GetCnic() + "," + i.GetCity() + "," + i.GetPassword() + "," + i.returnRole());
+                file.WriteLine(i.GetUsername() + "," + i.GetRollNumber() + "," + i.GetCnic() + "," + i.GetCity() + "," + i.GetPassword() + "," + i.GetRoomNumber() + "," + i.returnRole());
             }
             file.Flush();
             file.Close();
@@ -76,8 +76,9 @@ namespace Buisness_Application.DL
                     string cnic = Parsing(record, 3);
                     string city = Parsing(record, 4);
                     string password = Parsing(record, 5);
-                    string role = Parsing(record, 6);
-                    Hostelite h = new Hostelite(name, cnic, city, rollNumber, password, role);
+                    string roomNumber = Parsing(record, 6);
+                    string role = Parsing(record, 7);
+                    Hostelite h = new Hostelite(name, cnic, city, rollNumber, password, role , roomNumber);
                     AddHosteliteInList(h);
                     UserCRUD.AdddInList(h);
                 }

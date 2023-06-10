@@ -13,17 +13,18 @@ namespace Buisness_Application.BL
         protected string city;
         protected string cnic;
         protected string rollNumber;
-        
-        public Hostelite(string name , string cnic , string city , string rollNumber , string password , string role) : base(name , password , role)
+        protected string roomNumber;
+        public Hostelite(string name , string cnic , string city , string rollNumber , string password , string role , string roomNumber) : base(name , password , role)
         {
             this.username = name;
             this.cnic = cnic;
             this.city = city;
             this.rollNumber = rollNumber;
             this.password = password;
+            this.roomNumber = roomNumber;
             role = "hostelite";
         }
-
+        
         public void SetCity(string city)
         {
             this.city = city;
@@ -51,7 +52,15 @@ namespace Buisness_Application.BL
             return rollNumber;
         }
 
-        
+        public void SetRoomNumber(string roomNumber)
+        {
+            this.roomNumber = roomNumber;
+        }
+
+        public string GetRoomNumber()
+        {
+            return roomNumber;
+        }
 
         
         

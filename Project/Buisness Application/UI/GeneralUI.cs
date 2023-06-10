@@ -27,6 +27,8 @@ namespace Buisness_Application.UI
             Console.WriteLine("\t \t. .                                                         . .");
             Console.WriteLine("\t \t. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .");
             Console.WriteLine("\t \t. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .");
+            Console.WriteLine("");
+            Console.WriteLine("");
 
         }
 
