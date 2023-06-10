@@ -1,4 +1,5 @@
 ﻿using Buisness_Application.BL;
+using Buisness_Application.DL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,15 @@ namespace Buisness_Application.UI
             User u = new User(name, password);
             return u;
 
+        }
+
+        public static void View()
+        {
+            foreach(User i in UserCRUD.u)
+            {
+                Console.WriteLine(i.GetUsername() + i.GetPassword());
+            }
+            Console.ReadKey();
         }
     }
 }

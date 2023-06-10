@@ -51,60 +51,10 @@ namespace Buisness_Application.BL
             return rollNumber;
         }
 
-        public void StoreInFile(string path)
-        {
-            StreamWriter file = new StreamWriter(path, true);
-            
-            file.WriteLine(username + "," + rollNumber + "," + cnic + "," + city + "," + password + "," + role);
-            
-            file.Flush();
-            file.Close();
-        }
+        
 
-        public static void LoadHostelitesFromFile(string path)
-        {
-            if (File.Exists(path))
-            {
-
-                StreamReader file = new StreamReader(path);
-                string record;
-
-                while ((record = file.ReadLine()) != null)
-                {
-                    string name = Parsing(record, 1);
-                    string rollNumber = Parsing(record, 2);
-                    string cnic = Parsing(record, 3);
-                    string city = Parsing(record, 4);
-                    string password = Parsing(record, 5);
-                    string role = Parsing(record, 6);
-                    Hostelite h = new Hostelite(name, cnic, city, rollNumber, password, role);
-                    HosteliteCRUD.AddHosteliteInList(h);
-                    UserCRUD.AdddInList(h);
-                }
-
-                file.Close();
-            }
-            else
-            {
-                Console.WriteLine("File not found");
-            }
-        }
-        public static string Parsing(string record, int field)
-        {
-            int count = 1;
-            string item = "";
-            for (int i = 0; i < record.Length; i++)
-            {
-                if (record[i] == ',')
-                {
-                    count++;
-                }
-                else if (count == field)
-                {
-                    item = item + record[i];
-                }
-            }
-            return item;
-        }
+        
+        
+        
     }
 }
