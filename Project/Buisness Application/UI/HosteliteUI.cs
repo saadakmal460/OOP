@@ -161,6 +161,8 @@ namespace Buisness_Application.UI
             return flag;
            
         }
+
+        
         public static string SearchHosteliteOption()
         {
             Console.WriteLine("\t 1.Search by name");
@@ -171,9 +173,30 @@ namespace Buisness_Application.UI
             return option;
         }
 
-        //public string HosteliteMenu()
-        //{
+        public static string ShowWarning()
+        {
+            Console.WriteLine("Once you removed your registration you will not be able to LogIn again!! Do you ant to continue Yes or No");
+            string option = Console.ReadLine();
+            return option;
+        }
 
-        //}
+        public static string HosteliteMenu()
+        {
+            string option;
+            Console.WriteLine("\t 1.View your information");
+            Console.WriteLine("\t 2.View mess menu");
+            Console.WriteLine("\t 3.Add a complaint");
+            Console.WriteLine("\t 4.See notices");
+            Console.WriteLine("\t 5.Pay fees");
+            Console.WriteLine("\t 6.Check bills");
+            Console.WriteLine("\t 7.Remove registration");
+            Console.WriteLine("\t 8.Review");
+            Console.WriteLine("\t 9.EXIT");
+
+            Console.WriteLine();
+            Console.Write("\tEnter your option: ");
+            option = Console.ReadLine();
+            return option;
+        }
     }
 }

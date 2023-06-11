@@ -50,6 +50,10 @@ namespace Buisness_Application.BL
                 role = "admin";
 
             }
+            else if(username == "finance" && password == "123")
+            {
+                role = "Finance";
+            }
             else
             {
                 foreach (User i in UserCRUD.u)

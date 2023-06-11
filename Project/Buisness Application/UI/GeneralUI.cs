@@ -28,7 +28,6 @@ namespace Buisness_Application.UI
             Console.WriteLine("\t \t. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .");
             Console.WriteLine("\t \t. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .");
             Console.WriteLine("");
-            Console.WriteLine("");
 
         }
 
@@ -36,6 +35,8 @@ namespace Buisness_Application.UI
         {
             Console.WriteLine(" ");
             Console.WriteLine("\tLogin > ");
+            Console.WriteLine("");
+            
         }
 
         public static int LoginScreen()

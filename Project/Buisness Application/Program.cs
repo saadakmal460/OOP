@@ -18,11 +18,17 @@ namespace Buisness_Application
             string path = "hostelites.txt";
             string pathNotices = "Notices.txt";
             string messPath = "Mess.txt";
-
+            string complaintPath = "Complaints.txt";
+            string ReviewsPath = "Reviews.txt";
+            string ChallanPath = "Challans.txt";
+            string HosteliteName = "";
             //Loading data
             HosteliteCRUD.LoadHostelitesFromFile(path);
             NoticesCRUD.LoadNoticesFromFile(pathNotices);
             MessCRUD.LoadMessMenuFromFile(messPath);
+            ComplaintsCRUD.LoadComplaintsFromFile(complaintPath);
+            ReviewsCRUD.LoadReviewsFromFile(ReviewsPath);
+            ChallanCRUD.LoadChallansFromFile(ChallanPath);
           
             //main while loop
             while(option!=2)
@@ -43,7 +49,7 @@ namespace Buisness_Application
                     //Taking username and password
                     User user = UserUI.TakeInputForLogin();
                     string role = user.returnRole();
-                    
+                    HosteliteName = user.GetUsername();
                     //starting admin menu
                     if(role == "admin")
                     {
@@ -54,7 +60,7 @@ namespace Buisness_Application
                         //Admin menu
                         string optionAdmin = "0";
                         //stating admin menu loop
-                        while(optionAdmin != "10")
+                        while(optionAdmin != "12")
                         {
                             Console.Clear();
                             GeneralUI.Header();
@@ -86,6 +92,7 @@ namespace Buisness_Application
                                 bool flag = HosteliteCRUD.RemoveFromHosteliteList(name);
                                 HosteliteUI.ShowMessage(flag);
                                 HosteliteCRUD.DeleteHosteliteFromFile(path);
+                                
                             }
                             //option 3 start
                             else if (optionAdmin == "3")
@@ -165,6 +172,15 @@ namespace Buisness_Application
                                         Console.ReadKey();
                                     }
                                 }
+                            }
+
+                            else if(optionAdmin == "6")
+                            {
+                                Console.Clear();
+                                GeneralUI.Header();
+                                GeneralUI.Path();
+
+                                ComplaintsUI.ViewComplaints();
                             }
                             //option 7 start
                             else if(optionAdmin == "7")
@@ -249,15 +265,136 @@ namespace Buisness_Application
                                     }
                                 }
                             }
+
+                            //start option 11
+                            else if(optionAdmin == "11")
+                            {
+                                Console.Clear();
+                                GeneralUI.Header();
+                                GeneralUI.Path();
+
+                                //View reviews and ratings
+                                ReviewsUI.ViewAllReviews();
+
+                            }
                         }
                     }
 
                     else if(role == "hostelite")
                     {
                         Console.Clear();
-                        GeneralUI.Header();
-                        GeneralUI.Path();
+                        string hOption = "0";
+                        while(hOption != "10")
+                        {
+                            Console.Clear();
+                            GeneralUI.Header();
+                            GeneralUI.Path();
+
+                            hOption = HosteliteUI.HosteliteMenu();
+                            if(hOption == "1")
+                            {
+                                Console.Clear();
+                                GeneralUI.Header();
+                                GeneralUI.Path();
+
+                                HosteliteUI.SearchByName(HosteliteName);
+                                Console.ReadKey();
+                            }
+
+                            else if(hOption == "2")
+                            {
+                                Console.Clear();
+                                GeneralUI.Header();
+                                GeneralUI.Path();
+
+                                MessUI.ViewMess();
+                            }
+
+                            else if(hOption == "3")
+                            {
+                                Console.Clear();
+                                GeneralUI.Header();
+                                GeneralUI.Path();
+
+                                Complaints complaint = ComplaintsUI.TakeComplaints(HosteliteName);
+                                ComplaintsCRUD.AddComplaitsInList(complaint);
+                                ComplaintsCRUD.StoreComplaintsInFile(complaintPath);
+
+                            }
+
+                            else if(hOption == "4")
+                            {
+                                Console.Clear();
+                                GeneralUI.Header();
+                                GeneralUI.Path();
+
+                                //viewing notice
+                                NoticesUI.ViewNotices();
+                                Console.ReadKey();
+                            }
+
+                            else if(hOption == "7")
+                            {
+                                Console.Clear();
+                                GeneralUI.Header();
+                                GeneralUI.Path();
+
+                                string op = HosteliteUI.ShowWarning();
+                                if (op == "Yes")
+                                {
+                                    string name = HosteliteUI.TakeNameAsInput();
+                                    bool flag = HosteliteCRUD.RemoveFromHosteliteList(name);
+                                    HosteliteUI.ShowMessage(flag);
+                                    HosteliteCRUD.DeleteHosteliteFromFile(path);
+                                    break;
+                                        
+                                }
+                            }
+
+                            else if(hOption == "8")
+                            {
+                                Console.Clear();
+                                GeneralUI.Header();
+                                GeneralUI.Path();
+
+                                //adding reviews
+                                Reviews review = ReviewsUI.TakeReviews(HosteliteName);
+                                ReviewsCRUD.AddInList(review);
+                                ReviewsCRUD.StoreReviewsInFile(ReviewsPath);
+                                
+                            }
+                        }
                         
+                    }
+
+                    else if(role == "Finance")
+                    {
+                        string FinanceOption = "0";
+                        while(FinanceOption != "10")
+                        {
+                            Console.Clear();
+                            GeneralUI.Header();
+                            GeneralUI.Path();
+                            FinanceOption = FinanceUI.FinanceMenu();
+                            if(FinanceOption == "3")
+                            {
+                                Console.Clear();
+                                GeneralUI.Header();
+                                GeneralUI.Path();
+
+                                string rollNumber = HosteliteUI.TakeRollNumberAsInput();
+                                bool flag = ChallanUI.CheckInChallanList(rollNumber);
+                                Challan c = ChallanUI.TakeChallanInput(rollNumber);
+                                ChallanCRUD.StoreChallansInFile(ChallanPath);
+
+                                if (!flag)
+                                {
+                                    ChallanCRUD.AddChallanInList(c);
+                                }
+                                
+
+                            }
+                        }
                     }
                 }
             }

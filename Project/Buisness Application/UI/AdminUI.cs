@@ -22,7 +22,8 @@ namespace Buisness_Application.UI
             Console.WriteLine("\t 8.Payment records");
             Console.WriteLine("\t 9.View alloted rooms");
             Console.WriteLine("\t 10.Search hostelite");
-            Console.WriteLine("\t 11.Exit");
+            Console.WriteLine("\t 11.View reviews and ratings");
+            Console.WriteLine("\t 12.Exit");
             Console.Write(" \tEnter option: ");
             string option = Console.ReadLine();
             return option;

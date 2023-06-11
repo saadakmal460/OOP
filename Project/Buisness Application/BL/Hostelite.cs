@@ -14,6 +14,7 @@ namespace Buisness_Application.BL
         protected string cnic;
         protected string rollNumber;
         protected string roomNumber;
+        protected Reviews reviews;
         public Hostelite(string name , string cnic , string city , string rollNumber , string password , string role , string roomNumber) : base(name , password , role)
         {
             this.username = name;
@@ -23,7 +24,9 @@ namespace Buisness_Application.BL
             this.password = password;
             this.roomNumber = roomNumber;
             role = "hostelite";
+            reviews = new Reviews(name , "0" , "null");
         }
+
         
         public void SetCity(string city)
         {
