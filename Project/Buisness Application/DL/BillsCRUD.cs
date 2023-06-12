@@ -27,7 +27,7 @@ namespace Buisness_Application.DL
             StreamWriter file = new StreamWriter(path, false);
             foreach (Bills i in billsList)
             {
-                file.WriteLine(i.GetBillName()+ "," + i.GetAmount() + "," + i.GetBillName());
+                file.WriteLine(i.GetBillName()+ "," + i.GetAmount() + "," + i.GetBillType());
             }
             file.Flush();
             file.Close();

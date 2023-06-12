@@ -18,6 +18,10 @@ namespace Buisness_Application.BL
             this.billType = billType;
         }
 
+        public Bills()
+        {
+
+        }
         public void SetBillName(string billName)
         {
             this.billName = billName;
@@ -48,11 +52,22 @@ namespace Buisness_Application.BL
             return billType;
         }
 
-        public int GetTotalAmount()
+        public int GetTotalAmount(int amount)
         {
-            int amount = 0;
+            
             amount = amount + int.Parse(GetAmount());
             return amount;
+        }
+
+        public int GetAmountDigits(int amount)
+        {
+            int count = 0;
+            while(amount != 0)
+            {
+                amount = amount / 10;
+                count++;
+            }
+            return count;
         }
     }
 }
