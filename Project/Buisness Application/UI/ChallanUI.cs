@@ -60,7 +60,7 @@ namespace Buisness_Application.UI
                 Console.WriteLine("No record found");
             }
 
-            Challan c = new Challan(rollNumber, challan, amount);
+            Challan c = new Challan(rollNumber, challan, amount , "Pending");
             return c;
         }
 
@@ -78,5 +78,16 @@ namespace Buisness_Application.UI
             return flag2;
         }
 
+        public static void ShowFee()
+        {
+            Console.WriteLine("Roll Number\t\tStatus");
+            foreach(Challan i in ChallanCRUD.challanList)
+            {
+                Console.WriteLine(i.GetRollNumber() + "\t\t\t" + i.GetStatus());
+            }
+            Console.ReadKey();
+        }
+
+        
     }
 }

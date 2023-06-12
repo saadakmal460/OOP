@@ -8,27 +8,32 @@ using System.Threading.Tasks;
 
 namespace Buisness_Application.DL
 {
-    class ChallanCRUD
+    class BillsCRUD
     {
-        public static List<Challan> challanList = new List<Challan>();
+        public static List<Bills> billsList = new List<Bills>();
 
-        public static void AddChallanInList(Challan c)
+        public static void AddInList(Bills b)
         {
-            challanList.Add(c);
+            billsList.Add(b);
         }
 
-        public static void StoreChallansInFile(string path)
+        public static void RemoveFromList(int i)
+        {
+            billsList.RemoveAt(i - 1);
+        }
+
+        public static void StoreBillsInFile(string path)
         {
             StreamWriter file = new StreamWriter(path, false);
-            foreach (Challan i in challanList)
+            foreach (Bills i in billsList)
             {
-                file.WriteLine(i.GetRollNumber() + "," + i.GetChallanNumber() + "," + i.GetAmount() + "," + i.GetStatus());
+                file.WriteLine(i.GetBillName()+ "," + i.GetAmount() + "," + i.GetBillName());
             }
             file.Flush();
             file.Close();
         }
 
-        public static void LoadChallansFromFile(string path)
+        public static void LoadBillsFromFile(string path)
         {
             if (File.Exists(path))
             {
@@ -38,13 +43,12 @@ namespace Buisness_Application.DL
 
                 while ((record = file.ReadLine()) != null)
                 {
-                    
-                    string rollNumber = Parsing(record, 1);
-                    string challan = Parsing(record, 2);
-                    string amount = Parsing(record, 3);
-                    string status = Parsing(record, 4);
-                    Challan c = new Challan(rollNumber, challan, amount , status);
-                    AddChallanInList(c);
+
+                    string name = Parsing(record, 1);
+                    string amount = Parsing(record, 2);
+                    string type = Parsing(record, 3);
+                    Bills b = new Bills(name, amount , type);
+                    AddInList(b);
 
                 }
 

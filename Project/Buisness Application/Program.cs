@@ -21,7 +21,11 @@ namespace Buisness_Application
             string complaintPath = "Complaints.txt";
             string ReviewsPath = "Reviews.txt";
             string ChallanPath = "Challans.txt";
+            string BillsPath = "Bills.txt";
+            
             string HosteliteName = "";
+            
+            
             //Loading data
             HosteliteCRUD.LoadHostelitesFromFile(path);
             NoticesCRUD.LoadNoticesFromFile(pathNotices);
@@ -29,9 +33,10 @@ namespace Buisness_Application
             ComplaintsCRUD.LoadComplaintsFromFile(complaintPath);
             ReviewsCRUD.LoadReviewsFromFile(ReviewsPath);
             ChallanCRUD.LoadChallansFromFile(ChallanPath);
-          
+            BillsCRUD.LoadBillsFromFile(BillsPath);
+
             //main while loop
-            while(option!=2)
+            while (option!=2)
             {
                 //clearing and printing header
                 Console.Clear();
@@ -284,7 +289,7 @@ namespace Buisness_Application
                     {
                         Console.Clear();
                         string hOption = "0";
-                        while(hOption != "10")
+                        while(hOption != "9")
                         {
                             Console.Clear();
                             GeneralUI.Header();
@@ -333,6 +338,18 @@ namespace Buisness_Application
                                 Console.ReadKey();
                             }
 
+                            else if(hOption == "5")
+                            {
+                                Console.Clear();
+                                GeneralUI.Header();
+                                GeneralUI.Path();
+
+                                //paying fee
+                                 PayFeeUI.TakeInputForPayFee();
+                                 ChallanCRUD.StoreChallansInFile(ChallanPath);
+
+                            }
+
                             else if(hOption == "7")
                             {
                                 Console.Clear();
@@ -376,7 +393,110 @@ namespace Buisness_Application
                             GeneralUI.Header();
                             GeneralUI.Path();
                             FinanceOption = FinanceUI.FinanceMenu();
-                            if(FinanceOption == "3")
+
+
+                            if (FinanceOption == "1")
+                            {
+                                string billsOption = "0";
+                                while (billsOption != "4")
+                                {
+                                    Console.Clear();
+                                    GeneralUI.Header();
+                                    GeneralUI.Path();
+                                    billsOption = BillsUI.BillsMenu();
+                                    if (billsOption == "1")
+                                    {
+                                        Console.Clear();
+                                        GeneralUI.Header();
+                                        GeneralUI.Path();
+
+                                        Bills bill = BillsUI.TakeInputForExpense();
+                                        BillsCRUD.AddInList(bill);
+                                        BillsCRUD.StoreBillsInFile(BillsPath);
+
+                                    }
+
+                                    else if (billsOption == "2")
+                                    {
+                                        Console.Clear();
+                                        GeneralUI.Header();
+                                        GeneralUI.Path();
+
+                                        BillsUI.ShowExpense();
+                                        Console.ReadKey();
+                                    }
+
+                                    else if (billsOption == "3")
+                                    {
+                                        Console.Clear();
+                                        GeneralUI.Header();
+                                        GeneralUI.Path();
+
+                                        BillsUI.ShowExpense();
+                                        int i = BillsUI.TakeInputForNumber();
+                                        BillsCRUD.RemoveFromList(i);
+                                        BillsCRUD.StoreBillsInFile(BillsPath);
+                                    }
+                                }
+                            }
+
+                            else if (FinanceOption == "2")
+                            {
+                                Console.Clear();
+                                GeneralUI.Header();
+                                GeneralUI.Path();
+
+                                BillsUI.ShowExpense();
+                                BillsUI.ShowCalculatedExpenses();
+                                Console.ReadKey();
+
+                            }
+
+                            else if (FinanceOption == "3")
+                            {
+                                string RevenueOption = "0";
+                                while (RevenueOption != "4")
+                                {
+                                    Console.Clear();
+                                    GeneralUI.Header();
+                                    GeneralUI.Path();
+                                    RevenueOption = BillsUI.BillsMenu();
+                                    if (RevenueOption == "1")
+                                    {
+                                        Console.Clear();
+                                        GeneralUI.Header();
+                                        GeneralUI.Path();
+
+                                        Bills bill = BillsUI.TakeInputForRevenue();
+                                        BillsCRUD.AddInList(bill);
+                                        BillsCRUD.StoreBillsInFile(BillsPath);
+
+                                    }
+
+                                    else if (RevenueOption == "2")
+                                    {
+                                        Console.Clear();
+                                        GeneralUI.Header();
+                                        GeneralUI.Path();
+
+                                        BillsUI.ShowExpense();
+                                        Console.ReadKey();
+                                    }
+
+                                    else if (RevenueOption == "3")
+                                    {
+                                        Console.Clear();
+                                        GeneralUI.Header();
+                                        GeneralUI.Path();
+
+                                        BillsUI.ShowExpense();
+                                        int i = BillsUI.TakeInputForNumber();
+                                        BillsCRUD.RemoveFromList(i);
+                                        BillsCRUD.StoreBillsInFile(BillsPath);
+                                    }
+                                }
+                            }
+                            else if (FinanceOption == "4")
                             {
                                 Console.Clear();
                                 GeneralUI.Header();
@@ -391,8 +511,28 @@ namespace Buisness_Application
                                 {
                                     ChallanCRUD.AddChallanInList(c);
                                 }
-                                
 
+
+                            }
+
+                            else if (FinanceOption == "6")
+                            {
+                                Console.Clear();
+                                GeneralUI.Header();
+                                GeneralUI.Path();
+
+                                ChallanUI.ShowFee();
+                            }
+
+                            else if (FinanceOption == "9")
+                            {
+                                Console.Clear();
+                                GeneralUI.Header();
+                                GeneralUI.Path();
+
+                                //viewing notice
+                                NoticesUI.ViewNotices();
+                                Console.ReadKey();
                             }
                         }
                     }

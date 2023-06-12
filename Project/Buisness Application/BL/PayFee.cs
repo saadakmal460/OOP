@@ -6,28 +6,19 @@ using System.Threading.Tasks;
 
 namespace Buisness_Application.BL
 {
-    class Challan
+    class PayFee
     {
-        private string rollNumber;
+        private string bank;
+        private string accountNo;
         private string challanNumber;
         private string amount;
-        private string status;
-        public Challan(string rollNumber , string challanNumber , string amount , string status)
+
+        public PayFee(string bank , string accountNo , string challanNumber , string amount)
         {
-            this.rollNumber = rollNumber;
-            this.challanNumber = challanNumber;
+            this.bank = bank;
             this.amount = amount;
-            this.status = status;
-        }
-
-
-        public void SetRollNumber(string rollNumber)
-        {
-            this.rollNumber = rollNumber;
-        }
-        public string GetRollNumber()
-        {
-            return rollNumber;
+            this.accountNo = accountNo;
+            this.challanNumber = challanNumber;
         }
 
         public void SetChallanNumber(string challanNumber)
@@ -48,13 +39,24 @@ namespace Buisness_Application.BL
             return amount;
         }
 
-        public void SetStatus(string status)
+        public void SetBank(string bank)
         {
-            this.status = status;
+            this.bank = bank;
         }
-        public string GetStatus()
+        public string GetBank()
         {
-            return status;
+            return bank;
         }
+
+        public void SetAccountNo(string accountNo)
+        {
+            this.accountNo = accountNo;
+        }
+        public string GetAccountNo()
+        {
+            return accountNo;
+        }
+
+
     }
 }
