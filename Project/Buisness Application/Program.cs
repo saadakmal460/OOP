@@ -73,7 +73,7 @@ namespace Buisness_Application
                             //options for admin screen
                             optionAdmin = AdminUI.PrintMenuForAdmin();
                             //option 1 start
-                            if(optionAdmin == "1")
+                            if (optionAdmin == "1")
                             {
                                 Console.Clear();
                                 GeneralUI.Header();
@@ -83,7 +83,7 @@ namespace Buisness_Application
                                 Hostelite h = HosteliteUI.TakeInputForHostelite();
                                 HosteliteCRUD.AddHosteliteInList(h);
                                 UserCRUD.AdddInList(h);
-                                HosteliteCRUD.StoreInFile(path);   
+                                HosteliteCRUD.StoreInFile(path);
                             }
                             //option 2 start
                             else if (optionAdmin == "2")
@@ -97,7 +97,7 @@ namespace Buisness_Application
                                 bool flag = HosteliteCRUD.RemoveFromHosteliteList(name);
                                 HosteliteUI.ShowMessage(flag);
                                 HosteliteCRUD.DeleteHosteliteFromFile(path);
-                                
+
                             }
                             //option 3 start
                             else if (optionAdmin == "3")
@@ -105,7 +105,7 @@ namespace Buisness_Application
                                 Console.Clear();
                                 GeneralUI.Header();
                                 GeneralUI.Path();
-                                
+
                                 //Updating records
                                 string name = HosteliteUI.TakeNameAsInput();
                                 bool flag = HosteliteUI.UpdateRecord(name);
@@ -131,7 +131,7 @@ namespace Buisness_Application
                                 string noticeOption = "0";
 
                                 //starting while loop
-                                while(noticeOption != "4")
+                                while (noticeOption != "4")
                                 {
                                     Console.Clear();
                                     GeneralUI.Header();
@@ -179,7 +179,7 @@ namespace Buisness_Application
                                 }
                             }
 
-                            else if(optionAdmin == "6")
+                            else if (optionAdmin == "6")
                             {
                                 Console.Clear();
                                 GeneralUI.Header();
@@ -188,26 +188,26 @@ namespace Buisness_Application
                                 ComplaintsUI.ViewComplaints();
                             }
                             //option 7 start
-                            else if(optionAdmin == "7")
+                            else if (optionAdmin == "7")
                             {
                                 Console.Clear();
                                 string messOption = "0";
-                                while(messOption != "3")
+                                while (messOption != "3")
                                 {
                                     Console.Clear();
                                     GeneralUI.Header();
                                     GeneralUI.Path();
                                     messOption = MessUI.MessMenu();
-                                    if(messOption == "1")
+                                    if (messOption == "1")
                                     {
                                         Console.Clear();
                                         GeneralUI.Header();
                                         GeneralUI.Path();
                                         MessUI.ViewMess();
-                                       
+
                                     }
 
-                                    else if(messOption == "2")
+                                    else if (messOption == "2")
                                     {
                                         Console.Clear();
                                         GeneralUI.Header();
@@ -222,8 +222,38 @@ namespace Buisness_Application
                                 }
                             }
 
+                            else if (optionAdmin == "8")
+                            {
+                                string opt = "0";
+                                while (opt != "3")
+                                {
+                                    Console.Clear();
+                                    GeneralUI.Header();
+                                    GeneralUI.Path();
+                                    opt = BillsUI.ReportMenu();
+
+                                    if (opt == "1")
+                                    {
+                                        Console.Clear();
+                                        GeneralUI.Header();
+                                        GeneralUI.Path();
+
+                                        BillsUI.ShowFinancialReport();
+                                        Console.ReadKey();
+                                    }
+                                    else if (opt == "2")
+                                    {
+                                        Console.Clear();
+                                        GeneralUI.Header();
+                                        GeneralUI.Path();
+
+                                        BillsUI.ShowGraph();
+
+                                    }
+                                }
+                            }
                             //option 9 start
-                            else if(optionAdmin == "9")
+                            else if (optionAdmin == "9")
                             {
                                 Console.Clear();
                                 GeneralUI.Header();
@@ -234,7 +264,7 @@ namespace Buisness_Application
                             }
 
                             //option 10 start
-                            else if(optionAdmin == "10")
+                            else if (optionAdmin == "10")
                             {
                                 Console.Clear();
                                 GeneralUI.Header();
@@ -242,10 +272,10 @@ namespace Buisness_Application
 
                                 //search menu
                                 string searchOption = "0";
-                                while(searchOption != "3")
+                                while (searchOption != "3")
                                 {
                                     searchOption = HosteliteUI.SearchHosteliteOption();
-                                    if(searchOption== "1")
+                                    if (searchOption == "1")
                                     {
                                         Console.Clear();
                                         GeneralUI.Header();
@@ -257,7 +287,7 @@ namespace Buisness_Application
 
                                     }
 
-                                    else if(searchOption == "2")
+                                    else if (searchOption == "2")
                                     {
                                         Console.Clear();
                                         GeneralUI.Header();
@@ -272,7 +302,7 @@ namespace Buisness_Application
                             }
 
                             //start option 11
-                            else if(optionAdmin == "11")
+                            else if (optionAdmin == "11")
                             {
                                 Console.Clear();
                                 GeneralUI.Header();
@@ -422,7 +452,7 @@ namespace Buisness_Application
                                         GeneralUI.Header();
                                         GeneralUI.Path();
 
-                                        BillsUI.ShowExpense();
+                                        BillsUI.Show("Expense");
                                         Console.ReadKey();
                                     }
 
@@ -432,7 +462,7 @@ namespace Buisness_Application
                                         GeneralUI.Header();
                                         GeneralUI.Path();
 
-                                        BillsUI.ShowExpense();
+                                        BillsUI.Show("Expense");
                                         int i = BillsUI.TakeInputForNumber();
                                         BillsCRUD.RemoveFromList(i);
                                         BillsCRUD.StoreBillsInFile(BillsPath);
@@ -446,8 +476,8 @@ namespace Buisness_Application
                                 GeneralUI.Header();
                                 GeneralUI.Path();
 
-                                BillsUI.ShowExpense();
-                                BillsUI.ShowCalculatedExpenses();
+                                BillsUI.Show("Expense");
+                                BillsUI.ShowCalculated("Expense");
                                 Console.ReadKey();
 
                             }
@@ -460,7 +490,7 @@ namespace Buisness_Application
                                     Console.Clear();
                                     GeneralUI.Header();
                                     GeneralUI.Path();
-                                    RevenueOption = BillsUI.BillsMenu();
+                                    RevenueOption = BillsUI.RevenueMenu();
                                     if (RevenueOption == "1")
                                     {
                                         Console.Clear();
@@ -479,7 +509,7 @@ namespace Buisness_Application
                                         GeneralUI.Header();
                                         GeneralUI.Path();
 
-                                        BillsUI.ShowExpense();
+                                        BillsUI.Show("Revenue");
                                         Console.ReadKey();
                                     }
 
@@ -489,13 +519,14 @@ namespace Buisness_Application
                                         GeneralUI.Header();
                                         GeneralUI.Path();
 
-                                        BillsUI.ShowExpense();
+                                        BillsUI.Show("Expense");
                                         int i = BillsUI.TakeInputForNumber();
                                         BillsCRUD.RemoveFromList(i);
                                         BillsCRUD.StoreBillsInFile(BillsPath);
                                     }
                                 }
                             }
+
                             else if (FinanceOption == "4")
                             {
                                 Console.Clear();
@@ -515,7 +546,7 @@ namespace Buisness_Application
 
                             }
 
-                            else if (FinanceOption == "6")
+                            else if (FinanceOption == "5")
                             {
                                 Console.Clear();
                                 GeneralUI.Header();
@@ -524,7 +555,38 @@ namespace Buisness_Application
                                 ChallanUI.ShowFee();
                             }
 
-                            else if (FinanceOption == "9")
+                            else if (FinanceOption == "6")
+                            {
+                                string opt = "0";
+                                while (opt != "3")
+                                {
+                                    Console.Clear();
+                                    GeneralUI.Header();
+                                    GeneralUI.Path();
+                                    opt = BillsUI.ReportMenu();
+
+                                    if(opt == "1")
+                                    {
+                                        Console.Clear();
+                                        GeneralUI.Header();
+                                        GeneralUI.Path();
+
+                                        BillsUI.ShowFinancialReport();
+                                        Console.ReadKey();
+                                    }
+                                    else if(opt == "2")
+                                    {
+                                        Console.Clear();
+                                        GeneralUI.Header();
+                                        GeneralUI.Path();
+
+                                        BillsUI.ShowGraph();
+
+                                    }
+                                }
+                            }
+
+                            else if (FinanceOption == "8")
                             {
                                 Console.Clear();
                                 GeneralUI.Header();
