@@ -30,7 +30,7 @@ namespace Buisness_Application.UI
             Console.Write("\tEnter password: ");
             string password = Console.ReadLine();
 
-            Hostelite h = new Hostelite(name, cnic, city, rollNumber, password , "hostelite",roomNumber);
+            Hostelite h = new Hostelite(name, cnic, city, rollNumber, password , "hostelite", roomNumber);
             return h;
 
         }

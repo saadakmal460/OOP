@@ -16,6 +16,15 @@ namespace Buisness_Application.DL
             u.Add(user);
         }
 
+        public static void show()
+        {
+            foreach(User i in u)
+            {
+                Console.WriteLine(i.GetUsername() + "\t" + i.GetPassword());
+            }
+            Console.ReadKey();
+        }
+
        
     }
 }

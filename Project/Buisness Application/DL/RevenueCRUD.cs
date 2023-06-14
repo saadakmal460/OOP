@@ -8,27 +8,32 @@ using System.Threading.Tasks;
 
 namespace Buisness_Application.DL
 {
-    class AdminCRUD
+    class RevenueCRUD
     {
-        public static List<Admin> adminList = new List<Admin>();
+        public static List<Revenue> revenueList = new List<Revenue>();
 
-        public static void AddInList(Admin a)
+
+        public static void AddInList(Revenue r)
         {
-            adminList.Add(a);
+            revenueList.Add(r);
         }
 
-        public static void StoreAdminInFile(string path)
+        public static void RemoveFromList(int i)
+        {
+            revenueList.RemoveAt(i - 1);
+        }
+        public static void StoreRevenueInFile(string path)
         {
             StreamWriter file = new StreamWriter(path, false);
-            foreach (Admin i in adminList)
+            foreach (Revenue i in revenueList)
             {
-                file.WriteLine(i.GetUsername() + "," + i.GetPassword() + "," + i.GetContact() + "," + i.returnRole());
+                file.WriteLine(i.GetBillName() + "," + i.GetAmount() + "," + i.GetExtraChargesRevenue() + "," + i.GetType());
             }
             file.Flush();
             file.Close();
         }
 
-        public static void LoadAdminFromFile(string path)
+        public static void LoadRevenueFromFile(string path)
         {
             if (File.Exists(path))
             {
@@ -40,21 +45,20 @@ namespace Buisness_Application.DL
                 {
 
                     string name = Parsing(record, 1);
-                    string password = Parsing(record, 2);
-                    string conatact = Parsing(record, 3);
-                    string role = Parsing(record, 4);
+                    string amount = Parsing(record, 2);
+                    string tax = Parsing(record, 3);
+                    string type = Parsing(record, 4);
 
-                    Admin a = new Admin(name, password, conatact, role);
-                    AddInList(a);
-                    UserCRUD.AdddInList(a);
+                    Revenue r = new Revenue(name, amount, tax, type);
+                    FinancialRecord f = new FinancialRecord(name, amount, type);
+                    FinancialRecordCRUD.AddInList(f);
+                    AddInList(r);
+
                 }
 
                 file.Close();
             }
-            else
-            {
-                Console.WriteLine("File not found");
-            }
+
         }
 
         public static string Parsing(string record, int field)

@@ -27,6 +27,12 @@ namespace Buisness_Application.BL
             reviews = new Reviews(name , "0" , "null");
         }
 
+       
+
+        public void AddReview(Reviews r)
+        {
+            this.reviews = r;
+        }
         
         public void SetCity(string city)
         {
