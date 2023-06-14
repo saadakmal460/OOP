@@ -27,7 +27,184 @@ namespace Buisness_Application.BL
         private static bool flag;
         private static string NoticeOption = "0";
         private static Notices notice;
+        private static int index;
+        private static string messOption = "0";
+        private static string reportOption = "0";
+        private static string day;
+        private static string searchOption = "0";
+        private static string rollNumber = "0";
+        private static Admin admin;
+        private static string officalOption = "0";
+        private static string hostelOption = "0";
+        private static Complaints complaints;
+        private static string Hostelitedecision;
+        private static Reviews reviews;
+        private static string finanaceOption = "0";
+        private static string expenseOption = "0";
+        private static Expense expenses;
+        private static string revenueOption = "0";
+        private static Revenue revenue;
+        private static Challan challan;
 
+
+        public static Challan GetChallan()
+        {
+            return challan;
+        }
+        public static void SetChallan(Challan c)
+        {
+            challan = c;
+        }
+
+        public static void SetRevenue(Revenue r)
+        {
+            revenue = r;
+        }
+
+        public static Revenue GetRevenue()
+        {
+            return revenue;
+        }
+        public static void SetRevenueOption(string opt)
+        {
+            revenueOption = opt;
+        }
+
+        public static string GetRevenueOption()
+        {
+            return revenueOption;
+        }
+        public static void SetExpense(Expense e)
+        {
+            expenses = e;
+        }
+
+        public static Expense GetExpense()
+        {
+            return expenses;
+        }
+        public static void SetExpenseOption(string opt)
+        {
+            expenseOption = opt;
+        }
+
+        public static string GetExpenseOption()
+        {
+            return expenseOption;
+        }
+        public static void SetFinanaceOption(string opt)
+        {
+            finanaceOption = opt;
+        }
+
+        public static string GetFinanceOption()
+        {
+            return finanaceOption;
+        }
+        public static void SetReviews(Reviews r)
+        {
+            reviews = r;
+        }
+
+        public static Reviews GetReviews()
+        {
+            return reviews;
+        }
+        public static string GetHostelitedecision()
+        {
+            return Hostelitedecision;
+        }
+
+        public static void SetHostelitedecision(string hd)
+        {
+            Hostelitedecision = hd;
+        }
+
+        public static Complaints GetComplaints()
+        {
+            return complaints;
+        }
+        public static void SetComplaints(Complaints c)
+        {
+            complaints = c;
+        }
+        public static void SethosteliteOption(string opt)
+        {
+            hostelOption = opt;
+        }
+
+        public static string GethosteliteOption()
+        {
+            return hostelOption;
+        }
+        public static void SetOfficialOption(string opt)
+        {
+            officalOption = opt;
+        }
+
+        public static string GetOfficialOption()
+        {
+            return officalOption;
+        }
+        public static Admin GetAdmin()
+        {
+            return admin;
+        }
+        public static void SetAdmin(Admin a)
+        {
+            admin = a;
+        }
+        public static string GetRollNumber()
+        {
+            return rollNumber;
+        }
+        public static void SetRollNumber(string rn)
+        {
+            rollNumber = rn;
+        }
+        
+        public static void SetSearchOption(string opt)
+        {
+            searchOption = opt;
+        }
+
+        public static string GetSearchOption()
+        {
+            return searchOption;
+        }
+        public static string GetDay()
+        {
+            return day;
+        }
+
+        public static void SetDay(string d)
+        {
+            day = d;
+        }
+        public static string GetReportOption()
+        {
+            return reportOption;
+        }
+        public static void SetReportOption(string opt)
+        {
+            reportOption = opt;
+        }
+        public static string GetMessOption()
+        {
+            return messOption;
+        }
+        public static void SetMessOption(string opt)
+        {
+            messOption = opt;
+        }
+        public static int GetIndex()
+        {
+            return index;
+        }
+        public static void SetIndex(int i)
+        {
+            index = i;
+        }
         public static Notices GetNoticeObj()
         {
             return notice;
