@@ -26,7 +26,7 @@ namespace Buisness_Application
             RevenueCRUD.LoadRevenueFromFile(ExtraBL.GetRevenuePath());
             AdminCRUD.LoadAdminFromFile(ExtraBL.GetAdminPath());
 
-           
+            
             //main while loop
             while (ExtraBL.GetOption() !=2)
             {
@@ -35,6 +35,7 @@ namespace Buisness_Application
                 GeneralUI.Header();
                 GeneralUI.Path();
 
+                
                 //Login screen
                 ExtraBL.setOption(GeneralUI.LoginScreen());
                 if(ExtraBL.GetOption() == 1)
@@ -45,9 +46,7 @@ namespace Buisness_Application
 
                     //Taking username and password
                     ExtraBL.SetUser(UserUI.TakeInputForLogin());
-                    ExtraBL.SetRole(ExtraBL.GetUser());
                     ExtraBL.SetHosteliteName(ExtraBL.GetUser());
-                    
 
                     //starting admin menu
                     if(ExtraBL.GetRole() == "admin")
@@ -57,9 +56,7 @@ namespace Buisness_Application
                         GeneralUI.Path();
 
                         //Admin menu
-                        //string optionAdmin = "0";
-                        
-
+                        ExtraBL.SetAdminOption("0");
                         //stating admin menu loop
                         while(ExtraBL.GetAdminOption() != "13")
                         {
@@ -125,8 +122,8 @@ namespace Buisness_Application
                             else if (ExtraBL.GetAdminOption()== "5")
                             {
                                 //starting of notices functions
-                               
 
+                                ExtraBL.SetOptionForNotice("0");
                                 //starting while loop
                                 while (ExtraBL.GetOptionForNotice() != "4")
                                 {
@@ -146,7 +143,7 @@ namespace Buisness_Application
 
                                         //adding notice
                                         ExtraBL.SetNoticeObj(NoticesUI.TakeInputForNotices());
-                                        NoticesCRUD.AddNoticesInList(ExtraBL.GetNoticeObj());
+                                        Admin.AddNotices((ExtraBL.GetNoticeObj()));
                                         NoticesCRUD.StoreNoticesInFile(ExtraBL.GetNoticesPath());
 
                                     }
@@ -160,7 +157,7 @@ namespace Buisness_Application
                                         //deleting notices
                                         NoticesUI.ViewNotices();
                                         ExtraBL.SetIndex(NoticesUI.TakeInputToDeleteNotice());
-                                        NoticesCRUD.RemoveANotice(ExtraBL.GetIndex());
+                                        NoticesCRUD.RemoveANotice(Admin.GetNoticesList() ,ExtraBL.GetIndex());
                                         NoticesCRUD.StoreNoticesInFile(ExtraBL.GetNoticesPath());
                                     }
                                     //option 3 of notices
@@ -191,7 +188,7 @@ namespace Buisness_Application
                             //option 7 start
                             else if (ExtraBL.GetAdminOption()== "7")
                             {
-                                Console.Clear();
+                                ExtraBL.SetMessOption("0");
                                 
                                 while (ExtraBL.GetMessOption() != "3")
                                 {
@@ -236,7 +233,7 @@ namespace Buisness_Application
                             //option 8 start
                             else if (ExtraBL.GetAdminOption()== "8")
                             {
-                                
+                                ExtraBL.SetReportOption("0");
                                 while (ExtraBL.GetReportOption() != "3")
                                 {
                                     Console.Clear();
@@ -289,7 +286,7 @@ namespace Buisness_Application
                                 GeneralUI.Path();
 
                                 //search menu
-                                
+                                ExtraBL.SetSearchOption("0");
                                 while (ExtraBL.GetSearchOption() != "3")
                                 {
                                     Console.Clear();
@@ -340,7 +337,7 @@ namespace Buisness_Application
                             //option 12 start
                             else if(ExtraBL.GetAdminOption()== "12")
                             {
-
+                                ExtraBL.SetOfficialOption("0");
                                 while(ExtraBL.GetOfficialOption() != "3")
                                 {
                                     Console.Clear();
@@ -379,8 +376,8 @@ namespace Buisness_Application
                     //start of hostelite menu
                     else if(ExtraBL.GetRole() == "hostelite")
                     {
-                        Console.Clear();
-                        
+
+                        ExtraBL.SethosteliteOption("0");
                         //starting while loop
                         while(ExtraBL.GethosteliteOption()!= "9")
                         {
@@ -495,7 +492,7 @@ namespace Buisness_Application
                     //start of finance menu
                     else if(ExtraBL.GetRole() == "Finance")
                     {
-                        
+                        ExtraBL.SetFinanaceOption("0");
                         //starting of finanace menu loop
                         while(ExtraBL.GetFinanceOption() != "10")
                         {
@@ -510,6 +507,7 @@ namespace Buisness_Application
                             if (ExtraBL.GetFinanceOption() == "1")
                             {
                                 //starting of expense loop
+                                ExtraBL.SetExpenseOption("0");
                                 while (ExtraBL.GetExpenseOption()!= "4")
                                 {
                                     Console.Clear();
@@ -584,6 +582,7 @@ namespace Buisness_Application
                                 GeneralUI.Path();
 
                                 //starting revenue loop
+                                ExtraBL.SetRevenueOption("0");
                                 while (ExtraBL.GetRevenueOption() != "4")
                                 {
                                     Console.Clear();
@@ -674,7 +673,7 @@ namespace Buisness_Application
                             //finance option 6
                             else if (ExtraBL.GetFinanceOption() == "6")
                             {
-
+                                ExtraBL.SetReportOption("0");
                                 while (ExtraBL.GetReportOption() != "3")
                                 {
                                     Console.Clear();
@@ -720,8 +719,12 @@ namespace Buisness_Application
                                 Console.ReadKey();
                             }
                         }
+
+                        
                     }
+
                 }
+
             }
             Console.ReadKey();
         }
