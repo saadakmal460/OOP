@@ -42,31 +42,27 @@ namespace Buisness_Application.BL
         {
             return password;
         }
+
+
         public string returnRole()
         {
-            string role = "";
-            if (username == "admin" && password == "123")
-            {
-                role = "admin";
 
-            }
-            else if(username == "finance" && password == "123")
-            {
-                role = "Finance";
-            }
-            else
-            {
                 foreach (User i in UserCRUD.u)
                 {
-                    if (username == i.username && password == i.password)
+                    if (username == i.GetUsername() && password == i.GetPassword())
                     {
                         role = i.role;
 
                     }
                 }
-            }
             
+
             return role;
+        }
+
+        public void SetRole(string role)
+        {
+            this.role = role;
         }
     }
 }

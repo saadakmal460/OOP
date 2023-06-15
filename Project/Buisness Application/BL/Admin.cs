@@ -10,7 +10,7 @@ namespace Buisness_Application.BL
     class Admin : User
     {
         private string contact;
-        private Notices n;
+        private static List<Notices> notices = new List<Notices>();
         public Admin(string username, string password, string contact, string role) : base(username, password, role)
         {
             this.username = username;
@@ -19,6 +19,14 @@ namespace Buisness_Application.BL
             this.contact = contact;
         }
 
+        public static void AddNotices(Notices n)
+        {
+            notices.Add(n);
+        }
+        public static List<Notices> GetNoticesList()
+        {
+            return notices;
+        }
         public void SetContact(string contact)
         {
             this.contact = contact;
@@ -28,10 +36,6 @@ namespace Buisness_Application.BL
         {
             return contact;
         }
-
-
-
-
 
 
     }

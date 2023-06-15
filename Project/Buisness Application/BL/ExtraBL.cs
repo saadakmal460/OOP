@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Buisness_Application.BL;
+using Buisness_Application.DL;
+
 namespace Buisness_Application.BL
 {
     class ExtraBL
@@ -19,8 +21,8 @@ namespace Buisness_Application.BL
         private static string RevenuePath = "Revenue.txt";
         private static string AdminPath = "Admin.txt";
         private static string HosteliteName;
-        private static User user ;
-        private static string role;
+        private static User user;
+        //private static string role;
         private static string AdminOption;
         private static Hostelite hostelite;
         private static string name;
@@ -249,16 +251,21 @@ namespace Buisness_Application.BL
         }
 
 
-        public static void SetRole(User user)
-        {
-            role = user.returnRole();
-        }
-        public static string GetRole()
-        {
-            return role;
-        }
+        //public static void SetRole(User user)
+        //{
+
+        //    user.role = user.returnRole();
+            
+        //}
+
         
 
+        public static string GetRole()
+        {
+            
+            return user.returnRole();
+
+        }
         public static User GetUser()
         {
             return user;

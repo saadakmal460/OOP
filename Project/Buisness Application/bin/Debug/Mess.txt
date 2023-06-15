@@ -1,4 +1,4 @@
-Monday,kabab
+Monday,wer
 Tuesday,Chicken
 Wednesday,Sabzi
 Thursday,Daal

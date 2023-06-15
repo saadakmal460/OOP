@@ -20,10 +20,11 @@ namespace Buisness_Application.DL
         {
             foreach(User i in u)
             {
-                Console.WriteLine(i.GetUsername() + "\t" + i.GetPassword());
+                Console.WriteLine(i.GetUsername() + "\t" + i.GetPassword() + "\t" + i.returnRole());
             }
             Console.ReadKey();
         }
+
 
        
     }

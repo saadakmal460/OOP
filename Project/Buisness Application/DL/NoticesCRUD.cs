@@ -10,15 +10,11 @@ namespace Buisness_Application.DL
 {
     class NoticesCRUD
     {
-        public static List<Notices> notices = new List<Notices>();
-        public static void AddNoticesInList(Notices n)
-        {
-            notices.Add(n);
-        }
+        
 
-        public static void RemoveANotice(int i)
+        public static void RemoveANotice(List<Notices> n , int i)
         {
-            notices.RemoveAt(i - 1);
+            n.RemoveAt(i - 1);
         }
         public static void LoadNoticesFromFile(string path)
         {
@@ -33,7 +29,7 @@ namespace Buisness_Application.DL
                     string title = Parsing(record , 1);
                     string notices = Parsing(record, 2);
                     Notices n = new Notices(title, notices);
-                    AddNoticesInList(n);
+                    Admin.AddNotices(n);
                 }
 
                 file.Close();
@@ -63,7 +59,7 @@ namespace Buisness_Application.DL
         public static void StoreNoticesInFile(string path)
         {
             StreamWriter file = new StreamWriter(path, false);
-            foreach (Notices i in notices)
+            foreach (Notices i in Admin.GetNoticesList())
             {
                 file.WriteLine(i.GetTitle() + "," + i.GetNotice());
             }

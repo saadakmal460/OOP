@@ -15,7 +15,7 @@ namespace Buisness_Application.UI
             int count = 0;
             Console.WriteLine("");
             Console.WriteLine("Notices: ");
-            foreach (Notices i in NoticesCRUD.notices)
+            foreach (Notices i in Admin.GetNoticesList())
             {
                 count++;
                 Console.WriteLine("");
