@@ -57,17 +57,12 @@
     <Compile Include="BL\Revenue.cs" />
     <Compile Include="BL\Reviews.cs" />
     <Compile Include="BL\User.cs" />
-    <Compile Include="DL\AdminCRUD.cs" />
     <Compile Include="DL\ChallanCRUD.cs" />
     <Compile Include="DL\ComplaintsCRUD.cs" />
-    <Compile Include="DL\ExpenseCRUD.cs" />
     <Compile Include="DL\FinanceCRUD.cs" />
     <Compile Include="DL\FinancialRecordCRUD.cs" />
-    <Compile Include="DL\HosteliteCRUD.cs" />
     <Compile Include="DL\MessCRUD.cs" />
     <Compile Include="DL\NoticesCRUD.cs" />
-    <Compile Include="DL\PayFeeCRUD.cs" />
-    <Compile Include="DL\RevenueCRUD.cs" />
     <Compile Include="DL\ReviewsCRUD.cs" />
     <Compile Include="DL\UserCRUD.cs" />
     <Compile Include="Program.cs" />

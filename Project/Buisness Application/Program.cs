@@ -13,20 +13,20 @@ namespace Buisness_Application
     {
         static void Main(string[] args)
         {
-           
+
 
             //Loading data
-            HosteliteCRUD.LoadHostelitesFromFile(ExtraBL.getpath());
+            UserCRUD.LoadUsersFromFile(ExtraBL.GetUsersPath());
             NoticesCRUD.LoadNoticesFromFile(ExtraBL.GetNoticesPath());
             MessCRUD.LoadMessMenuFromFile(ExtraBL.GetMessPath());
             ComplaintsCRUD.LoadComplaintsFromFile(ExtraBL.GetComplaintsPath());
             ReviewsCRUD.LoadReviewsFromFile(ExtraBL.GetReviewsPath());
             ChallanCRUD.LoadChallansFromFile(ExtraBL.GetChallanPath());
-            ExpenseCRUD.LoadExpensesFromFile(ExtraBL.GetExpensePath());
-            RevenueCRUD.LoadRevenueFromFile(ExtraBL.GetRevenuePath());
-            AdminCRUD.LoadAdminFromFile(ExtraBL.GetAdminPath());
+            FinancialRecordCRUD.LoadFinancialRecordFromFile(ExtraBL.GetRecordPath());
 
-            
+            UserUI.View();
+            Console.ReadKey();
+
             //main while loop
             while (ExtraBL.GetOption() !=2)
             {
@@ -74,9 +74,9 @@ namespace Buisness_Application
 
                                 //adding hostelite
                                 ExtraBL.SetHostelite(HosteliteUI.TakeInputForHostelite());
-                                HosteliteCRUD.AddHosteliteInList(ExtraBL.GetHosteliteObj());
                                 UserCRUD.AdddInList(ExtraBL.GetHosteliteObj());
-                                HosteliteCRUD.StoreInFile(ExtraBL.getpath());
+                                UserCRUD.StoreUsersInFile(ExtraBL.GetUsersPath());
+
                             }
 
                             //option 2 start
@@ -88,9 +88,9 @@ namespace Buisness_Application
 
                                 //removing hostelite by taking name
                                 ExtraBL.SetName(HosteliteUI.TakeNameAsInput());
-                                ExtraBL.SetFlag(HosteliteCRUD.RemoveFromHosteliteList(ExtraBL.GetName()));
+                                ExtraBL.SetFlag(UserCRUD.RemoveUserFromList(ExtraBL.GetName()));
                                 HosteliteUI.ShowMessage(ExtraBL.GetFlag());
-                                HosteliteCRUD.DeleteHosteliteFromFile(ExtraBL.getpath());
+                                UserCRUD.StoreUsersInFile(ExtraBL.GetUsersPath());
 
                             }
                             //option 3 start
@@ -104,7 +104,7 @@ namespace Buisness_Application
                                 ExtraBL.SetName(HosteliteUI.TakeNameAsInput());
                                 ExtraBL.SetFlag(HosteliteUI.UpdateRecord(ExtraBL.GetName()));
                                 HosteliteUI.ShowMessage(ExtraBL.GetFlag());
-                                HosteliteCRUD.StoreInFile(ExtraBL.getpath());
+                                UserCRUD.StoreUsersInFile(ExtraBL.GetUsersPath());
                             }
                             //option 4 start
                             else if (ExtraBL.GetAdminOption()== "4")
@@ -114,7 +114,6 @@ namespace Buisness_Application
                                 GeneralUI.Path();
 
                                 //viewing hostelites
-                                HosteliteCRUD.sortList();
                                 HosteliteUI.ViewHostelites();
                             }
 
@@ -354,9 +353,8 @@ namespace Buisness_Application
 
                                         //taking input and adding admin in list 
                                         ExtraBL.SetAdmin(AdminUI.TakeInputForAdmin());
-                                        AdminCRUD.AddInList(ExtraBL.GetAdmin());
                                         UserCRUD.AdddInList(ExtraBL.GetAdmin());
-                                        AdminCRUD.StoreAdminInFile(ExtraBL.GetAdminPath());
+                                        UserCRUD.StoreUsersInFile(ExtraBL.GetUsersPath());
                                     }
                                     else if(ExtraBL.GetOfficialOption()  == "2")
                                     {
@@ -421,7 +419,7 @@ namespace Buisness_Application
 
                                 //adding complaints and storing in list
                                 ExtraBL.SetComplaints(ComplaintsUI.TakeComplaints(ExtraBL.GetHosteliteName()));
-                                ComplaintsCRUD.AddComplaitsInList(ExtraBL.GetComplaints());
+                                Hostelite.AddComplaintsInList(ExtraBL.GetComplaints());
                                 ComplaintsCRUD.StoreComplaintsInFile(ExtraBL.GetComplaintsPath());
 
                             }
@@ -464,9 +462,9 @@ namespace Buisness_Application
                                 {
                                     //taking name and then removing
                                     ExtraBL.SetName(HosteliteUI.TakeNameAsInput());
-                                    ExtraBL.SetFlag(HosteliteCRUD.RemoveFromHosteliteList(ExtraBL.GetName()));
+                                    ExtraBL.SetFlag(UserCRUD.RemoveUserFromList(ExtraBL.GetName()));
                                     HosteliteUI.ShowMessage(ExtraBL.GetFlag());
-                                    HosteliteCRUD.DeleteHosteliteFromFile(ExtraBL.getpath());
+                                    UserCRUD.StoreUsersInFile(ExtraBL.GetUsersPath());
                                     break;
                                         
                                 }
@@ -481,7 +479,7 @@ namespace Buisness_Application
 
                                 //adding reviews
                                 ExtraBL.SetReviews(ReviewsUI.TakeReviews(ExtraBL.GetReviewsPath()));
-                                ReviewsCRUD.AddInList(ExtraBL.GetReviews());
+                                Hostelite.AddInList((ExtraBL.GetReviews()));
                                 ReviewsCRUD.StoreReviewsInFile(ExtraBL.GetReviewsPath());
                                 
                             }
@@ -526,9 +524,8 @@ namespace Buisness_Application
 
                                         //taking expenses as input and adding in list
                                         ExtraBL.SetExpense(ExpenseUI.TakeInputForExpense());
-                                        ExpenseCRUD.AddInList(ExtraBL.GetExpense());
                                         FinancialRecordCRUD.AddInList(ExtraBL.GetExpense());
-                                        ExpenseCRUD.StoreExpensesInFile(ExtraBL.GetExpensePath());
+                                        FinancialRecordCRUD.StoreInFile(ExtraBL.GetRecordPath());
                                     }
 
                                     //expense option 2
@@ -552,9 +549,10 @@ namespace Buisness_Application
 
                                         //removing the expense by taking its number
                                         ExpenseUI.ShowExpense();
-                                        ExtraBL.SetIndex(FinancialRecordUI.TakeInputForNumber());
-                                        ExpenseCRUD.RemoveFromList(ExtraBL.GetIndex());
-                                        ExpenseCRUD.StoreExpensesInFile(ExtraBL.GetExpensePath());
+                                        ExtraBL.SetFrName(FinancialRecordUI.TakeRecordName());
+                                        ExtraBL.SetFlag(FinancialRecordCRUD.RemoveFromList(ExtraBL.GetFrName()));
+                                        HosteliteUI.ShowMessage(ExtraBL.GetFlag());
+                                        FinancialRecordCRUD.StoreInFile(ExtraBL.GetRecordPath());
 
                                     }
                                 }
@@ -602,9 +600,8 @@ namespace Buisness_Application
 
                                         //taking revenue as input and adding in list
                                         ExtraBL.SetRevenue(RevenueUI.TakeInputForRevenue());
-                                        RevenueCRUD.AddInList(ExtraBL.GetRevenue());
                                         FinancialRecordCRUD.AddInList(ExtraBL.GetRevenue());
-                                        RevenueCRUD.StoreRevenueInFile(ExtraBL.GetRevenuePath());
+                                        FinancialRecordCRUD.StoreInFile(ExtraBL.GetRecordPath());
                                     }
 
                                     //revenue option 2
@@ -628,10 +625,10 @@ namespace Buisness_Application
 
                                         //removing revenue
                                         RevenueUI.ShowRevenue();
-                                        ExtraBL.SetIndex(FinancialRecordUI.TakeInputForNumber());
-                                        RevenueCRUD.RemoveFromList(ExtraBL.GetIndex());
-                                        FinancialRecordCRUD.RemoveFromList(ExtraBL.GetIndex());
-                                        RevenueCRUD.StoreRevenueInFile(ExtraBL.GetRevenuePath());
+                                        ExtraBL.SetFrName(FinancialRecordUI.TakeRecordName());
+                                        ExtraBL.SetFlag(FinancialRecordCRUD.RemoveFromList(ExtraBL.GetFrName()));
+                                        HosteliteUI.ShowMessage(ExtraBL.GetFlag());
+                                        FinancialRecordCRUD.StoreInFile(ExtraBL.GetRecordPath());
 
                                     }
 
