@@ -46,8 +46,19 @@ namespace Buisness_Application.BL
 
         public string returnRole()
         {
+            if (username == "finance" && password == "123")
+            {
+                role = "Finance";
+            }
 
-                foreach (User i in UserCRUD.u)
+            else if(username == "admin" && password == "123")
+            {
+                role = "admin";
+            }
+
+            else
+            {
+                foreach (User i in UserCRUD.userList)
                 {
                     if (username == i.GetUsername() && password == i.GetPassword())
                     {
@@ -55,6 +66,7 @@ namespace Buisness_Application.BL
 
                     }
                 }
+            }
             
 
             return role;

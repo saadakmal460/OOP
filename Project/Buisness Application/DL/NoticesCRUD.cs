@@ -10,7 +10,6 @@ namespace Buisness_Application.DL
 {
     class NoticesCRUD
     {
-        
 
         public static void RemoveANotice(List<Notices> n , int i)
         {

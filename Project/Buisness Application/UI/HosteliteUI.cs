@@ -38,27 +38,33 @@ namespace Buisness_Application.UI
         public static bool UpdateRecord(string name)
         {
             bool flag = true;
-            foreach(Hostelite i in HosteliteCRUD.hostelitesList)
+            foreach(User i in Admin.GetUserList())
             {
-                if(i.GetUsername() == name)
-                {
-                    Console.Write("\tEnter roll number: ");
-                    string rollNumber = Console.ReadLine();
+                
+                
+                    if (i is Hostelite)
+                    {
+                    if (i.GetUsername() == name)
+                    {
+                        Hostelite h = (Hostelite)i;
+                        Console.Write("\tEnter roll number: ");
+                        string rollNumber = Console.ReadLine();
 
-                    Console.Write("\tEnter CNIC: ");
-                    string cnic = Console.ReadLine();
+                        Console.Write("\tEnter CNIC: ");
+                        string cnic = Console.ReadLine();
 
-                    Console.Write("\tEnter city: ");
-                    string city = Console.ReadLine();
+                        Console.Write("\tEnter city: ");
+                        string city = Console.ReadLine();
 
-                    Console.Write("\tEnter password: ");
-                    string password = Console.ReadLine();
+                        Console.Write("\tEnter password: ");
+                        string password = Console.ReadLine();
 
-                    i.SetRollNumber(rollNumber);
-                    i.SetCnic(cnic);
-                    i.SetCity(city);
-                    i.SetPassword(password);
-                    flag = true;
+                        h.SetRollNumber(rollNumber);
+                        h.SetCnic(cnic);
+                        h.SetCity(city);
+                        h.SetPassword(password);
+                        flag = true;
+                    }
                 }
                 else
                 {
@@ -69,12 +75,15 @@ namespace Buisness_Application.UI
         }
         public static void ViewHostelites()
         {
-
+            
             Console.WriteLine("Name\t\tRoll Number\t\tCNIC\t\t\tCity");
-            foreach(Hostelite i in HosteliteCRUD.sortedList)
+            foreach(User i in UserCRUD.SortedList())
             {
-                Console.WriteLine(i.GetUsername() + "\t\t" + i.GetRollNumber() + "\t\t\t" + i.GetCnic() + "\t\t" + i.GetCity());
-
+                if (i is Hostelite)
+                {
+                    Hostelite h = (Hostelite)i;
+                    Console.WriteLine(i.GetUsername() + "\t\t" + h.GetRollNumber() + "\t\t\t" + h.GetCnic() + "\t\t" + h.GetCity());
+                }
             }
             Console.ReadKey();
         }
@@ -83,10 +92,13 @@ namespace Buisness_Application.UI
         {
 
             Console.WriteLine("Name\t\tRoom NUmber");
-            foreach (Hostelite i in HosteliteCRUD.sortedList)
+            foreach (User i in UserCRUD.SortedList())
             {
-                Console.WriteLine(i.GetUsername() + "\t\t" + i.GetRoomNumber());
-
+                if (i is Hostelite)
+                {
+                    Hostelite h = (Hostelite)i;
+                    Console.WriteLine(i.GetUsername() + "\t\t" + h.GetRoomNumber());
+                }
             }
             Console.ReadKey();
         }
@@ -125,12 +137,20 @@ namespace Buisness_Application.UI
             bool flag = true;
  
             Console.WriteLine("Name\t\tRoll Number\t\tCNIC\t\t\tCity");
-            foreach (Hostelite i in HosteliteCRUD.hostelitesList)
+            foreach (User i in UserCRUD.SortedList())
             {
-                if (rollNumber == i.GetRollNumber())
+                if (i is Hostelite)
                 {
-                    Console.WriteLine(i.GetUsername() + "\t\t" + i.GetRollNumber() + "\t\t\t" + i.GetCnic() + "\t\t" + i.GetCity());
-                    flag = true;
+                    Hostelite h = (Hostelite)i;
+                    if (rollNumber == h.GetRollNumber())
+                    {
+                        Console.WriteLine(i.GetUsername() + "\t\t" + h.GetRollNumber() + "\t\t\t" + h.GetCnic() + "\t\t" + h.GetCity());
+                        flag = true;
+                    }
+                    else
+                    {
+                        flag = false;
+                    }
                 }
                 else
                 {
@@ -145,12 +165,20 @@ namespace Buisness_Application.UI
             bool flag = true;
 
             Console.WriteLine("Name\t\tRoll Number\t\tCNIC\t\t\tCity");
-            foreach (Hostelite i in HosteliteCRUD.hostelitesList)
+            foreach (User i in UserCRUD.SortedList())
             {
-                if (name == i.GetUsername())
+                if (i is Hostelite)
                 {
-                    Console.WriteLine(i.GetUsername() + "\t\t" + i.GetRollNumber() + "\t\t\t" + i.GetCnic() + "\t\t" + i.GetCity());
-                    flag = true;
+                    Hostelite h = (Hostelite)i;
+                    if (name == i.GetUsername())
+                    {
+                        Console.WriteLine(i.GetUsername() + "\t\t" + h.GetRollNumber() + "\t\t\t" + h.GetCnic() + "\t\t" + h.GetCity());
+                        flag = true;
+                    }
+                    else
+                    {
+                        flag = false;
+                    }
                 }
                 else
                 {

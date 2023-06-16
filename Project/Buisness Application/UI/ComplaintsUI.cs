@@ -22,7 +22,7 @@ namespace Buisness_Application.UI
         public static void ViewComplaints()
         {
             Console.WriteLine("\t Complaints: ");
-            foreach(Complaints i in ComplaintsCRUD.complaintsList)
+            foreach(Complaints i in Hostelite.GetComplaintsList())
             {
                 Console.WriteLine("\t" + i.GetName() + ": " + i.GetComplaint());
             }

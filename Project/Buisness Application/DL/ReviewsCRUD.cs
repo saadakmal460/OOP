@@ -10,17 +10,12 @@ namespace Buisness_Application.DL
 {
     class ReviewsCRUD
     {
-        public static List<Reviews> reviewsList = new List<Reviews>();
-
-        public static void AddInList(Reviews r)
-        {
-            reviewsList.Add(r);
-        }
+        
 
         public static void StoreReviewsInFile(string path)
         {
             StreamWriter file = new StreamWriter(path, false);
-            foreach (Reviews i in reviewsList)
+            foreach (Reviews i in Hostelite.GetReviewList())
             {
                 file.WriteLine(i.GetName() + "," + i.GetRating() + "," + i.GetReviews());
             }
@@ -42,7 +37,7 @@ namespace Buisness_Application.DL
                     string reviews = Parsing(record, 3);
 
                     Reviews r = new Reviews(name, rating, reviews);
-                    AddInList(r);
+                    Hostelite.AddInList(r);
                 }
 
                 file.Close();

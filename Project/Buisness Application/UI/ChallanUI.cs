@@ -17,7 +17,7 @@ namespace Buisness_Application.UI
             string challan = "", amount = "";
             
 
-            foreach (Hostelite i in HosteliteCRUD.hostelitesList)
+            foreach (Hostelite i in UserCRUD.userList)
             {
                 if (rollNumber == i.GetRollNumber())
                 {

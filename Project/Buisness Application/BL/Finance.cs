@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 namespace Buisness_Application.BL
 {
     class Finance
-    {     
+    {
+        
+       
     }
 }

@@ -25,7 +25,7 @@ namespace Buisness_Application.UI
 
         public static void View()
         {
-            foreach(User i in UserCRUD.u)
+            foreach (User i in UserCRUD.userList)
             {
                 Console.WriteLine(i.GetUsername() + i.GetPassword());
             }

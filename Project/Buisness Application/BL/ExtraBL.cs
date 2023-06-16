@@ -47,8 +47,22 @@ namespace Buisness_Application.BL
         private static string revenueOption = "0";
         private static Revenue revenue;
         private static Challan challan;
+        private static string FinancialRecordName ;
 
 
+
+        public static string GetUsersPath()
+        {
+            return "Users.txt";
+        }
+        public static string GetFrName()
+        {
+            return FinancialRecordName;
+        }
+        public static void SetFrName(string name)
+        {
+            FinancialRecordName = name;
+        }
         public static Challan GetChallan()
         {
             return challan;
@@ -258,7 +272,10 @@ namespace Buisness_Application.BL
             
         //}
 
-        
+        public static string GetRecordPath()
+        {
+            return "Record.txt";
+        }
 
         public static string GetRole()
         {

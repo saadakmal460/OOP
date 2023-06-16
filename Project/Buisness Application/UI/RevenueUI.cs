@@ -13,11 +13,14 @@ namespace Buisness_Application.UI
         public static void ShowRevenue()
         {
             int count = 0;
-            Console.WriteLine("\tExpense\t\tAmount\t\tTax");
-            foreach (Revenue i in RevenueCRUD.revenueList)
+            foreach (FinancialRecord i in FinancialRecordCRUD.recordList)
             {
-                count++;
-                Console.WriteLine("\t"+ count+ "."+ i.GetBillName() + "\t\t" + i.GetAmount() + "\t\t" + i.GetExtraChargesRevenue());
+                if (i is Revenue)
+                {
+                    Revenue revenueRecord = (Revenue)i;
+                    count++;
+                    Console.WriteLine("\t" + count + "." + i.GetBillName() + "\t\t" + i.GetAmount() + "\t\t" + revenueRecord.GetExtraChargesRevenue());
+                }
             }
 
         }

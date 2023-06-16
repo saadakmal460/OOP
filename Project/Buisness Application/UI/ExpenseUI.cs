@@ -14,10 +14,14 @@ namespace Buisness_Application.UI
         {
             int count = 0;
             Console.WriteLine("\tExpense\t\tAmount\t\tTax");
-            foreach (Expense i in ExpenseCRUD.expenseList)
+            foreach (FinancialRecord i in FinancialRecordCRUD.recordList)
             {
-                count++;
-                Console.WriteLine("\t" + count + "." + i.GetBillName()+ "\t\t" + i.GetAmount() + "\t\t" + i.GetTax());
+                if (i is Expense)
+                {
+                    Expense expenseRecord = (Expense)i;
+                    count++;
+                    Console.WriteLine("\t" + count + "." + i.GetBillName() + "\t\t" + i.GetAmount() + "\t\t" + expenseRecord.GetTax());
+                } 
             }
             
         }

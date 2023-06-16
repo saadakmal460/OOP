@@ -10,11 +10,12 @@ namespace Buisness_Application.BL
 {
     class Hostelite : User
     {
-        protected string city;
-        protected string cnic;
-        protected string rollNumber;
-        protected string roomNumber;
-        protected Reviews reviews;
+        private string city;
+        private string cnic;
+        private string rollNumber;
+        private string roomNumber;
+        private static List<Reviews> reviews = new List<Reviews>();
+        private static List<Complaints> complaints = new List<Complaints>();
         public Hostelite(string name , string cnic , string city , string rollNumber , string password , string role , string roomNumber) : base(name , password , role)
         {
             this.username = name;
@@ -24,15 +25,28 @@ namespace Buisness_Application.BL
             this.password = password;
             this.roomNumber = roomNumber;
             role = "hostelite";
-            reviews = new Reviews(name , "0" , "null");
+            
         }
 
-       
-
-        public void AddReview(Reviews r)
+        public static void AddComplaintsInList(Complaints c)
         {
-            this.reviews = r;
+            complaints.Add(c);
         }
+
+        public static List<Complaints> GetComplaintsList()
+        {
+            return complaints;
+        }
+        public static void AddInList(Reviews r)
+        {
+            reviews.Add(r);
+        }
+       
+        public static List<Reviews> GetReviewList()
+        {
+            return reviews;
+        }
+        
         
         public void SetCity(string city)
         {

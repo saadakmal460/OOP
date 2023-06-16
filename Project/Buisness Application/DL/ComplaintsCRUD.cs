@@ -10,17 +10,11 @@ namespace Buisness_Application.DL
 {
     class ComplaintsCRUD
     {
-        public static List<Complaints> complaintsList = new List<Complaints>();
-
-        public static void AddComplaitsInList(Complaints c)
-        {
-            complaintsList.Add(c);
-        }
 
         public static void StoreComplaintsInFile(string path)
         {
             StreamWriter file = new StreamWriter(path, false);
-            foreach (Complaints i in complaintsList)
+            foreach (Complaints i in Hostelite.GetComplaintsList())
             {
                 file.WriteLine(i.GetName() + "," + i.GetComplaint());
             }
@@ -40,7 +34,7 @@ namespace Buisness_Application.DL
                     string name = Parsing(record, 1);
                     string complaints = Parsing(record, 2);
                     Complaints c = new Complaints(name, complaints);
-                    AddComplaitsInList(c);
+                    Hostelite.AddComplaintsInList(c);
                 }
 
                 file.Close();

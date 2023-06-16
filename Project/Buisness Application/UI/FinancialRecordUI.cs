@@ -1,4 +1,5 @@
-﻿using Buisness_Application.DL;
+﻿using Buisness_Application.BL;
+using Buisness_Application.DL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,13 @@ namespace Buisness_Application.UI
 {
     class FinancialRecordUI
     {
+
+        public static string TakeRecordName()
+        {
+            Console.WriteLine("Enter name of record which you want to delete: ");
+            string name = Console.ReadLine();
+            return name;
+        }
         public static void ShowFinancialReprt()
         {
             ExpenseUI.ShowExpense();

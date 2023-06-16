@@ -10,7 +10,6 @@ namespace Buisness_Application.UI
 {
     class ReviewsUI
     {
-
         public static Reviews TakeReviews(string name)
         {
             Console.Write("\t Enter rating (1-5 Stars): ");
@@ -29,7 +28,7 @@ namespace Buisness_Application.UI
 
             Console.WriteLine("");
             Console.WriteLine("Name\t\tRatings\t\tReviews");
-            foreach(Reviews i in ReviewsCRUD.reviewsList)
+            foreach(Reviews i in Hostelite.GetReviewList())
             {
                 Console.WriteLine(i.GetName() + "\t\t" + i.GetRating() + "\t\t" + i.GetReviews());
             }
