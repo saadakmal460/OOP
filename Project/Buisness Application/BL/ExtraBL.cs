@@ -48,7 +48,17 @@ namespace Buisness_Application.BL
         private static Revenue revenue;
         private static Challan challan;
         private static string FinancialRecordName ;
+        private static Finance finance;
 
+       
+        public static Finance GetFinance()
+        {
+            return finance;
+        }
+        public static void SetFinance(Finance f)
+        {
+            finance = f;
+        }
 
 
         public static string GetUsersPath()

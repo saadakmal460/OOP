@@ -30,7 +30,7 @@ namespace Buisness_Application.UI
         public static void ShowCalculatedAmount(string type)
         {
             Console.WriteLine("\t__________________________________");
-            Console.WriteLine("\tTotal= " + FinancialRecordCRUD.CalculateTotalAmount(type));
+            Console.WriteLine("\tTotal= " + FinancialRecordDL.CalculateTotalAmount(type));
             
         }
         public static int TakeInputForNumber()
@@ -62,8 +62,8 @@ namespace Buisness_Application.UI
         {
 
             char box = '\u2588';
-            int expenses = FinancialRecordCRUD.CalculateDigits("Expense");
-            int revenue = FinancialRecordCRUD.CalculateDigits("Revenue");
+            int expenses = FinancialRecordDL.CalculateDigits("Expense");
+            int revenue = FinancialRecordDL.CalculateDigits("Revenue");
 
 
             Console.WriteLine("    |                         ");
@@ -80,18 +80,28 @@ namespace Buisness_Application.UI
             Console.WriteLine("    |                         ");
             Console.WriteLine("    |___________________________________");
 
+
+
+            
             for (int i = 0; i < expenses; i++)
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.SetCursorPosition(10, 32 - i);
                 Console.WriteLine(box);
+                Console.ResetColor();
             }
+            
 
+
+            
             for (int i = 0; i < revenue; i++)
             {
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.SetCursorPosition(17, 32 - i);
                 Console.WriteLine(box);
+                Console.ResetColor();
             }
-
+            
 
 
             Console.ReadKey();

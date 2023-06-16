@@ -17,7 +17,7 @@ namespace Buisness_Application.UI
             string challan = "", amount = "";
             
 
-            foreach (Hostelite i in UserCRUD.userList)
+            foreach (Hostelite i in UserDL.GetUserList())
             {
                 if (rollNumber == i.GetRollNumber())
                 {
@@ -45,7 +45,7 @@ namespace Buisness_Application.UI
                 amount = Console.ReadLine();
 
                 // Update existing challan
-                foreach (Challan i in ChallanCRUD.challanList)
+                foreach (Challan i in ChallanDL.challanList)
                 {
                     if (rollNumber == i.GetRollNumber())
                     {
@@ -67,7 +67,7 @@ namespace Buisness_Application.UI
         public static bool CheckInChallanList(string rollNumber)
         {
             bool flag2 = false;
-            foreach (Challan i in ChallanCRUD.challanList)
+            foreach (Challan i in ChallanDL.challanList)
             {
                 if (rollNumber == i.GetRollNumber())
                 {
@@ -81,7 +81,7 @@ namespace Buisness_Application.UI
         public static void ShowFee()
         {
             Console.WriteLine("Roll Number\t\tStatus");
-            foreach(Challan i in ChallanCRUD.challanList)
+            foreach(Challan i in ChallanDL.challanList)
             {
                 Console.WriteLine(i.GetRollNumber() + "\t\t\t" + i.GetStatus());
             }

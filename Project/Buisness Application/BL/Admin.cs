@@ -11,7 +11,7 @@ namespace Buisness_Application.BL
     {
         private string contact;
         private static List<Notices> notices = new List<Notices>();
-        private static List<User> users = new List<User>();
+        
         public Admin(string username, string password, string contact, string role) : base(username, password, role)
         {
             this.username = username;
@@ -21,14 +21,7 @@ namespace Buisness_Application.BL
         }
 
        
-        public static List<User> GetUserList()
-        {
-            return users;
-        }
-        public static void AddUsersInList(Hostelite h)
-        {
-            users.Add(h);
-        }
+        
         public static void AddNotices(Notices n)
         {
             notices.Add(n);

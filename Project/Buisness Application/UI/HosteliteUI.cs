@@ -38,7 +38,7 @@ namespace Buisness_Application.UI
         public static bool UpdateRecord(string name)
         {
             bool flag = true;
-            foreach(User i in Admin.GetUserList())
+            foreach(User i in UserDL.GetUserList())
             {
                 
                 
@@ -75,13 +75,13 @@ namespace Buisness_Application.UI
         }
         public static void ViewHostelites()
         {
-            
             Console.WriteLine("Name\t\tRoll Number\t\tCNIC\t\t\tCity");
-            foreach(User i in UserCRUD.SortedList())
+            foreach(User i in UserDL.GetUserList())
             {
                 if (i is Hostelite)
                 {
                     Hostelite h = (Hostelite)i;
+                    
                     Console.WriteLine(i.GetUsername() + "\t\t" + h.GetRollNumber() + "\t\t\t" + h.GetCnic() + "\t\t" + h.GetCity());
                 }
             }
@@ -92,7 +92,7 @@ namespace Buisness_Application.UI
         {
 
             Console.WriteLine("Name\t\tRoom NUmber");
-            foreach (User i in UserCRUD.SortedList())
+            foreach (User i in UserDL.GetUserList())
             {
                 if (i is Hostelite)
                 {
@@ -135,13 +135,14 @@ namespace Buisness_Application.UI
         public static bool SearchByRollNumber(string rollNumber)
         {
             bool flag = true;
- 
+            
             Console.WriteLine("Name\t\tRoll Number\t\tCNIC\t\t\tCity");
-            foreach (User i in UserCRUD.SortedList())
+            foreach (User i in UserDL.GetUserList())
             {
                 if (i is Hostelite)
                 {
                     Hostelite h = (Hostelite)i;
+                    
                     if (rollNumber == h.GetRollNumber())
                     {
                         Console.WriteLine(i.GetUsername() + "\t\t" + h.GetRollNumber() + "\t\t\t" + h.GetCnic() + "\t\t" + h.GetCity());
@@ -165,7 +166,7 @@ namespace Buisness_Application.UI
             bool flag = true;
 
             Console.WriteLine("Name\t\tRoll Number\t\tCNIC\t\t\tCity");
-            foreach (User i in UserCRUD.SortedList())
+            foreach (User i in UserDL.GetUserList())
             {
                 if (i is Hostelite)
                 {

@@ -27,7 +27,7 @@ namespace Buisness_Application.UI
             string amount = Console.ReadLine();
             while (true)
             {
-                foreach (Challan i in ChallanCRUD.challanList)
+                foreach (Challan i in ChallanDL.challanList)
                 {
                     if(i.GetChallanNumber() == challan && i.GetAmount() == amount)
                     {

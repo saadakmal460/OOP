@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Buisness_Application.BL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,21 @@ namespace Buisness_Application.UI
 {
     class FinanceUI
     {
+
+        public static Finance TakeInputForFinanceEmployeee()
+        {
+            Console.Write("\tEnter name: ");
+            string name = Console.ReadLine();
+
+            Console.Write("\tEnter roll number: ");
+            string EmployeeNumber = Console.ReadLine();
+
+            Console.Write("\tEnter password: ");
+            string password = Console.ReadLine();
+
+            Finance f = new Finance(name, password, "Finance", EmployeeNumber);
+            return f;
+        }
         public static string FinanceMenu()
         {
             string option;
