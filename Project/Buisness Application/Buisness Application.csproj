@@ -57,6 +57,7 @@
     <Compile Include="BL\Revenue.cs" />
     <Compile Include="BL\Reviews.cs" />
     <Compile Include="BL\User.cs" />
+    <Compile Include="BL\Validations.cs" />
     <Compile Include="DL\ChallanDL.cs" />
     <Compile Include="DL\ComplaintsDL.cs" />
     <Compile Include="DL\FinanceDL.cs" />
@@ -81,10 +82,10 @@
     <Compile Include="UI\RevenueUI.cs" />
     <Compile Include="UI\ReviewsUI.cs" />
     <Compile Include="UI\UserUI.cs" />
+    <Compile Include="UI\ValidationsUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

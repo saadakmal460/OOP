@@ -76,8 +76,6 @@ namespace Buisness_Application
                             {
                                 GeneralUI.GeneralFunctions();
                                 
-                                
-
                                 //removing hostelite by taking name
                                 ExtraBL.SetName(HosteliteUI.TakeNameAsInput());
                                 ExtraBL.SetFlag(UserDL.RemoveUserFromList(ExtraBL.GetName()));
@@ -555,7 +553,7 @@ namespace Buisness_Application
 
                                 //generating challan and overwriting by checking
                                 ExtraBL.SetRollNumber(HosteliteUI.TakeRollNumberAsInput());
-                                ExtraBL.SetFlag(ChallanUI.CheckInChallanList(ExtraBL.GetRollNumber()));
+                                ExtraBL.SetFlag(ChallanDL.CheckInChallanList(ExtraBL.GetRollNumber()));
                                 ExtraBL.SetChallan(ChallanUI.TakeChallanInput(ExtraBL.GetRollNumber()));
                                 ChallanDL.StoreChallansInFile(ExtraBL.GetChallanPath());
 
