@@ -14,13 +14,16 @@ namespace Buisness_Application.UI
         {
             Console.Write("\tEnter name: ");
             string name = Console.ReadLine();
+            name = Validations.ValidateName(name);
 
             Console.Write("\tEnter password: ");
             string password = Console.ReadLine();
+            password = Validations.ValidatePassword(password);
+
 
             Console.Write("\tEnter contact number: ");
             string conatct = Console.ReadLine();
-
+            conatct = Validations.ValidateContactNumber(conatct);
             Admin a = new Admin(name, password, conatct, "admin");
             return a;
         }

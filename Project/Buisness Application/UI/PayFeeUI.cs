@@ -16,9 +16,11 @@ namespace Buisness_Application.UI
             
             Console.Write("\t Enter bank name: ");
             string bank = Console.ReadLine();
+            bank = Validations.ValidateName(bank);
 
             Console.Write("\t Enter account number: ");
             string acc = Console.ReadLine();
+            acc = Validations.ValidateAccountNumber(acc);
 
             Console.Write("\t Enter challan Number: ");
             string challan = Console.ReadLine();

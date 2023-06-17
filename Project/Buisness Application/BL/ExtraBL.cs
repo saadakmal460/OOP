@@ -22,7 +22,6 @@ namespace Buisness_Application.BL
         private static string AdminPath = "Admin.txt";
         private static string HosteliteName;
         private static User user;
-        //private static string role;
         private static string AdminOption;
         private static Hostelite hostelite;
         private static string name;

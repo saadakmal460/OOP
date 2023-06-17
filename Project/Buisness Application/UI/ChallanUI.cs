@@ -26,23 +26,28 @@ namespace Buisness_Application.UI
                 }
             }
 
-            flag2 = CheckInChallanList(rollNumber);
+            flag2 = ChallanDL.CheckInChallanList(rollNumber);
 
             if (flag && !flag2)
             {
                 Console.Write("\t Enter challan number: ");
                 challan = Console.ReadLine();
+                challan = Validations.ValidateChallan(challan);
 
                 Console.Write("\t Enter amount: ");
                 amount = Console.ReadLine();
+                amount = Validations.ValidateNumber(amount);
             }
             else if (flag && flag2)
             {
                 Console.Write("\t Enter challan number: ");
                 challan = Console.ReadLine();
+                challan = Validations.ValidateChallan(challan);
+
 
                 Console.Write("\t Enter  amount: ");
                 amount = Console.ReadLine();
+                amount = Validations.ValidateNumber(amount);
 
                 // Update existing challan
                 foreach (Challan i in ChallanDL.challanList)
@@ -64,19 +69,7 @@ namespace Buisness_Application.UI
             return c;
         }
 
-        public static bool CheckInChallanList(string rollNumber)
-        {
-            bool flag2 = false;
-            foreach (Challan i in ChallanDL.challanList)
-            {
-                if (rollNumber == i.GetRollNumber())
-                {
-                    flag2 = true;
-                    break;
-                }
-            }
-            return flag2;
-        }
+        
 
         public static void ShowFee()
         {

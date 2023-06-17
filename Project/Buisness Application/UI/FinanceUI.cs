@@ -14,12 +14,15 @@ namespace Buisness_Application.UI
         {
             Console.Write("\tEnter name: ");
             string name = Console.ReadLine();
+            name = Validations.ValidateName(name);
 
-            Console.Write("\tEnter roll number: ");
+            Console.Write("\tEnter employee number: ");
             string EmployeeNumber = Console.ReadLine();
+            EmployeeNumber = Validations.ValidateEmployeeNumber(EmployeeNumber);
 
             Console.Write("\tEnter password: ");
             string password = Console.ReadLine();
+            password = Validations.ValidatePassword(password);
 
             Finance f = new Finance(name, password, "Finance", EmployeeNumber);
             return f;

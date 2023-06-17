@@ -29,12 +29,16 @@ namespace Buisness_Application.UI
         {
             Console.Write("\t Enter expense name: ");
             string name = Console.ReadLine();
+            name = Validations.ValidateName(name);
 
             Console.Write("\t Enter amount: ");
             string amount = Console.ReadLine();
+            amount = Validations.ValidateNumber(amount);
+
 
             Console.Write("\t Enter tax amount: ");
             string tax = Console.ReadLine();
+            tax = Validations.ValidateNumber(tax);
 
             Expense e = new Expense(name, amount, tax , "Expense");
             return e;

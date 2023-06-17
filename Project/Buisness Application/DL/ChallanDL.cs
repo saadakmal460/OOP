@@ -16,7 +16,19 @@ namespace Buisness_Application.DL
         {
             challanList.Add(c);
         }
-
+        public static bool CheckInChallanList(string rollNumber)
+        {
+            bool flag2 = false;
+            foreach (Challan i in ChallanDL.challanList)
+            {
+                if (rollNumber == i.GetRollNumber())
+                {
+                    flag2 = true;
+                    break;
+                }
+            }
+            return flag2;
+        }
         public static void StoreChallansInFile(string path)
         {
             StreamWriter file = new StreamWriter(path, false);

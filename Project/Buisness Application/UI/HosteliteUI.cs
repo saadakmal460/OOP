@@ -14,21 +14,31 @@ namespace Buisness_Application.UI
         {
             Console.Write("\tEnter name: ");
             string name = Console.ReadLine();
+            name = Validations.ValidateName(name);
 
             Console.Write("\tEnter roll number: ");
             string rollNumber = Console.ReadLine();
+            rollNumber = Validations.ValidateRollNumber(rollNumber);
 
             Console.Write("\tEnter CNIC: ");
             string cnic = Console.ReadLine();
+            cnic = Validations.ValidateCNIC(cnic);
+
 
             Console.Write("\tEnter city: ");
             string city = Console.ReadLine();
+            city = Validations.ValidateCity(city);
+
 
             Console.Write("\tAllot room number: ");
             string roomNumber = Console.ReadLine();
+            roomNumber = Validations.ValidateRoomNumber(roomNumber);
+
 
             Console.Write("\tEnter password: ");
             string password = Console.ReadLine();
+            password = Validations.ValidatePassword(password);
+
 
             Hostelite h = new Hostelite(name, cnic, city, rollNumber, password , "hostelite", roomNumber);
             return h;
@@ -49,15 +59,20 @@ namespace Buisness_Application.UI
                         Hostelite h = (Hostelite)i;
                         Console.Write("\tEnter roll number: ");
                         string rollNumber = Console.ReadLine();
+                        rollNumber = Validations.ValidateRollNumber(rollNumber);
 
                         Console.Write("\tEnter CNIC: ");
                         string cnic = Console.ReadLine();
+                        cnic = Validations.ValidateCNIC(cnic);
 
                         Console.Write("\tEnter city: ");
                         string city = Console.ReadLine();
+                        city = Validations.ValidateCity(city);
 
                         Console.Write("\tEnter password: ");
                         string password = Console.ReadLine();
+                        password = Validations.ValidatePassword(password);
+
 
                         h.SetRollNumber(rollNumber);
                         h.SetCnic(cnic);

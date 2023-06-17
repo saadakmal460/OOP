@@ -13,7 +13,9 @@ namespace Buisness_Application.UI
         public static Complaints TakeComplaints(string name)
         {
             Console.Write("\t Enter your complaint: ");
+            
             string complaint = Console.ReadLine();
+            
 
             Complaints c = new Complaints(name, complaint);
             return c;

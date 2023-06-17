@@ -14,6 +14,7 @@ namespace Buisness_Application.UI
         {
             Console.Write("\t Enter rating (1-5 Stars): ");
             string rating = Console.ReadLine();
+            rating = Validations.ValidateRating(rating);
 
             Console.Write("Enter Reviews: ");
             string review = Console.ReadLine();

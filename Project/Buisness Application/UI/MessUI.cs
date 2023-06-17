@@ -32,6 +32,7 @@ namespace Buisness_Application.UI
                 {
                     Console.Write("\tEnter dish name: ");
                     string dish = Console.ReadLine();
+                    dish = Validations.ValidateName(dish);
                     i.SetDish(dish);
                     flag = true;
                 }

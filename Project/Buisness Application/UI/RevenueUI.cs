@@ -28,12 +28,16 @@ namespace Buisness_Application.UI
         {
             Console.Write("\t Enter expense name: ");
             string name = Console.ReadLine();
+            name = Validations.ValidateName(name);
 
             Console.Write("\t Enter amount: ");
             string amount = Console.ReadLine();
+            amount = Validations.ValidateNumber(amount);
+
 
             Console.Write("\t Extra charge revenue include (Yes or No): ");
             string t = Console.ReadLine();
+            t = Validations.ValidateChoice(t);
 
             Revenue e = new Revenue(name, amount, t, "Revenue");
             return e;

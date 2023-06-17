@@ -31,7 +31,7 @@ namespace Buisness_Application.UI
             string tilte = Console.ReadLine();
             Console.Write("\t\tEnter your notice: ");
             notice = Console.ReadLine();
-
+            
             Notices n = new Notices(tilte, notice);
             return n;
         }
