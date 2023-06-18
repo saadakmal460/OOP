@@ -14,7 +14,6 @@ namespace Buisness_Application
         static void Main(string[] args)
         {
 
-
             //Loading data
             UserDL.LoadUsersFromFile(ExtraBL.GetUsersPath());
             NoticesDL.LoadNoticesFromFile(ExtraBL.GetNoticesPath());
@@ -27,32 +26,32 @@ namespace Buisness_Application
             
 
             //main while loop
-            while (ExtraBL.GetOption() !=2)
+            while (ExtraBL.GetOption() != "2")
             {
                 //clearing and printing header
-                GeneralUI.GeneralFunctions();
+                GeneralUI.GeneralFunctions("");
 
                 //Login screen
                 ExtraBL.setOption(GeneralUI.LoginScreen());
-                if(ExtraBL.GetOption() == 1)
+                if(ExtraBL.GetOption() == "1")
                 {
-                    GeneralUI.GeneralFunctions();
+                    GeneralUI.GeneralFunctions("");
 
                     //Taking username and password
                     ExtraBL.SetUser(UserUI.TakeInputForLogin());
                     ExtraBL.SetHosteliteName(ExtraBL.GetUser());
 
                     //starting admin menu
-                    if(ExtraBL.GetRole() == "admin")
+                    if (ExtraBL.GetRole() == "admin")
                     {
-                        GeneralUI.GeneralFunctions();
+                        GeneralUI.GeneralFunctions("");
 
                         //Admin menu
                         ExtraBL.SetAdminOption("0");
                         //stating admin menu loop
                         while(ExtraBL.GetAdminOption() != "13")
                         {
-                            GeneralUI.GeneralFunctions();
+                            GeneralUI.GeneralFunctions("Admin");
                             
                             
                             //options for admin screen
@@ -60,7 +59,7 @@ namespace Buisness_Application
                             //option 1 start
                             if (ExtraBL.GetAdminOption() == "1")
                             {
-                                GeneralUI.GeneralFunctions();
+                                GeneralUI.GeneralFunctions("Admin > Add Hostelite");
                                 
                                 
 
@@ -74,7 +73,7 @@ namespace Buisness_Application
                             //option 2 start
                             else if (ExtraBL.GetAdminOption() == "2")
                             {
-                                GeneralUI.GeneralFunctions();
+                                GeneralUI.GeneralFunctions("Admin > Remove Hostelite");
                                 
                                 //removing hostelite by taking name
                                 ExtraBL.SetName(HosteliteUI.TakeNameAsInput());
@@ -86,9 +85,9 @@ namespace Buisness_Application
                             //option 3 start
                             else if (ExtraBL.GetAdminOption()== "3")
                             {
-                                GeneralUI.GeneralFunctions();
-                                
-                                
+                                GeneralUI.GeneralFunctions("Admin > Update Hostelite Record");
+
+
 
                                 //Updating records
                                 ExtraBL.SetName(HosteliteUI.TakeNameAsInput());
@@ -99,7 +98,7 @@ namespace Buisness_Application
                             //option 4 start
                             else if (ExtraBL.GetAdminOption()== "4")
                             {
-                                GeneralUI.GeneralFunctions();
+                                GeneralUI.GeneralFunctions("Admin > View Hostelites");
 
                                 //viewing hostelites
                                 HosteliteUI.ViewHostelites();
@@ -114,7 +113,7 @@ namespace Buisness_Application
                                 //starting while loop
                                 while (ExtraBL.GetOptionForNotice() != "4")
                                 {
-                                    GeneralUI.GeneralFunctions();
+                                    GeneralUI.GeneralFunctions("Admin > Notices");
 
                                     //notice board operations
                                     ExtraBL.SetOptionForNotice(AdminUI.NoticeMenu());
@@ -122,7 +121,7 @@ namespace Buisness_Application
                                     //option 1 of notices
                                     if (ExtraBL.GetOptionForNotice() == "1")
                                     {
-                                        GeneralUI.GeneralFunctions();
+                                        GeneralUI.GeneralFunctions("Admin > Notices > Add notice");
 
                                         //adding notice
                                         ExtraBL.SetNoticeObj(NoticesUI.TakeInputForNotices());
@@ -133,7 +132,7 @@ namespace Buisness_Application
                                     //option 2 of notices
                                     else if (ExtraBL.GetOptionForNotice() == "2")
                                     {
-                                        GeneralUI.GeneralFunctions();
+                                        GeneralUI.GeneralFunctions("Admin > Notices > Remove notice");
 
                                         //deleting notices
                                         NoticesUI.ViewNotices();
@@ -144,7 +143,7 @@ namespace Buisness_Application
                                     //option 3 of notices
                                     else if (ExtraBL.GetOptionForNotice() == "3")
                                     {
-                                        GeneralUI.GeneralFunctions();
+                                        GeneralUI.GeneralFunctions("Admin > Notices > View notice");
 
                                         //viewing notice
                                         NoticesUI.ViewNotices();
@@ -156,7 +155,7 @@ namespace Buisness_Application
                             //option 6 start
                             else if (ExtraBL.GetAdminOption()== "6")
                             {
-                                GeneralUI.GeneralFunctions();
+                                GeneralUI.GeneralFunctions("Admin > View Complaints");
 
                                 //viewing complaints
                                 ComplaintsUI.ViewComplaints();
@@ -169,7 +168,7 @@ namespace Buisness_Application
                                 
                                 while (ExtraBL.GetMessOption() != "3")
                                 {
-                                    GeneralUI.GeneralFunctions();
+                                    GeneralUI.GeneralFunctions("Admin > Mess");
 
                                     //taking mess option
                                     ExtraBL.SetMessOption(MessUI.MessMenu());
@@ -178,7 +177,7 @@ namespace Buisness_Application
                                     //mess option 1
                                     if (ExtraBL.GetMessOption() == "1")
                                     {
-                                        GeneralUI.GeneralFunctions();
+                                        GeneralUI.GeneralFunctions("Admin > Mess > View Menu");
 
                                         //viewing mess
                                         MessUI.ViewMess();
@@ -188,7 +187,7 @@ namespace Buisness_Application
                                     //mess option 2
                                     else if (ExtraBL.GetMessOption()  == "2")
                                     {
-                                        GeneralUI.GeneralFunctions();
+                                        GeneralUI.GeneralFunctions("Admin > Mess > UpdateMenu");
    
                                         //taking day as input and uodatin the mess
                                         ExtraBL.SetDay(MessUI.TakeDayAsInput());
@@ -207,14 +206,14 @@ namespace Buisness_Application
                                 ExtraBL.SetReportOption("0");
                                 while (ExtraBL.GetReportOption() != "3")
                                 {
-                                    GeneralUI.GeneralFunctions();
+                                    GeneralUI.GeneralFunctions("Admin > Payment Records");
 
                                     //financial report menu
                                     ExtraBL.SetReportOption(FinancialRecordUI.ShowMenu());
 
                                     if (ExtraBL.GetReportOption() == "1")
                                     {
-                                        GeneralUI.GeneralFunctions();
+                                        GeneralUI.GeneralFunctions("Admin > Payment Records > Financial report");
 
                                         //viewing financial report
                                         FinancialRecordUI.ShowFinancialReprt();
@@ -222,7 +221,7 @@ namespace Buisness_Application
                                     }
                                     else if (ExtraBL.GetReportOption() == "2")
                                     {
-                                        GeneralUI.GeneralFunctions();
+                                        GeneralUI.GeneralFunctions("Admin > Payment Records > Graphical analysis");
 
                                         //viewing graph
                                         FinancialRecordUI.ShowGraph();
@@ -234,7 +233,7 @@ namespace Buisness_Application
                             //option 9 start
                             else if (ExtraBL.GetAdminOption()== "9")
                             {
-                                GeneralUI.GeneralFunctions();
+                                GeneralUI.GeneralFunctions("Admin > View alloted rooms");
 
                                 //viewing alloted rooms
                                 HosteliteUI.ViewHostelitesRooms();
@@ -243,18 +242,18 @@ namespace Buisness_Application
                             //option 10 start
                             else if (ExtraBL.GetAdminOption()== "10")
                             {
-                                GeneralUI.GeneralFunctions();
+                                GeneralUI.GeneralFunctions("");
 
                                 //search menu
                                 ExtraBL.SetSearchOption("0");
                                 while (ExtraBL.GetSearchOption() != "3")
                                 {
-                                    GeneralUI.GeneralFunctions();
+                                    GeneralUI.GeneralFunctions("Admin > Search Hostelite > ");
 
                                     ExtraBL.SetSearchOption(HosteliteUI.SearchHosteliteOption());
                                     if (ExtraBL.GetSearchOption() == "1")
                                     {
-                                        GeneralUI.GeneralFunctions();
+                                        GeneralUI.GeneralFunctions("Admin > Search Hostelite > Search by name");
 
                                         //searching by name
                                         ExtraBL.SetName(HosteliteUI.TakeNameAsInput());
@@ -265,7 +264,7 @@ namespace Buisness_Application
 
                                     else if (ExtraBL.GetSearchOption() == "2")
                                     {
-                                        GeneralUI.GeneralFunctions();
+                                        GeneralUI.GeneralFunctions("Admin > Search Hostelite > Search by Roll Number");
  
                                         //searching by roll number
                                         ExtraBL.SetRollNumber(HosteliteUI.TakeRollNumberAsInput());
@@ -278,7 +277,7 @@ namespace Buisness_Application
                             //start option 11
                             else if (ExtraBL.GetAdminOption()== "11")
                             {
-                                GeneralUI.GeneralFunctions();
+                                GeneralUI.GeneralFunctions("Admin > View Reviews");
 
                                 //View reviews and ratings
                                 ReviewsUI.ViewAllReviews();
@@ -292,13 +291,13 @@ namespace Buisness_Application
                                 ExtraBL.SetOfficialOption("0");
                                 while(ExtraBL.GetOfficialOption() != "3")
                                 {
-                                    GeneralUI.GeneralFunctions();
+                                    GeneralUI.GeneralFunctions("Admin > Add an Offical");
 
                                     //taking option as input
                                     ExtraBL.SetOfficialOption(AdminUI.OfficalMenu());
                                     if (ExtraBL.GetOfficialOption() == "1")
                                     {
-                                        GeneralUI.GeneralFunctions();
+                                        GeneralUI.GeneralFunctions("Admin > Add an Admin");
                                         
 
                                         //taking input and adding admin in list 
@@ -308,7 +307,7 @@ namespace Buisness_Application
                                     }
                                     else if(ExtraBL.GetOfficialOption()  == "2")
                                     {
-                                        GeneralUI.GeneralFunctions();
+                                        GeneralUI.GeneralFunctions("Admin > Add a finance officer");
 
                                         //taking input and adding finance officer in list 
                                         ExtraBL.SetFinance(FinanceUI.TakeInputForFinanceEmployeee());
@@ -329,7 +328,7 @@ namespace Buisness_Application
                         //starting while loop
                         while(ExtraBL.GethosteliteOption()!= "9")
                         {
-                            GeneralUI.GeneralFunctions();
+                            GeneralUI.GeneralFunctions("Hostelite > ");
 
                             //taking option from hostelite menu
                             ExtraBL.SethosteliteOption(HosteliteUI.HosteliteMenu());
@@ -337,7 +336,7 @@ namespace Buisness_Application
                             //hostelite option 1 start
                             if(ExtraBL.GethosteliteOption() == "1")
                             {
-                                GeneralUI.GeneralFunctions();
+                                GeneralUI.GeneralFunctions("Hostelite > View Profile");
 
                                 //Showing hostelite info
                                 HosteliteUI.SearchByName(ExtraBL.GetHosteliteName());
@@ -347,7 +346,7 @@ namespace Buisness_Application
                             //hostelite option 2 start
                             else if (ExtraBL.GethosteliteOption() == "2")
                             {
-                                GeneralUI.GeneralFunctions();
+                                GeneralUI.GeneralFunctions("Hostelite > View Mess");
 
                                 //showing mess
                                 MessUI.ViewMess();
@@ -356,7 +355,7 @@ namespace Buisness_Application
                             //hostelite option 3 start
                             else if (ExtraBL.GethosteliteOption() == "3")
                             {
-                                GeneralUI.GeneralFunctions();
+                                GeneralUI.GeneralFunctions("Hostelite > Add a complaint");
 
                                 //adding complaints and storing in list
                                 ExtraBL.SetComplaints(ComplaintsUI.TakeComplaints(ExtraBL.GetHosteliteName()));
@@ -368,7 +367,7 @@ namespace Buisness_Application
                             //hostelite option 4 start
                             else if (ExtraBL.GethosteliteOption() == "4")
                             {
-                                GeneralUI.GeneralFunctions();
+                                GeneralUI.GeneralFunctions("Hostelite > View Notices");
 
                                 //viewing notice
                                 NoticesUI.ViewNotices();
@@ -378,18 +377,26 @@ namespace Buisness_Application
                             //hostelite option 5 start
                             else if (ExtraBL.GethosteliteOption() == "5")
                             {
-                                GeneralUI.GeneralFunctions();
+                                GeneralUI.GeneralFunctions("Hostelite > Pay Fee");
 
                                 //paying fee
-                                 PayFeeUI.TakeInputForPayFee();
-                                 ChallanDL.StoreChallansInFile(ExtraBL.GetChallanPath());
+                                ExtraBL.SetFlag(PayFeeUI.TakeInputForPayFee());
+                                ChallanDL.StoreChallansInFile(ExtraBL.GetChallanPath());
+                                HosteliteUI.ShowMessage(ExtraBL.GetFlag());
+                            }
 
+                            else if(ExtraBL.GethosteliteOption() == "6")
+                            {
+                                GeneralUI.GeneralFunctions("Hostelite > Check bills");
+
+                                FinanceUI.ShowBills();
+                                
                             }
 
                             //hostelite option 7 start
                             else if (ExtraBL.GethosteliteOption() == "7")
                             {
-                                GeneralUI.GeneralFunctions();
+                                GeneralUI.GeneralFunctions("Hostelite > Reomve account");
 
                                 //showing warning
                                 ExtraBL.SetHostelitedecision(HosteliteUI.ShowWarning());
@@ -408,7 +415,7 @@ namespace Buisness_Application
                             //hostelite option 8 start
                             else if (ExtraBL.GethosteliteOption() == "8")
                             {
-                                GeneralUI.GeneralFunctions();
+                                GeneralUI.GeneralFunctions("Hostelite > Add a review");
 
                                 //adding reviews
                                 ExtraBL.SetReviews(ReviewsUI.TakeReviews(ExtraBL.GetReviewsPath()));
@@ -425,9 +432,9 @@ namespace Buisness_Application
                     {
                         ExtraBL.SetFinanaceOption("0");
                         //starting of finanace menu loop
-                        while(ExtraBL.GetFinanceOption() != "10")
+                        while(ExtraBL.GetFinanceOption() != "8")
                         {
-                            GeneralUI.GeneralFunctions();
+                            GeneralUI.GeneralFunctions("Finance > ");
  
                             //taking option input from finance menu
                             ExtraBL.SetFinanaceOption(FinanceUI.FinanceMenu());
@@ -439,7 +446,7 @@ namespace Buisness_Application
                                 ExtraBL.SetExpenseOption("0");
                                 while (ExtraBL.GetExpenseOption()!= "4")
                                 {
-                                    GeneralUI.GeneralFunctions();
+                                    GeneralUI.GeneralFunctions("Finance > Expenses");
                                     
                                     //taking option from expense menu
                                     ExtraBL.SetExpenseOption(FinancialRecordUI.FinancialRecordMenu("Expense"));
@@ -447,18 +454,18 @@ namespace Buisness_Application
                                     //expense option 1
                                     if (ExtraBL.GetExpenseOption() == "1")
                                     {
-                                        GeneralUI.GeneralFunctions();
+                                        GeneralUI.GeneralFunctions("Finance > Expenses > Add Expense");
 
                                         //taking expenses as input and adding in list
                                         ExtraBL.SetExpense(ExpenseUI.TakeInputForExpense());
-                                        FinancialRecordDL.AddInList(ExtraBL.GetExpense());
+                                        Finance.AddInList(ExtraBL.GetExpense());
                                         FinancialRecordDL.StoreInFile(ExtraBL.GetRecordPath());
                                     }
 
                                     //expense option 2
                                     else if (ExtraBL.GetExpenseOption() == "2")
                                     {
-                                        GeneralUI.GeneralFunctions();
+                                        GeneralUI.GeneralFunctions("Finance > Expenses > View Expense");
 
                                         //showing expenses
                                         ExpenseUI.ShowExpense();
@@ -468,7 +475,7 @@ namespace Buisness_Application
                                     //expense option 3
                                     else if (ExtraBL.GetExpenseOption() == "3")
                                     {
-                                        GeneralUI.GeneralFunctions();
+                                        GeneralUI.GeneralFunctions("Finance > Expenses > Remove an Expense");
 
                                         //removing the expense by taking its number
                                         ExpenseUI.ShowExpense();
@@ -484,7 +491,7 @@ namespace Buisness_Application
                             //finance option 2
                             else if (ExtraBL.GetFinanceOption() == "2")
                             {
-                                GeneralUI.GeneralFunctions();
+                                GeneralUI.GeneralFunctions("Finance > View calculations");
 
                                 //showing calulated expense
                                 ExpenseUI.ShowExpense();
@@ -496,14 +503,14 @@ namespace Buisness_Application
                             //finance option 3
                             else if (ExtraBL.GetFinanceOption() == "3")
                             {
-                                GeneralUI.GeneralFunctions();
+                                GeneralUI.GeneralFunctions("");
                                 
 
                                 //starting revenue loop
                                 ExtraBL.SetRevenueOption("0");
                                 while (ExtraBL.GetRevenueOption() != "4")
                                 {
-                                    GeneralUI.GeneralFunctions();
+                                    GeneralUI.GeneralFunctions("Finance > Revenue");
                                     
                                     //taking input from revenue menu
                                     ExtraBL.SetRevenueOption(FinancialRecordUI.FinancialRecordMenu("Revenue"));
@@ -511,18 +518,18 @@ namespace Buisness_Application
                                     //revenue option 1
                                     if (ExtraBL.GetRevenueOption() == "1")
                                     {
-                                        GeneralUI.GeneralFunctions();
+                                        GeneralUI.GeneralFunctions("Finance > Revenue > Add a revenue");
 
                                         //taking revenue as input and adding in list
                                         ExtraBL.SetRevenue(RevenueUI.TakeInputForRevenue());
-                                        FinancialRecordDL.AddInList(ExtraBL.GetRevenue());
+                                        Finance.AddInList(ExtraBL.GetRevenue());
                                         FinancialRecordDL.StoreInFile(ExtraBL.GetRecordPath());
                                     }
 
                                     //revenue option 2
                                     else if (ExtraBL.GetRevenueOption()  == "2")
                                     {
-                                        GeneralUI.GeneralFunctions();
+                                        GeneralUI.GeneralFunctions("Finance > Revenue > View revenue");
                                         
                                         //showing revenue
                                         RevenueUI.ShowRevenue();
@@ -532,7 +539,7 @@ namespace Buisness_Application
                                     //revenue option 3
                                     else if (ExtraBL.GetRevenueOption()  == "3")
                                     {
-                                        GeneralUI.GeneralFunctions();
+                                        GeneralUI.GeneralFunctions("Finance > Revenue > Show revenue");
 
                                         //removing revenue
                                         RevenueUI.ShowRevenue();
@@ -549,26 +556,25 @@ namespace Buisness_Application
                             //finance option 4
                             else if (ExtraBL.GetFinanceOption() == "4")
                             {
-                                GeneralUI.GeneralFunctions();
+                                GeneralUI.GeneralFunctions("Finance > Generate Challan");
 
                                 //generating challan and overwriting by checking
                                 ExtraBL.SetRollNumber(HosteliteUI.TakeRollNumberAsInput());
                                 ExtraBL.SetFlag(ChallanDL.CheckInChallanList(ExtraBL.GetRollNumber()));
                                 ExtraBL.SetChallan(ChallanUI.TakeChallanInput(ExtraBL.GetRollNumber()));
-                                ChallanDL.StoreChallansInFile(ExtraBL.GetChallanPath());
 
-                                if (ExtraBL.GetFlag())
+                                if (!ExtraBL.GetFlag())
                                 {
-                                    ChallanDL.AddChallanInList(ExtraBL.GetChallan());
+                                    Finance.AddChallanInList(ExtraBL.GetChallan());
                                 }
-
+                                ChallanDL.StoreChallansInFile(ExtraBL.GetChallanPath());
 
                             }
 
                             //finance option 5
                             else if (ExtraBL.GetFinanceOption() == "5")
                             {
-                                GeneralUI.GeneralFunctions();
+                                GeneralUI.GeneralFunctions("Finance > Show fee status");
  
                                 //showing student fee status
                                 ChallanUI.ShowFee();
@@ -580,14 +586,14 @@ namespace Buisness_Application
                                 ExtraBL.SetReportOption("0");
                                 while (ExtraBL.GetReportOption() != "3")
                                 {
-                                    GeneralUI.GeneralFunctions();
+                                    GeneralUI.GeneralFunctions("Finance > Financial Record");
 
                                     //financial report menu
                                     ExtraBL.SetReportOption(FinancialRecordUI.ShowMenu());
 
                                     if (ExtraBL.GetReportOption() == "1")
                                     {
-                                        GeneralUI.GeneralFunctions();
+                                        GeneralUI.GeneralFunctions("Finance > Financial Record > Show report");
                                         
                                         //viewing financial report
                                         FinancialRecordUI.ShowFinancialReprt();
@@ -595,7 +601,7 @@ namespace Buisness_Application
                                     }
                                     else if (ExtraBL.GetReportOption() == "2")
                                     {
-                                        GeneralUI.GeneralFunctions();
+                                        GeneralUI.GeneralFunctions("Finance > Financial Record > Show graphical analysis");
       
                                         //viewing graph
                                         FinancialRecordUI.ShowGraph();
@@ -605,9 +611,9 @@ namespace Buisness_Application
                             }
                             
 
-                            else if (ExtraBL.GetFinanceOption() == "8")
+                            else if (ExtraBL.GetFinanceOption() == "7")
                             {
-                                GeneralUI.GeneralFunctions();
+                                GeneralUI.GeneralFunctions("Finance > View Notices");
   
                                 //viewing notice
                                 NoticesUI.ViewNotices();
@@ -616,6 +622,12 @@ namespace Buisness_Application
                         }
 
                         
+
+                    }
+
+                    if (ExtraBL.GetRole() == null)
+                    {
+                        Validations.ValidateLogin(ExtraBL.GetUser());
                     }
 
                 }
