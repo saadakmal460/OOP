@@ -10,9 +10,11 @@ namespace Buisness_Application.UI
 {
     class PayFeeUI
     {
-        public static void TakeInputForPayFee()
+        public static bool TakeInputForPayFee()
         {
             bool flag = true;
+            bool flag2 = false;
+            
             
             Console.Write("\t Enter bank name: ");
             string bank = Console.ReadLine();
@@ -29,7 +31,7 @@ namespace Buisness_Application.UI
             string amount = Console.ReadLine();
             while (true)
             {
-                foreach (Challan i in ChallanDL.challanList)
+                foreach (Challan i in Finance.GetChallanList())
                 {
                     if(i.GetChallanNumber() == challan && i.GetAmount() == amount)
                     {
@@ -57,7 +59,8 @@ namespace Buisness_Application.UI
                     break;
                 }
             }
-
+            PayFee f = new PayFee(bank, acc, challan, amount);
+            return flag;
             
             
 

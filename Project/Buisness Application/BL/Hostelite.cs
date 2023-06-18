@@ -16,6 +16,7 @@ namespace Buisness_Application.BL
         private string roomNumber;
         private static List<Reviews> reviews = new List<Reviews>();
         private static List<Complaints> complaints = new List<Complaints>();
+        private static PayFee payFee;
         public Hostelite(string name , string cnic , string city , string rollNumber , string password , string role , string roomNumber) : base(name , password , role)
         {
             this.username = name;
@@ -28,6 +29,14 @@ namespace Buisness_Application.BL
             
         }
 
+        public static PayFee GetPayFee()
+        {
+            return payFee;
+        }
+        public static void SetPayFee(PayFee Fee)
+        {
+            payFee = Fee;
+        }
         public static void AddComplaintsInList(Complaints c)
         {
             complaints.Add(c);

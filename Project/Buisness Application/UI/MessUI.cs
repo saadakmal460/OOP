@@ -15,7 +15,7 @@ namespace Buisness_Application.UI
         public static void ViewMess()
         {
             Console.WriteLine("\t\tDay\t\t\tDish");
-            foreach(Mess i in MessCRUD.menu)
+            foreach(Mess i in Admin.GetMessList())
             {
                 Console.WriteLine("\t\t" + i.GetDay() + "\t\t\t" + i.GetDish());
             }
@@ -25,8 +25,8 @@ namespace Buisness_Application.UI
 
         public static bool UpdateMenu(string day)
         {
-            bool flag = true;
-            foreach (Mess i in MessCRUD.menu)
+            bool flag = false;
+            foreach (Mess i in Admin.GetMessList())
             {
                 if(day == i.GetDay())
                 {
@@ -36,10 +36,7 @@ namespace Buisness_Application.UI
                     i.SetDish(dish);
                     flag = true;
                 }
-                else
-                {
-                    flag = false;
-                }
+                
             }
             return flag;
         }
@@ -52,8 +49,11 @@ namespace Buisness_Application.UI
         }
         public static string MessMenu()
         {
-            Console.WriteLine("1.View Mess");
-            Console.WriteLine("2.Update mess");
+            Console.WriteLine("\t1.View Mess");
+            Console.WriteLine("\t2.Update mess");
+            Console.WriteLine("\t3.Exit");
+            Console.Write("\t Enter your option: ");
+
             string option = Console.ReadLine();
             return option;
         }

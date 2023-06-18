@@ -8,7 +8,11 @@ namespace Buisness_Application.UI
 {
     class ValidationsUI
     {
- 
+        public static void ShowLoginMessage()
+        {
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.WriteLine("\tInvalid username or password!!");
+        }
         public static void InvalidMessage()
         {
             Console.ForegroundColor = ConsoleColor.DarkRed;

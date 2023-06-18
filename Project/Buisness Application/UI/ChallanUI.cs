@@ -17,12 +17,16 @@ namespace Buisness_Application.UI
             string challan = "", amount = "";
             
 
-            foreach (Hostelite i in UserDL.GetUserList())
+            foreach (User i in UserDL.GetUserList())
             {
-                if (rollNumber == i.GetRollNumber())
+                if (i is Hostelite)
                 {
-                    flag = true;
-                    break;
+                    Hostelite h = (Hostelite)i;
+                    if (rollNumber == h.GetRollNumber())
+                    {
+                        flag = true;
+                        break;
+                    }
                 }
             }
 
@@ -50,7 +54,7 @@ namespace Buisness_Application.UI
                 amount = Validations.ValidateNumber(amount);
 
                 // Update existing challan
-                foreach (Challan i in ChallanDL.challanList)
+                foreach (Challan i in Finance.GetChallanList())
                 {
                     if (rollNumber == i.GetRollNumber())
                     {
@@ -74,7 +78,7 @@ namespace Buisness_Application.UI
         public static void ShowFee()
         {
             Console.WriteLine("Roll Number\t\tStatus");
-            foreach(Challan i in ChallanDL.challanList)
+            foreach(Challan i in Finance.GetChallanList())
             {
                 Console.WriteLine(i.GetRollNumber() + "\t\t\t" + i.GetStatus());
             }

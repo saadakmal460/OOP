@@ -11,7 +11,16 @@ namespace Buisness_Application.BL
     {
         private string contact;
         private static List<Notices> notices = new List<Notices>();
-        
+        private static List<Mess> menu = new List<Mess>()
+        {
+            new Mess("Monday", "Biryani"),
+            new Mess("Tuesday", "Chicken"),
+            new Mess("Wednesday", "Sabzi"),
+            new Mess("Thursday", "Daal"),
+            new Mess("Friday", "Pulao"),
+            new Mess("Saturday", "Sabzi"),
+            new Mess("Sunday", "Daal")
+        };
         public Admin(string username, string password, string contact, string role) : base(username, password, role)
         {
             this.username = username;
@@ -20,8 +29,7 @@ namespace Buisness_Application.BL
             this.contact = contact;
         }
 
-       
-        
+
         public static void AddNotices(Notices n)
         {
             notices.Add(n);
@@ -40,6 +48,13 @@ namespace Buisness_Application.BL
             return contact;
         }
 
-
+        public static List<Mess> GetMessList()
+        {
+            return menu;
+        }
+        public static void AddMenuInList(Mess m)
+        {
+            menu.Add(m);
+        }
     }
 }

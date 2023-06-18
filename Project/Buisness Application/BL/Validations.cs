@@ -11,6 +11,30 @@ namespace Buisness_Application.BL
     class Validations
     {
 
+        public static void ValidateLogin(User u)
+        {
+            bool flag = true;
+            foreach (User i in UserDL.GetUserList())
+            {
+                if (u.GetUsername() == i.GetUsername() && u.GetPassword() == i.GetPassword())
+                {
+                    flag = true;
+
+                }
+
+                else
+                {
+                    flag = false;
+                }
+
+            }
+
+            if (!flag)
+            {
+                ValidationsUI.ShowLoginMessage();
+                Console.ReadKey();
+            }
+        }
         public static string ValidateEmployeeNumber(string number)
         {
             while (true)
@@ -66,7 +90,7 @@ namespace Buisness_Application.BL
         }
         public static string ValidateChoice(string choice)
         {
-            while (choice != "Yes" || choice!= "No")
+            while (choice != "Yes" && choice!= "No")
             {
                 ValidationsUI.InvalidMessage();
                 choice = Console.ReadLine();
@@ -104,7 +128,18 @@ namespace Buisness_Application.BL
             while (true)
             {
                 bool flag = true;
-
+                foreach (User i in UserDL.GetUserList())
+                {
+                    if (i is Admin)
+                    {
+                        Admin a = (Admin)i;
+                        if (number == a.GetContact())
+                        {
+                            flag = false;
+                            break;
+                        }
+                    }
+                }
                 for (int i = 0; i < number.Length; i++)
                 {
                     if (number[i] < 48 || number[i] > 57)
@@ -131,6 +166,19 @@ namespace Buisness_Application.BL
                 while (true)
                 {
                     bool isValid = true;
+                    foreach (User i in UserDL.GetUserList())
+                    {
+                        if (i is Hostelite)
+                        {
+                            Hostelite h = (Hostelite)i;
+                            if (name == h.GetUsername())
+                            {
+                                isValid = false;
+                                break;
+                            }
+                        }
+                    }
+
                     for (int i = 0; i < check; i++)
                     {
                         if (name[i] < 65 || (name[i] > 90 && name[i] < 97) || name[i] > 122)

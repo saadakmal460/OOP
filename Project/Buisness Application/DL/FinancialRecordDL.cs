@@ -10,31 +10,23 @@ namespace Buisness_Application.DL
 {
     class FinancialRecordDL
     {
-        public static List<FinancialRecord> recordList = new List<FinancialRecord>();
-
-        
-        
-        public static void AddInList(FinancialRecord fr)
-        {
-            recordList.Add(fr);
-        }
 
         public static bool RemoveFromList(string name)
         {
             bool flag = false;
-            for (int i =0; i<recordList.Count; i++)
+            for (int i =0; i<Finance.GetFinancialRecordList().Count; i++)
             {
-                FinancialRecord record = recordList[i];
+                FinancialRecord record = Finance.GetFinancialRecordList()[i];
                 if (name == record.GetBillName())
                 {
                     if (record is Revenue)
                     {
-                        recordList.RemoveAt(i);
+                        Finance.GetFinancialRecordList().RemoveAt(i);
                         flag = true;
                     }
                     else if (record is Expense)
                     {
-                        recordList.RemoveAt(i);
+                        Finance.GetFinancialRecordList().RemoveAt(i);
                         flag = true;
                     }
                 }
@@ -44,7 +36,7 @@ namespace Buisness_Application.DL
         public static void StoreInFile(string path)
         {
             StreamWriter file = new StreamWriter(path, false);
-            foreach (FinancialRecord i in recordList)
+            foreach (FinancialRecord i in Finance.GetFinancialRecordList())
             {
                 if (i is Revenue)
                 {
@@ -80,14 +72,15 @@ namespace Buisness_Application.DL
                     if(type == "Expense")
                     {
                         Expense e = new Expense(name, amount, tax, type);
-                        AddInList(e);
+                        Finance.AddInList(e);
                     }
                     else if(type == "Revenue")
                     {
                         Revenue r = new Revenue(name, amount, tax, type);
-                        AddInList(r);
+                        Finance.AddInList(r);
+
                     }
-                    
+
 
                 }
 
@@ -128,7 +121,7 @@ namespace Buisness_Application.DL
         public static int CalculateTotalAmount(string type)
         {
             int sum = 0;
-            foreach(FinancialRecord i in recordList)
+            foreach(FinancialRecord i in Finance.GetFinancialRecordList())
             {
                 if(type == i.GetType())
                 {

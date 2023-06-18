@@ -37,14 +37,20 @@ namespace Buisness_Application.UI
             Console.WriteLine("\t 4.Generate challans");
             Console.WriteLine("\t 5.Check student fees");
             Console.WriteLine("\t 6.View financial report");
-            Console.WriteLine("\t 7.Transfer salaries");
-            Console.WriteLine("\t 8.See notices");
-            Console.WriteLine("\t 9.EXIT");
+            Console.WriteLine("\t 7.See notices");
+            Console.WriteLine("\t 8.EXIT");
 
             Console.WriteLine();
             Console.Write("\tEnter your option: ");
             option = Console.ReadLine();
             return option;
+        }
+
+        public static void ShowBills()
+        {
+            Console.WriteLine("\tMess\t\tLaundaray\t\tSecurity fees\t\tOthers");
+            Console.WriteLine("\t10000\t\t3000\t\t\t2500\t\t\t10000");
+            Console.ReadKey();
         }
     }
 }

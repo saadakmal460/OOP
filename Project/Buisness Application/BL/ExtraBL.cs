@@ -10,7 +10,7 @@ namespace Buisness_Application.BL
 {
     class ExtraBL
     {
-        private static int option = 0;
+        private static string option = "0";
         private static string path = "hostelites.txt";
         private static string pathNotices = "Notices.txt";
         private static string messPath = "Mess.txt";
@@ -340,11 +340,11 @@ namespace Buisness_Application.BL
             return messPath;
         }
 
-        public static int GetOption()
+        public static string GetOption()
         {
             return option;
         }
-        public static void setOption(int x)
+        public static void setOption(string x)
         {
             option = x;
         }

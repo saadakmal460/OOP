@@ -55,6 +55,8 @@ namespace Buisness_Application.UI
         {
             Console.WriteLine("\t 1.Show Financial report");
             Console.WriteLine("\t 2.Show Graphical analysis");
+            Console.WriteLine("\t 3.Exit");
+
             string opt = Console.ReadLine();
             return opt;
         }
@@ -85,7 +87,7 @@ namespace Buisness_Application.UI
             
             for (int i = 0; i < expenses; i++)
             {
-                Console.ForegroundColor = ConsoleColor.Red;
+                Console.ForegroundColor = ConsoleColor.DarkRed;
                 Console.SetCursorPosition(10, 32 - i);
                 Console.WriteLine(box);
                 Console.ResetColor();
@@ -101,8 +103,16 @@ namespace Buisness_Application.UI
                 Console.WriteLine(box);
                 Console.ResetColor();
             }
-            
 
+            Console.SetCursorPosition(42 , 28);
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine(box +" Revenue");
+            Console.ResetColor();
+
+            Console.SetCursorPosition(42, 30);
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.WriteLine(box + " Expense");
+            Console.ResetColor();
 
             Console.ReadKey();
         }

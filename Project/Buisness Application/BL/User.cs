@@ -1,4 +1,5 @@
 ﻿using Buisness_Application.DL;
+using Buisness_Application.UI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,7 +47,7 @@ namespace Buisness_Application.BL
 
         public string returnRole()
         {
-            
+            bool flag = true;
            foreach (User i in UserDL.GetUserList())
            {
                 if (username == i.GetUsername() && password == i.GetPassword())
@@ -54,6 +55,13 @@ namespace Buisness_Application.BL
                     role = i.role;
 
                 }
+                
+           }
+
+           if(!flag)
+           {
+                ValidationsUI.ShowLoginMessage();
+                Console.ReadKey();
            }
             
             

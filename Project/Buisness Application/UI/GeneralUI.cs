@@ -9,11 +9,11 @@ namespace Buisness_Application.UI
     class GeneralUI
     {
 
-        public static void GeneralFunctions()
+        public static void GeneralFunctions(string path)
         {
             Console.Clear();
             Header();
-            Path();
+            Path(path);
         }
         public static void Header()
         {
@@ -42,26 +42,26 @@ namespace Buisness_Application.UI
         }
 
 
-        public static void Path()
+        public static void Path(string path)
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(" ");
-            Console.WriteLine("\tLogin > ");
+            Console.WriteLine("\tLogin > " + path);
             Console.WriteLine("");
             Console.ResetColor();
         }
 
-        public static int LoginScreen()
+        public static string LoginScreen()
         {
-            Console.ForegroundColor = ConsoleColor.Green;
-            int option;
+            
+            string option;
             Console.WriteLine(" ");
             Console.WriteLine("\t1.LogIN");
             Console.WriteLine("\t2.Exit");
             Console.Write("\tEnter option: ");
-            option = int.Parse(Console.ReadLine());
+            option = Console.ReadLine();
             return option;
-            Console.ResetColor();
+            
 
         }
     }

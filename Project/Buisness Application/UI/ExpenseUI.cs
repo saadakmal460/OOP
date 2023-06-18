@@ -14,7 +14,7 @@ namespace Buisness_Application.UI
         {
             int count = 0;
             Console.WriteLine("\tExpense\t\tAmount\t\tTax");
-            foreach (FinancialRecord i in FinancialRecordDL.recordList)
+            foreach (FinancialRecord i in Finance.GetFinancialRecordList())
             {
                 if (i is Expense)
                 {

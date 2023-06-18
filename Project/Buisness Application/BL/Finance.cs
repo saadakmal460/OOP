@@ -9,8 +9,8 @@ namespace Buisness_Application.BL
     class Finance : User
     {
         private string employeeNumber;
-
-
+        private static List<Challan> challanList = new List<Challan>();
+        private static List<FinancialRecord> recordList = new List<FinancialRecord>();
         public Finance(string username, string password , string role , string employeeNumber) : base(username, password, role)
         {
             this.username = username;
@@ -27,6 +27,26 @@ namespace Buisness_Application.BL
         {
             return employeeNumber;
         }
-       
+
+        public static void AddChallanInList(Challan c)
+        {
+            challanList.Add(c);
+        }
+
+        public static List<Challan> GetChallanList()
+        {
+            return challanList;
+        }
+
+        public static void AddInList(FinancialRecord fr)
+        {
+            recordList.Add(fr);
+        }
+
+        public static List<FinancialRecord> GetFinancialRecordList()
+        {
+            return recordList;
+        }
+
     }
 }

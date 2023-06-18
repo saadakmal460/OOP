@@ -178,7 +178,7 @@ namespace Buisness_Application.UI
         }
         public static bool SearchByName(string name)
         {
-            bool flag = true;
+            bool flag = false;
 
             Console.WriteLine("Name\t\tRoll Number\t\tCNIC\t\t\tCity");
             foreach (User i in UserDL.GetUserList())

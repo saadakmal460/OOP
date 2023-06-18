@@ -13,7 +13,7 @@ namespace Buisness_Application.UI
         public static void ShowRevenue()
         {
             int count = 0;
-            foreach (FinancialRecord i in FinancialRecordDL.recordList)
+            foreach (FinancialRecord i in Finance.GetFinancialRecordList())
             {
                 if (i is Revenue)
                 {

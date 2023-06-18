@@ -10,16 +10,11 @@ namespace Buisness_Application.DL
 {
     class ChallanDL
     {
-        public static List<Challan> challanList = new List<Challan>();
 
-        public static void AddChallanInList(Challan c)
-        {
-            challanList.Add(c);
-        }
         public static bool CheckInChallanList(string rollNumber)
         {
             bool flag2 = false;
-            foreach (Challan i in ChallanDL.challanList)
+            foreach (Challan i in Finance.GetChallanList())
             {
                 if (rollNumber == i.GetRollNumber())
                 {
@@ -32,7 +27,7 @@ namespace Buisness_Application.DL
         public static void StoreChallansInFile(string path)
         {
             StreamWriter file = new StreamWriter(path, false);
-            foreach (Challan i in challanList)
+            foreach (Challan i in Finance.GetChallanList())
             {
                 file.WriteLine(i.GetRollNumber() + "," + i.GetChallanNumber() + "," + i.GetAmount() + "," + i.GetStatus());
             }
@@ -56,7 +51,7 @@ namespace Buisness_Application.DL
                     string amount = Parsing(record, 3);
                     string status = Parsing(record, 4);
                     Challan c = new Challan(rollNumber, challan, amount , status);
-                    AddChallanInList(c);
+                    Finance.AddChallanInList(c);
 
                 }
 

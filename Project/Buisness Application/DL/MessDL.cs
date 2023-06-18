@@ -10,30 +10,15 @@ namespace Buisness_Application.DL
 {
     class MessCRUD
     {
-        public static List<Mess> menu = new List<Mess>()
-        {
-            new Mess("Monday", "Biryani"),
-            new Mess("Tuesday", "Chicken"),
-            new Mess("Wednesday", "Sabzi"),
-            new Mess("Thursday", "Daal"),
-            new Mess("Friday", "Pulao"),
-            new Mess("Saturday", "Sabzi"),
-            new Mess("Sunday", "Daal")
-        };
-
-        public static void AddMenuInList(Mess m)
-        {
-            menu.Add(m);
-        }
 
         public static void RemoveAllItems()
         {
-            menu.Clear();
+            Admin.GetMessList().Clear();
         }
         public static void StoreMessMenuInFile(string path)
         {
             StreamWriter file = new StreamWriter(path, false);
-            foreach (Mess i in menu)
+            foreach (Mess i in Admin.GetMessList())
             {
                 file.WriteLine(i.GetDay() + "," + i.GetDish());
             }
@@ -54,7 +39,7 @@ namespace Buisness_Application.DL
                     string day = Parsing(record, 1);
                     string dish = Parsing(record, 2);
                     Mess m = new Mess(day, dish);
-                    AddMenuInList(m);
+                    Admin.AddMenuInList(m);
 
                 }
 
