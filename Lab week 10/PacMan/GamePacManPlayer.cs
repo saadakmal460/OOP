@@ -15,6 +15,11 @@ namespace PacMan
             this.type = type;
         }
 
+        public GameCell Move(GameDirection direction)
+        {
+            return this.CurrentCell.NextCell(direction);
+        }
+
         
     }
 }

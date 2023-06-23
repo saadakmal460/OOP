@@ -18,7 +18,7 @@ namespace PacMan
             this.rows = rows;
             this.colomns = colomns;
             
-            gameCell = new GameCell[colomns , rows];
+            gameCell = new GameCell[rows , colomns];
             LoadGrid(fileName);
         }
 
@@ -33,16 +33,12 @@ namespace PacMan
                 for(int i=0;i < record.Count(); i++)
                 {
                     
-                    GameCell cell = new GameCell(i, row);
+                    GameCell cell = new GameCell(row , i , this);
                     GameObject g = GetGameObject(record[i]);
-
+                    cell.CurrentGameObject = g;
                     
-                    gameCell[i , row] = cell;
-                    
-                    
-                    gameCell[i , row].CurrentGameObject = g; 
-                    
-                    
+                    gameCell[row , i] = cell;
+ 
                 }
                 row++;
             }
@@ -73,13 +69,14 @@ namespace PacMan
             {
                 type = GameObjectType.Wall;
             }
+            
             GameObject g = new GameObject(x, type);
             return g;
 
         }
         public GameCell GetCell(int x , int y)
         {
-            return gameCell[y ,x];
+            return gameCell[x, y];
             
         }
     }

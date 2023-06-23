@@ -18,11 +18,5 @@ namespace PacMan
             this.type = type;
         }
 
-        //public static GameObjectType GetGameObjectType(string charcter)
-        //{
-            
-        //}
-
-
     }
 }

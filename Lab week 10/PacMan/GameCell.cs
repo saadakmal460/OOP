@@ -31,22 +31,52 @@ namespace PacMan
         {
             if(GameDirection.Up == gameDirection)
             {
-                x = x - 1;
+                if (this.x > 0)
+                {
+                    GameCell next = gameGrid.GetCell(this.x-1 ,this.y);
+                    if (next.CurrentGameObject.type != GameObjectType.Wall)
+                    {
+                        return next;
+                    }
+                }
             }
             else if(GameDirection.Down == gameDirection)
             {
-                x = x + 1;
+                if (this.x < gameGrid.rows - 1)
+                {
+                    GameCell next = gameGrid.GetCell(this.x + 1, this.y);
+                    if (next.CurrentGameObject.type != GameObjectType.Wall)
+                    {
+                        return next;
+                    }
+                }
             }
             else if(GameDirection.Left == gameDirection)
             {
-                y = y - 1;
+                if(this.y >0)
+                {
+                    GameCell next = gameGrid.GetCell(this.x, this.y-1);
+                    if (next.CurrentGameObject.type != GameObjectType.Wall)
+                    {
+                        return next;
+                    }
+                }
+               
             }
-            else
+            else if(GameDirection.Right == gameDirection)
             {
-                y = y + 1;
+                if(this.y < gameGrid.colomns-1)
+                {
+                    GameCell next = gameGrid.GetCell(this.x , this.y+1);
+                    if (next.CurrentGameObject.type != GameObjectType.Wall)
+                    {
+                        return next;
+                    }
+                }
             }
-            GameCell c = new GameCell(x, y);
-            return c;
+
+            return this;
+            
         }
     }
 }
