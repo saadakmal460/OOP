@@ -63,6 +63,16 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1324046_200 {
+            get {
+                object obj = ResourceManager.GetObject("1324046-200", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _360_F_281777878_LaVb7LRKpTTo256lpx0G0qOr56lqxQH9 {
             get {
                 object obj = ResourceManager.GetObject("360_F_281777878_LaVb7LRKpTTo256lpx0G0qOr56lqxQH9", resourceCulture);
@@ -236,6 +246,17 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap person_add_FILL0_wght400_GRAD0_opsz481 {
             get {
                 object obj = ResourceManager.GetObject("person_add_FILL0_wght400_GRAD0_opsz481", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_transparent_arrow_sign_direction_go_move_navigation_right_arrows_next_arrow_icon {
+            get {
+                object obj = ResourceManager.GetObject("png-transparent-arrow-sign-direction-go-move-navigation-right-arrows-next-arrow-i" +
+                        "con", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
