@@ -34,11 +34,9 @@ namespace Buisness_Application.BL
                 Console.ReadKey();
             }
         }
-        public static string ValidateEmployeeNumber(string number)
+        public static bool ValidateEmployeeNumber(string number)
         {
-            while (true)
-            {
-                bool flag = true;
+            bool flag = true;
 
                 foreach (User i in UserDL.GetUserList())
                 {
@@ -60,16 +58,15 @@ namespace Buisness_Application.BL
                         break;
                     }
                 }
-                if (number.Length != 3 || !flag)
+                if (number.Length != 3 )
                 {
                     
-                    number = Console.ReadLine();
+                    flag = false;
                 }
-                else
-                {
-                    return number;
-                }
-            }
+
+            return flag;
+                
+            
         }
         public static string ValidateRating(string rating)
         {
@@ -122,11 +119,9 @@ namespace Buisness_Application.BL
                 }
             }
         }
-        public static string ValidateContactNumber(string number)
+        public static bool ValidateContactNumber(string number)
         {
-            while (true)
-            {
-                bool flag = true;
+            bool flag = true;
                 foreach (User i in UserDL.GetUserList())
                 {
                     if (i is Admin)
@@ -147,17 +142,15 @@ namespace Buisness_Application.BL
                         break;
                     }
                 }
-                if (number.Length != 11 || !flag)
+                if (number.Length != 11)
                 {
-                   
-                    number = Console.ReadLine();
+
+                    flag = false;
                 }
-                else
-                {
-                    return number;
-                }
-            }
+
+            return flag;
         }
+   
         public static bool ValidateName(string name)
         {
              int check = name.Length;

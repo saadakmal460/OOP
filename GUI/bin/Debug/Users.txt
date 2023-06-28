@@ -4,4 +4,5 @@ a,1,Finance,1
 ali,111,hostelite,111,0099887766554,lahore,3
 junaid,321,hostelite,155,5656565656565,lahore,1
 saad,111,hostelite,148,1234567890123,lahore,2
-ahmad,777,hostelite,777,7777777777777,lahore,5
+huzaifa,333,admin,03304133887
+qwerty,444,Finance,333
