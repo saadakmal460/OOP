@@ -69,11 +69,29 @@
     <Compile Include="DL\NoticesDL.cs" />
     <Compile Include="DL\ReviewsDL.cs" />
     <Compile Include="DL\UserDL.cs" />
+    <Compile Include="GUI\AddAdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AddAdminForm.Designer.cs">
+      <DependentUpon>AddAdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AddFinance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AddFinance.Designer.cs">
+      <DependentUpon>AddFinance.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\AddHosteliteForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\AddHosteliteForm.Designer.cs">
       <DependentUpon>AddHosteliteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AddOfficalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AddOfficalForm.Designer.cs">
+      <DependentUpon>AddOfficalForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\AdminForm.cs">
       <SubType>Form</SubType>
@@ -81,11 +99,29 @@
     <Compile Include="GUI\AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\FinancialRecordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FinancialRecordForm.Designer.cs">
+      <DependentUpon>FinancialRecordForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\LogInFrom.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\LogInFrom.Designer.cs">
       <DependentUpon>LogInFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RemoveHosteliteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RemoveHosteliteForm.Designer.cs">
+      <DependentUpon>RemoveHosteliteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RevenueForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RevenueForm.Designer.cs">
+      <DependentUpon>RevenueForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\UpdateRecordForm.cs">
       <SubType>Form</SubType>
@@ -99,22 +135,49 @@
     <Compile Include="GUI\ViewHosteliteForm.Designer.cs">
       <DependentUpon>ViewHosteliteForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ViewReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ViewReportForm.Designer.cs">
+      <DependentUpon>ViewReportForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\AddAdminForm.resx">
+      <DependentUpon>AddAdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AddFinance.resx">
+      <DependentUpon>AddFinance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\AddHosteliteForm.resx">
       <DependentUpon>AddHosteliteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AddOfficalForm.resx">
+      <DependentUpon>AddOfficalForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FinancialRecordForm.resx">
+      <DependentUpon>FinancialRecordForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\LogInFrom.resx">
       <DependentUpon>LogInFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RemoveHosteliteForm.resx">
+      <DependentUpon>RemoveHosteliteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RevenueForm.resx">
+      <DependentUpon>RevenueForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\UpdateRecordForm.resx">
       <DependentUpon>UpdateRecordForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ViewHosteliteForm.resx">
       <DependentUpon>ViewHosteliteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ViewReportForm.resx">
+      <DependentUpon>ViewReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -201,6 +264,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1324046-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-arrow-sign-direction-go-move-navigation-right-arrows-next-arrow-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
