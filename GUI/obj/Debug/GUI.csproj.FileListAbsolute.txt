@@ -21,3 +21,6 @@ D:\2nd Semester\OOP\Project\GUI\obj\Debug\GUI.GUI.ViewReportForm.resources
 D:\2nd Semester\OOP\Project\GUI\obj\Debug\GUI.GUI.RevenueForm.resources
 D:\2nd Semester\OOP\Project\GUI\obj\Debug\GUI.GUI.GraphicalAnalysisForm.resources
 D:\2nd Semester\OOP\Project\GUI\obj\Debug\GUI.GUI.ReviewsForm.resources
+D:\2nd Semester\OOP\Project\GUI\obj\Debug\GUI.GUI.SearchByNameForm.resources
+D:\2nd Semester\OOP\Project\GUI\obj\Debug\GUI.GUI.SearchHosteliteForm.resources
+D:\2nd Semester\OOP\Project\GUI\obj\Debug\GUI.GUI.SearchByRnForm.resources

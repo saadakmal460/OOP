@@ -16,6 +16,8 @@ namespace GUI.GUI
         public ReviewsForm()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
+
             ShowReviews();
         }
 
@@ -93,6 +95,18 @@ namespace GUI.GUI
                     starPath = Image.FromFile("C:\\Users\\Saad\\Downloads\\5s.png");
                 }
             return starPath;
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form f = new AdminForm();
+            f.Show();
         }
     }
 }

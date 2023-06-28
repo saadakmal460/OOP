@@ -73,6 +73,16 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _3015972 {
+            get {
+                object obj = ResourceManager.GetObject("3015972", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _360_F_281777878_LaVb7LRKpTTo256lpx0G0qOr56lqxQH9 {
             get {
                 object obj = ResourceManager.GetObject("360_F_281777878_LaVb7LRKpTTo256lpx0G0qOr56lqxQH9", resourceCulture);
@@ -166,6 +176,16 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap gg {
             get {
                 object obj = ResourceManager.GetObject("gg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap graph_paper_axis_blank_20x20_1_quadrant_010101_4477bb {
+            get {
+                object obj = ResourceManager.GetObject("graph-paper-axis-blank-20x20-1-quadrant-010101-4477bb", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -289,6 +309,16 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap user_sign_icon_person_symbol_human_avatar_isolated_on_white_backogrund_vector {
             get {
                 object obj = ResourceManager.GetObject("user-sign-icon-person-symbol-human-avatar-isolated-on-white-backogrund-vector", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap white {
+            get {
+                object obj = ResourceManager.GetObject("white", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

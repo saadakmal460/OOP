@@ -88,5 +88,12 @@ namespace GUI.GUI
             f.Show();
             this.Hide();
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            Form f = new SearchHosteliteForm();
+            f.Show();
+            this.Close();
+        }
     }
 }

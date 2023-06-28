@@ -54,7 +54,7 @@ namespace GUI.GUI
         private void RevenueLine()
         {
             int revenue = FinancialRecordDL.CalculateDigits("Revenue");
-            MessageBox.Show(revenue.ToString());
+            
             if(revenue == 3)
             {
                 pannel1k.Visible = true;
@@ -83,6 +83,11 @@ namespace GUI.GUI
             this.Hide();
             Form F = new FinancialRecordForm();
             F.Show();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
