@@ -81,5 +81,12 @@ namespace GUI.GUI
         {
 
         }
+
+        private void btnReviews_Click(object sender, EventArgs e)
+        {
+            Form f = new ReviewsForm();
+            f.Show();
+            this.Hide();
+        }
     }
 }

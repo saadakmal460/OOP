@@ -31,5 +31,17 @@ namespace GUI.GUI
             Form f = new AdminForm();
             f.Show();
         }
+
+        private void FinancialRecordForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkAddHostelite_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form f = new GraphicalAnalysisForm();
+            f.Show();
+            this.Hide();
+        }
     }
 }

@@ -123,6 +123,7 @@ namespace GUI.GUI
             this.btnReviews.Text = "Reviews and Ratings";
             this.btnReviews.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReviews.UseVisualStyleBackColor = false;
+            this.btnReviews.Click += new System.EventHandler(this.btnReviews_Click);
             // 
             // btnSearch
             // 

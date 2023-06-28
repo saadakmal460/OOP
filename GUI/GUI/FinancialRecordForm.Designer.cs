@@ -103,7 +103,7 @@ namespace GUI.GUI
             this.linkPayemntRecord.LinkColor = System.Drawing.SystemColors.HotTrack;
             this.linkPayemntRecord.Location = new System.Drawing.Point(95, 0);
             this.linkPayemntRecord.Name = "linkPayemntRecord";
-            this.linkPayemntRecord.Size = new System.Drawing.Size(167, 117);
+            this.linkPayemntRecord.Size = new System.Drawing.Size(164, 114);
             this.linkPayemntRecord.TabIndex = 5;
             this.linkPayemntRecord.TabStop = true;
             this.linkPayemntRecord.Text = "View \r\nFinancial\r\nReport";
@@ -129,10 +129,11 @@ namespace GUI.GUI
             this.linkAddHostelite.LinkColor = System.Drawing.SystemColors.ButtonHighlight;
             this.linkAddHostelite.Location = new System.Drawing.Point(95, 12);
             this.linkAddHostelite.Name = "linkAddHostelite";
-            this.linkAddHostelite.Size = new System.Drawing.Size(188, 117);
+            this.linkAddHostelite.Size = new System.Drawing.Size(184, 114);
             this.linkAddHostelite.TabIndex = 1;
             this.linkAddHostelite.TabStop = true;
             this.linkAddHostelite.Text = "View \r\nGraphical \r\nAnalysis";
+            this.linkAddHostelite.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkAddHostelite_LinkClicked);
             // 
             // pictureBox1
             // 
@@ -193,6 +194,7 @@ namespace GUI.GUI
             this.MinimumSize = new System.Drawing.Size(1225, 775);
             this.Name = "FinancialRecordForm";
             this.Text = "FinancialRecordForm";
+            this.Load += new System.EventHandler(this.FinancialRecordForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel7.ResumeLayout(false);
