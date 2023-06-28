@@ -113,7 +113,7 @@ namespace GUI.GUI
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.label7.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label7.Location = new System.Drawing.Point(638, 30);
@@ -412,6 +412,7 @@ namespace GUI.GUI
             this.MinimumSize = new System.Drawing.Size(1261, 772);
             this.Name = "UpdateRecordForm";
             this.Text = "UpdateRecordForm";
+            this.Load += new System.EventHandler(this.UpdateRecordForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

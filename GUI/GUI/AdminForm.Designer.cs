@@ -278,6 +278,7 @@ namespace GUI.GUI
             this.linkRemoveHostelite.TabIndex = 3;
             this.linkRemoveHostelite.TabStop = true;
             this.linkRemoveHostelite.Text = "Remove a \r\nHostelite";
+            this.linkRemoveHostelite.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkRemoveHostelite_LinkClicked);
             // 
             // panel4
             // 
@@ -355,6 +356,7 @@ namespace GUI.GUI
             this.linkAddOffical.TabIndex = 3;
             this.linkAddOffical.TabStop = true;
             this.linkAddOffical.Text = "Add an \r\nOffical";
+            this.linkAddOffical.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkAddOffical_LinkClicked);
             // 
             // panel7
             // 
@@ -380,6 +382,7 @@ namespace GUI.GUI
             this.linkPayemntRecord.TabIndex = 5;
             this.linkPayemntRecord.TabStop = true;
             this.linkPayemntRecord.Text = "Payment \r\nRecord";
+            this.linkPayemntRecord.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkPayemntRecord_LinkClicked);
             // 
             // panel8
             // 
@@ -388,6 +391,7 @@ namespace GUI.GUI
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(949, 727);
             this.panel8.TabIndex = 6;
+            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
             // pictureBox7
             // 

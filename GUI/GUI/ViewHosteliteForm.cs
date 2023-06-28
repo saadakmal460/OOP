@@ -17,6 +17,7 @@ namespace GUI.GUI
         public ViewHosteliteForm()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
             List<User> sortedUserList = UserDL.GetSortedList();
 
             

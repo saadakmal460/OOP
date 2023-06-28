@@ -17,6 +17,7 @@ namespace GUI.GUI
         public UpdateRecordForm()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
@@ -196,6 +197,11 @@ namespace GUI.GUI
             Form f = new AdminForm();
             f.Show();
             this.Visible = false;
+        }
+
+        private void UpdateRecordForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

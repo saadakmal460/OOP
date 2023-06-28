@@ -15,6 +15,7 @@ namespace GUI.GUI
         public AdminForm()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -53,6 +54,32 @@ namespace GUI.GUI
             Form f = new UpdateRecordForm();
             this.Hide();
             f.Show();
+        }
+
+        private void linkRemoveHostelite_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form f = new RemoveHosteliteForm();
+            f.Show();
+            this.Close();
+        }
+
+        private void linkAddOffical_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form f = new AddOfficalForm();
+            f.Show();
+            this.Close();
+        }
+
+        private void linkPayemntRecord_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form f = new FinancialRecordForm();
+            f.Show();
+            this.Close();
+        }
+
+        private void panel8_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

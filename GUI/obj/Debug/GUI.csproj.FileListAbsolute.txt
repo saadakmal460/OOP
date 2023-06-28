@@ -12,3 +12,10 @@ D:\2nd Semester\OOP\Project\GUI\obj\Debug\GUI.GUI.AdminForm.resources
 D:\2nd Semester\OOP\Project\GUI\obj\Debug\GUI.GUI.AddHosteliteForm.resources
 D:\2nd Semester\OOP\Project\GUI\obj\Debug\GUI.GUI.ViewHosteliteForm.resources
 D:\2nd Semester\OOP\Project\GUI\obj\Debug\GUI.GUI.UpdateRecordForm.resources
+D:\2nd Semester\OOP\Project\GUI\obj\Debug\GUI.GUI.RemoveHosteliteForm.resources
+D:\2nd Semester\OOP\Project\GUI\obj\Debug\GUI.GUI.AddOfficalForm.resources
+D:\2nd Semester\OOP\Project\GUI\obj\Debug\GUI.GUI.AddAdminForm.resources
+D:\2nd Semester\OOP\Project\GUI\obj\Debug\GUI.GUI.AddFinance.resources
+D:\2nd Semester\OOP\Project\GUI\obj\Debug\GUI.GUI.FinancialRecordForm.resources
+D:\2nd Semester\OOP\Project\GUI\obj\Debug\GUI.GUI.ViewReportForm.resources
+D:\2nd Semester\OOP\Project\GUI\obj\Debug\GUI.GUI.RevenueForm.resources

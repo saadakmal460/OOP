@@ -17,6 +17,7 @@ namespace GUI.GUI
         public AddHosteliteForm()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
@@ -132,6 +133,11 @@ namespace GUI.GUI
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddHosteliteForm_Load(object sender, EventArgs e)
         {
 
         }
