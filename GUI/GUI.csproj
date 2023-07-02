@@ -105,11 +105,23 @@
     <Compile Include="GUI\FinancialRecordForm.Designer.cs">
       <DependentUpon>FinancialRecordForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\GraphicalAnalysisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GraphicalAnalysisForm.Designer.cs">
+      <DependentUpon>GraphicalAnalysisForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\LogInFrom.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\LogInFrom.Designer.cs">
       <DependentUpon>LogInFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MessForm.Designer.cs">
+      <DependentUpon>MessForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\RemoveHosteliteForm.cs">
       <SubType>Form</SubType>
@@ -123,17 +135,59 @@
     <Compile Include="GUI\RevenueForm.Designer.cs">
       <DependentUpon>RevenueForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ReviewsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ReviewsForm.Designer.cs">
+      <DependentUpon>ReviewsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\SearchByNameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SearchByNameForm.Designer.cs">
+      <DependentUpon>SearchByNameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\SearchByRnForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SearchByRnForm.Designer.cs">
+      <DependentUpon>SearchByRnForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\SearchHosteliteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SearchHosteliteForm.Designer.cs">
+      <DependentUpon>SearchHosteliteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UpdateMessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\UpdateMessForm.Designer.cs">
+      <DependentUpon>UpdateMessForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\UpdateRecordForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\UpdateRecordForm.Designer.cs">
       <DependentUpon>UpdateRecordForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ViewAllotedRooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ViewAllotedRooms.Designer.cs">
+      <DependentUpon>ViewAllotedRooms.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\ViewHosteliteForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\ViewHosteliteForm.Designer.cs">
       <DependentUpon>ViewHosteliteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ViewMessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ViewMessForm.Designer.cs">
+      <DependentUpon>ViewMessForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\ViewReportForm.cs">
       <SubType>Form</SubType>
@@ -161,8 +215,14 @@
     <EmbeddedResource Include="GUI\FinancialRecordForm.resx">
       <DependentUpon>FinancialRecordForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GraphicalAnalysisForm.resx">
+      <DependentUpon>GraphicalAnalysisForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\LogInFrom.resx">
       <DependentUpon>LogInFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MessForm.resx">
+      <DependentUpon>MessForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\RemoveHosteliteForm.resx">
       <DependentUpon>RemoveHosteliteForm.cs</DependentUpon>
@@ -170,11 +230,32 @@
     <EmbeddedResource Include="GUI\RevenueForm.resx">
       <DependentUpon>RevenueForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ReviewsForm.resx">
+      <DependentUpon>ReviewsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SearchByNameForm.resx">
+      <DependentUpon>SearchByNameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SearchByRnForm.resx">
+      <DependentUpon>SearchByRnForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SearchHosteliteForm.resx">
+      <DependentUpon>SearchHosteliteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UpdateMessForm.resx">
+      <DependentUpon>UpdateMessForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\UpdateRecordForm.resx">
       <DependentUpon>UpdateRecordForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ViewAllotedRooms.resx">
+      <DependentUpon>ViewAllotedRooms.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\ViewHosteliteForm.resx">
       <DependentUpon>ViewHosteliteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ViewMessForm.resx">
+      <DependentUpon>ViewMessForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ViewReportForm.resx">
       <DependentUpon>ViewReportForm.cs</DependentUpon>
@@ -270,6 +351,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\png-transparent-arrow-sign-direction-go-move-navigation-right-arrows-next-arrow-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graph-paper-axis-blank-20x20-1-quadrant-010101-4477bb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3015972.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mess-icon-7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\857681.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
