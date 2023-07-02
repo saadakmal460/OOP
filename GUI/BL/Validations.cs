@@ -281,7 +281,7 @@ namespace Buisness_Application.BL
                     }
                 }
 
-                if (check2 <= 2 || check2 > 10)
+                if (check2 <= 2 || check2 > 10 || cityCheck == null)
                 {
                     flag = false;
                     

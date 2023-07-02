@@ -1,7 +1,7 @@
-Monday,wqeef
-Tuesday,Chicken
-Wednesday,Sabzi
+Monday,Sabzi
+Tuesday,
+Wednesday,sabzi
 Thursday,Daal
 Friday,Pulao
-Saturday,Sabzi
+Saturday,biryani
 Sunday,Daal
