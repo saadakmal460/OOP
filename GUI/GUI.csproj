@@ -87,6 +87,12 @@
     <Compile Include="GUI\AddHosteliteForm.Designer.cs">
       <DependentUpon>AddHosteliteForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\AddNoticeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AddNoticeForm.Designer.cs">
+      <DependentUpon>AddNoticeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\AddOfficalForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,12 @@
     </Compile>
     <Compile Include="GUI\AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DelteNoticeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DelteNoticeForm.Designer.cs">
+      <DependentUpon>DelteNoticeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\FinancialRecordForm.cs">
       <SubType>Form</SubType>
@@ -122,6 +134,12 @@
     </Compile>
     <Compile Include="GUI\MessForm.Designer.cs">
       <DependentUpon>MessForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NoticesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\NoticesForm.Designer.cs">
+      <DependentUpon>NoticesForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\RemoveHosteliteForm.cs">
       <SubType>Form</SubType>
@@ -177,6 +195,12 @@
     <Compile Include="GUI\ViewAllotedRooms.Designer.cs">
       <DependentUpon>ViewAllotedRooms.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ViewComplaintsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ViewComplaintsForm.Designer.cs">
+      <DependentUpon>ViewComplaintsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\ViewHosteliteForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +212,12 @@
     </Compile>
     <Compile Include="GUI\ViewMessForm.Designer.cs">
       <DependentUpon>ViewMessForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ViewNoticesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ViewNoticesForm.Designer.cs">
+      <DependentUpon>ViewNoticesForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\ViewReportForm.cs">
       <SubType>Form</SubType>
@@ -206,11 +236,17 @@
     <EmbeddedResource Include="GUI\AddHosteliteForm.resx">
       <DependentUpon>AddHosteliteForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AddNoticeForm.resx">
+      <DependentUpon>AddNoticeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\AddOfficalForm.resx">
       <DependentUpon>AddOfficalForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DelteNoticeForm.resx">
+      <DependentUpon>DelteNoticeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FinancialRecordForm.resx">
       <DependentUpon>FinancialRecordForm.cs</DependentUpon>
@@ -223,6 +259,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\MessForm.resx">
       <DependentUpon>MessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NoticesForm.resx">
+      <DependentUpon>NoticesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\RemoveHosteliteForm.resx">
       <DependentUpon>RemoveHosteliteForm.cs</DependentUpon>
@@ -251,11 +290,17 @@
     <EmbeddedResource Include="GUI\ViewAllotedRooms.resx">
       <DependentUpon>ViewAllotedRooms.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ViewComplaintsForm.resx">
+      <DependentUpon>ViewComplaintsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\ViewHosteliteForm.resx">
       <DependentUpon>ViewHosteliteForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ViewMessForm.resx">
       <DependentUpon>ViewMessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ViewNoticesForm.resx">
+      <DependentUpon>ViewNoticesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ViewReportForm.resx">
       <DependentUpon>ViewReportForm.cs</DependentUpon>
@@ -366,6 +411,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\857681.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1091916.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7037649.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet-list.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
