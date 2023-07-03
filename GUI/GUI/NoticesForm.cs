@@ -30,5 +30,19 @@ namespace GUI.GUI
             Form f = new AddNoticeForm();
             f.Show();
         }
+
+        private void linkAddHostelite_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form f = new ViewNoticesForm();
+            f.Show();
+            this.Close();
+        }
+
+        private void linkRemoveHostelite_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
+            Form f = new DelteNoticeForm();
+            f.Show();
+        }
     }
 }

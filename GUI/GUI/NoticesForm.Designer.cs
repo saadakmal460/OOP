@@ -112,6 +112,7 @@ namespace GUI.GUI
             this.linkAddHostelite.TabIndex = 1;
             this.linkAddHostelite.TabStop = true;
             this.linkAddHostelite.Text = "View\r\nNotices\r\n";
+            this.linkAddHostelite.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkAddHostelite_LinkClicked);
             // 
             // panel3
             // 
@@ -163,6 +164,7 @@ namespace GUI.GUI
             this.linkRemoveHostelite.TabIndex = 3;
             this.linkRemoveHostelite.TabStop = true;
             this.linkRemoveHostelite.Text = "Remove a \r\nNotice\r\n";
+            this.linkRemoveHostelite.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkRemoveHostelite_LinkClicked);
             // 
             // pictureBox3
             // 

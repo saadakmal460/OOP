@@ -75,5 +75,10 @@ namespace GUI.GUI
             Form f = new MessForm();
             f.Show();
         }
+
+        private void UpdateMessForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
