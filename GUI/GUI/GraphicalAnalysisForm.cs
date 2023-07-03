@@ -16,7 +16,6 @@ namespace GUI.GUI
         public GraphicalAnalysisForm()
         {
             InitializeComponent();
-            this.StartPosition = FormStartPosition.CenterScreen;
             RevenueLine();
             ExpenseLine();
         }

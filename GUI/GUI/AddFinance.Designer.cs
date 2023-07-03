@@ -31,9 +31,9 @@ namespace GUI.GUI
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddFinance));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblTitle = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.lblErrorLine = new System.Windows.Forms.Label();
             this.lblErrorPassword = new System.Windows.Forms.Label();
             this.lblErrorEmployeeNo = new System.Windows.Forms.Label();
@@ -62,17 +62,6 @@ namespace GUI.GUI
             this.panel1.Size = new System.Drawing.Size(354, 730);
             this.panel1.TabIndex = 2;
             // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblTitle.Location = new System.Drawing.Point(51, 353);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(253, 24);
-            this.lblTitle.TabIndex = 3;
-            this.lblTitle.Text = "Hostel Managment System";
-            // 
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.SystemColors.MenuHighlight;
@@ -98,6 +87,17 @@ namespace GUI.GUI
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblTitle.Location = new System.Drawing.Point(51, 353);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(253, 24);
+            this.lblTitle.TabIndex = 3;
+            this.lblTitle.Text = "Hostel Managment System";
             // 
             // lblErrorLine
             // 
@@ -262,7 +262,9 @@ namespace GUI.GUI
             this.MaximumSize = new System.Drawing.Size(1225, 775);
             this.MinimumSize = new System.Drawing.Size(1225, 775);
             this.Name = "AddFinance";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddFinance";
+            this.Load += new System.EventHandler(this.AddFinance_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

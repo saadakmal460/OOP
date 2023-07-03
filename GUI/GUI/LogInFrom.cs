@@ -18,7 +18,7 @@ namespace GUI
         public LoginFrom()
         {
             InitializeComponent();
-            this.StartPosition = FormStartPosition.CenterScreen;
+            
         }
 
         private void LoginFrom_Load(object sender, EventArgs e)

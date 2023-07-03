@@ -17,7 +17,6 @@ namespace GUI.GUI
         public SearchByNameForm()
         {
             InitializeComponent();
-            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void btnSearch_Click(object sender, EventArgs e)

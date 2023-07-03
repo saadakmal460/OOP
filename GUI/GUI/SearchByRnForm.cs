@@ -17,8 +17,6 @@ namespace GUI.GUI
         public SearchByRnForm()
         {
             InitializeComponent();
-            this.StartPosition = FormStartPosition.CenterScreen;
-
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -90,6 +88,11 @@ namespace GUI.GUI
             this.Close();
             Form f = new SearchHosteliteForm();
             f.Show();
+        }
+
+        private void SearchByRnForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

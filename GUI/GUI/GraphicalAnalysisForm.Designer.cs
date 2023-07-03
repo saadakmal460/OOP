@@ -277,6 +277,7 @@ namespace GUI.GUI
             this.MaximumSize = new System.Drawing.Size(1225, 775);
             this.MinimumSize = new System.Drawing.Size(1225, 775);
             this.Name = "GraphicalAnalysisForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GraphicalAnalysisForm";
             this.Load += new System.EventHandler(this.GraphicalAnalysisForm_Load);
             this.panel1.ResumeLayout(false);

@@ -10,18 +10,19 @@ using System.Windows.Forms;
 
 namespace GUI.GUI
 {
-    public partial class SearchHosteliteForm : Form
+    public partial class MessForm : Form
     {
-        public SearchHosteliteForm()
+        public MessForm()
         {
             InitializeComponent();
         }
 
-        private void linkSearchByName_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void linkAddHostelite_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Form f = new SearchByNameForm();
-            f.Show();
             this.Close();
+            Form f = new ViewMessForm();
+            f.Show();
+
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -29,19 +30,13 @@ namespace GUI.GUI
             this.Close();
             Form f = new AdminForm();
             f.Show();
-            
         }
 
-        private void linkSearchByRn_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void linkUpdateRecord_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Close();
-            Form f = new SearchByRnForm();
+            Form f = new UpdateMessForm();
             f.Show();
-        }
-
-        private void SearchHosteliteForm_Load(object sender, EventArgs e)
-        {
-
+            this.Close();
         }
     }
 }

@@ -172,6 +172,7 @@ namespace GUI
             this.MaximumSize = new System.Drawing.Size(1225, 775);
             this.MinimumSize = new System.Drawing.Size(1225, 775);
             this.Name = "LoginFrom";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HMS";
             this.Load += new System.EventHandler(this.LoginFrom_Load);
             this.panel1.ResumeLayout(false);

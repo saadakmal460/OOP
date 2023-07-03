@@ -1,7 +1,7 @@
 ﻿
 namespace GUI.GUI
 {
-    partial class FinancialRecordForm
+    partial class MessForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,24 +29,24 @@ namespace GUI.GUI
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FinancialRecordForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MessForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.linkPayemntRecord = new System.Windows.Forms.LinkLabel();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.linkAddHostelite = new System.Windows.Forms.LinkLabel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.linkUpdateRecord = new System.Windows.Forms.LinkLabel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -55,10 +55,105 @@ namespace GUI.GUI
             this.panel1.Controls.Add(this.btnBack);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.lblTitle);
-            this.panel1.Location = new System.Drawing.Point(1, -1);
+            this.panel1.Location = new System.Drawing.Point(1, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(354, 730);
-            this.panel1.TabIndex = 3;
+            this.panel1.TabIndex = 2;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblTitle.Location = new System.Drawing.Point(51, 353);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(253, 24);
+            this.lblTitle.TabIndex = 3;
+            this.lblTitle.Text = "Hostel Managment System";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.SystemColors.Control;
+            this.label7.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label7.Location = new System.Drawing.Point(619, 50);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(341, 48);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Mess Information";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel2.Controls.Add(this.linkAddHostelite);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Location = new System.Drawing.Point(627, 183);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(285, 130);
+            this.panel2.TabIndex = 13;
+            // 
+            // linkAddHostelite
+            // 
+            this.linkAddHostelite.ActiveLinkColor = System.Drawing.SystemColors.ActiveCaption;
+            this.linkAddHostelite.AutoSize = true;
+            this.linkAddHostelite.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.linkAddHostelite.Font = new System.Drawing.Font("Arial Rounded MT Bold", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkAddHostelite.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkAddHostelite.LinkColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.linkAddHostelite.Location = new System.Drawing.Point(95, 22);
+            this.linkAddHostelite.Name = "linkAddHostelite";
+            this.linkAddHostelite.Size = new System.Drawing.Size(199, 78);
+            this.linkAddHostelite.TabIndex = 1;
+            this.linkAddHostelite.TabStop = true;
+            this.linkAddHostelite.Text = "View Mess \r\nMenu";
+            this.linkAddHostelite.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkAddHostelite_LinkClicked);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel4.Controls.Add(this.linkUpdateRecord);
+            this.panel4.Controls.Add(this.pictureBox5);
+            this.panel4.Location = new System.Drawing.Point(627, 423);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(285, 118);
+            this.panel4.TabIndex = 6;
+            // 
+            // linkUpdateRecord
+            // 
+            this.linkUpdateRecord.ActiveLinkColor = System.Drawing.SystemColors.ActiveCaption;
+            this.linkUpdateRecord.AutoSize = true;
+            this.linkUpdateRecord.BackColor = System.Drawing.Color.Gainsboro;
+            this.linkUpdateRecord.Font = new System.Drawing.Font("Arial Rounded MT Bold", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkUpdateRecord.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkUpdateRecord.LinkColor = System.Drawing.SystemColors.HotTrack;
+            this.linkUpdateRecord.Location = new System.Drawing.Point(95, 19);
+            this.linkUpdateRecord.Name = "linkUpdateRecord";
+            this.linkUpdateRecord.Size = new System.Drawing.Size(166, 88);
+            this.linkUpdateRecord.TabIndex = 4;
+            this.linkUpdateRecord.TabStop = true;
+            this.linkUpdateRecord.Text = "Update \rMenu";
+            this.linkUpdateRecord.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkUpdateRecord_LinkClicked);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::GUI.Properties.Resources.png_transparent_e_commerce_online_shopping_ui_receipt_update_transaction_basic_e_commerce_line_icon1;
+            this.pictureBox5.Location = new System.Drawing.Point(0, 19);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(89, 75);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 4;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GUI.Properties.Resources._857681;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 25);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(89, 75);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // btnBack
             // 
@@ -86,125 +181,29 @@ namespace GUI.GUI
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblTitle.Location = new System.Drawing.Point(51, 353);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(253, 24);
-            this.lblTitle.TabIndex = 3;
-            this.lblTitle.Text = "Hostel Managment System";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.label7.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label7.Location = new System.Drawing.Point(604, 51);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(322, 48);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Financial Record";
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel7.Controls.Add(this.linkPayemntRecord);
-            this.panel7.Controls.Add(this.pictureBox7);
-            this.panel7.Location = new System.Drawing.Point(612, 172);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(285, 118);
-            this.panel7.TabIndex = 14;
-            // 
-            // linkPayemntRecord
-            // 
-            this.linkPayemntRecord.ActiveLinkColor = System.Drawing.SystemColors.ActiveCaption;
-            this.linkPayemntRecord.AutoSize = true;
-            this.linkPayemntRecord.BackColor = System.Drawing.Color.Gainsboro;
-            this.linkPayemntRecord.Font = new System.Drawing.Font("Arial Rounded MT Bold", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkPayemntRecord.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.linkPayemntRecord.LinkColor = System.Drawing.SystemColors.HotTrack;
-            this.linkPayemntRecord.Location = new System.Drawing.Point(95, 0);
-            this.linkPayemntRecord.Name = "linkPayemntRecord";
-            this.linkPayemntRecord.Size = new System.Drawing.Size(164, 114);
-            this.linkPayemntRecord.TabIndex = 5;
-            this.linkPayemntRecord.TabStop = true;
-            this.linkPayemntRecord.Text = "View \r\nFinancial\r\nReport";
-            this.linkPayemntRecord.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkPayemntRecord_LinkClicked);
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::GUI.Properties.Resources._3948979_2001;
-            this.pictureBox7.Location = new System.Drawing.Point(0, 17);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(89, 75);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 6;
-            this.pictureBox7.TabStop = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.panel2.Controls.Add(this.linkAddHostelite);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(612, 364);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(285, 130);
-            this.panel2.TabIndex = 15;
-            // 
-            // linkAddHostelite
-            // 
-            this.linkAddHostelite.ActiveLinkColor = System.Drawing.SystemColors.ActiveCaption;
-            this.linkAddHostelite.AutoSize = true;
-            this.linkAddHostelite.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.linkAddHostelite.Font = new System.Drawing.Font("Arial Rounded MT Bold", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkAddHostelite.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.linkAddHostelite.LinkColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.linkAddHostelite.Location = new System.Drawing.Point(95, 12);
-            this.linkAddHostelite.Name = "linkAddHostelite";
-            this.linkAddHostelite.Size = new System.Drawing.Size(184, 114);
-            this.linkAddHostelite.TabIndex = 1;
-            this.linkAddHostelite.TabStop = true;
-            this.linkAddHostelite.Text = "View \r\nGraphical \r\nAnalysis";
-            this.linkAddHostelite.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkAddHostelite_LinkClicked);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::GUI.Properties.Resources._1324046_200;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 25);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(89, 75);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // FinancialRecordForm
+            // MessForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1207, 728);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel7);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel1);
             this.MaximumSize = new System.Drawing.Size(1225, 775);
             this.MinimumSize = new System.Drawing.Size(1225, 775);
-            this.Name = "FinancialRecordForm";
+            this.Name = "MessForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FinancialRecordForm";
-            this.Load += new System.EventHandler(this.FinancialRecordForm_Load);
+            this.Text = "MessForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,11 +216,11 @@ namespace GUI.GUI
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.LinkLabel linkPayemntRecord;
-        private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.LinkLabel linkAddHostelite;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.LinkLabel linkUpdateRecord;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }

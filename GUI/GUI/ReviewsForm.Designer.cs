@@ -164,6 +164,7 @@ namespace GUI.GUI
             this.MaximumSize = new System.Drawing.Size(1225, 775);
             this.MinimumSize = new System.Drawing.Size(1225, 775);
             this.Name = "ReviewsForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReviewsForm";
             this.Load += new System.EventHandler(this.ReviewsForm_Load);
             this.panel1.ResumeLayout(false);

@@ -411,6 +411,7 @@ namespace GUI.GUI
             this.MaximumSize = new System.Drawing.Size(1261, 772);
             this.MinimumSize = new System.Drawing.Size(1261, 772);
             this.Name = "UpdateRecordForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateRecordForm";
             this.Load += new System.EventHandler(this.UpdateRecordForm_Load);
             this.panel1.ResumeLayout(false);

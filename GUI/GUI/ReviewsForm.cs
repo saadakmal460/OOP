@@ -16,7 +16,6 @@ namespace GUI.GUI
         public ReviewsForm()
         {
             InitializeComponent();
-            this.StartPosition = FormStartPosition.CenterScreen;
 
             ShowReviews();
         }

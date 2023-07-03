@@ -158,6 +158,7 @@ namespace GUI.GUI
             this.btnNotices.Text = "Notices";
             this.btnNotices.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNotices.UseVisualStyleBackColor = false;
+            this.btnNotices.Click += new System.EventHandler(this.btnNotices_Click);
             // 
             // btnAllotedRooms
             // 
@@ -174,6 +175,7 @@ namespace GUI.GUI
             this.btnAllotedRooms.Text = "View alloted rooms";
             this.btnAllotedRooms.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAllotedRooms.UseVisualStyleBackColor = false;
+            this.btnAllotedRooms.Click += new System.EventHandler(this.btnAllotedRooms_Click);
             // 
             // btnMess
             // 
@@ -190,6 +192,7 @@ namespace GUI.GUI
             this.btnMess.Text = "Mess Information";
             this.btnMess.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMess.UseVisualStyleBackColor = false;
+            this.btnMess.Click += new System.EventHandler(this.btnMess_Click);
             // 
             // btnComplaints
             // 
@@ -206,6 +209,7 @@ namespace GUI.GUI
             this.btnComplaints.Text = "Complaints";
             this.btnComplaints.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnComplaints.UseVisualStyleBackColor = false;
+            this.btnComplaints.Click += new System.EventHandler(this.btnComplaints_Click);
             // 
             // label1
             // 
@@ -488,7 +492,9 @@ namespace GUI.GUI
             this.MaximumSize = new System.Drawing.Size(1261, 772);
             this.MinimumSize = new System.Drawing.Size(1261, 772);
             this.Name = "AdminForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HMS";
+            this.Load += new System.EventHandler(this.AdminForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

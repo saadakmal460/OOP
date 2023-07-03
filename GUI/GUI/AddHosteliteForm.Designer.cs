@@ -370,6 +370,7 @@ namespace GUI.GUI
             this.MaximumSize = new System.Drawing.Size(1225, 775);
             this.MinimumSize = new System.Drawing.Size(1225, 775);
             this.Name = "AddHosteliteForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddHosteliteForm";
             this.Load += new System.EventHandler(this.AddHosteliteForm_Load);
             this.panel1.ResumeLayout(false);

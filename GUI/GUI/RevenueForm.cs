@@ -17,7 +17,6 @@ namespace GUI.GUI
         public RevenueForm()
         {
             InitializeComponent();
-            this.StartPosition = FormStartPosition.CenterScreen;
             ShowRevenue();
         }
 
@@ -98,6 +97,11 @@ namespace GUI.GUI
             this.Close();
             Form f = new ViewReportForm();
             f.Show();
+        }
+
+        private void RevenueForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -15,7 +15,6 @@ namespace GUI.GUI
         public AddOfficalForm()
         {
             InitializeComponent();
-            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void btnBack_Click(object sender, EventArgs e)

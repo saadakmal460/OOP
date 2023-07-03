@@ -1,7 +1,7 @@
 ﻿
 namespace GUI.GUI
 {
-    partial class SearchByRnForm
+    partial class ViewComplaintsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,16 +29,14 @@ namespace GUI.GUI
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchByRnForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewComplaintsForm));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.lblerror = new System.Windows.Forms.Label();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.txtRollNumber = new System.Windows.Forms.TextBox();
-            this.lblName = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -51,10 +49,10 @@ namespace GUI.GUI
             this.panel1.Controls.Add(this.btnBack);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.lblTitle);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(-1, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(354, 730);
-            this.panel1.TabIndex = 4;
+            this.panel1.TabIndex = 2;
             // 
             // btnBack
             // 
@@ -96,89 +94,58 @@ namespace GUI.GUI
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.label7.BackColor = System.Drawing.SystemColors.Control;
             this.label7.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label7.Location = new System.Drawing.Point(612, 38);
+            this.label7.Location = new System.Drawing.Point(618, 45);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(322, 48);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Search Hostelite\r\n";
-            // 
-            // lblerror
-            // 
-            this.lblerror.AutoSize = true;
-            this.lblerror.ForeColor = System.Drawing.Color.Crimson;
-            this.lblerror.Location = new System.Drawing.Point(726, 196);
-            this.lblerror.Name = "lblerror";
-            this.lblerror.Size = new System.Drawing.Size(115, 17);
-            this.lblerror.TabIndex = 37;
-            this.lblerror.Text = "No record Found";
-            this.lblerror.Visible = false;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.Green;
-            this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(904, 222);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(95, 40);
-            this.btnSearch.TabIndex = 36;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // txtRollNumber
-            // 
-            this.txtRollNumber.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.txtRollNumber.Location = new System.Drawing.Point(729, 171);
-            this.txtRollNumber.Name = "txtRollNumber";
-            this.txtRollNumber.Size = new System.Drawing.Size(270, 22);
-            this.txtRollNumber.TabIndex = 35;
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblName.Location = new System.Drawing.Point(443, 173);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(217, 20);
-            this.lblName.TabIndex = 34;
-            this.lblName.Text = "Enter hostelite roll number\r\n";
+            this.label7.Size = new System.Drawing.Size(325, 48);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "View Complaints";
             // 
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(422, 353);
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridView1.Location = new System.Drawing.Point(485, 174);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(651, 342);
-            this.dataGridView1.TabIndex = 38;
+            this.dataGridView1.Size = new System.Drawing.Size(587, 483);
+            this.dataGridView1.TabIndex = 13;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // SearchByRnForm
+            // ViewComplaintsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1207, 728);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.lblerror);
-            this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.txtRollNumber);
-            this.Controls.Add(this.lblName);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel1);
             this.MaximumSize = new System.Drawing.Size(1225, 775);
             this.MinimumSize = new System.Drawing.Size(1225, 775);
-            this.Name = "SearchByRnForm";
+            this.Name = "ViewComplaintsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SearchByRnForm";
-            this.Load += new System.EventHandler(this.SearchByRnForm_Load);
+            this.Text = "ViewComplaintsForm";
+            this.Load += new System.EventHandler(this.ViewComplaintsForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -195,10 +162,6 @@ namespace GUI.GUI
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label lblerror;
-        private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.TextBox txtRollNumber;
-        private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

@@ -17,8 +17,7 @@ namespace GUI.GUI
         public ViewReportForm()
         {
             InitializeComponent();
-            this.StartPosition = FormStartPosition.CenterScreen;
-            ShowExpense();
+            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -109,7 +108,7 @@ namespace GUI.GUI
 
         private void ViewReportForm_Load(object sender, EventArgs e)
         {
-
+            ShowExpense();
         }
     }
 }

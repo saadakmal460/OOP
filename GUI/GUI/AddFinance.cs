@@ -17,7 +17,7 @@ namespace GUI.GUI
         public AddFinance()
         {
             InitializeComponent();
-            this.StartPosition = FormStartPosition.CenterScreen;
+            
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
@@ -91,6 +91,11 @@ namespace GUI.GUI
         private void btnClear_Click_1(object sender, EventArgs e)
         {
             Clear();
+        }
+
+        private void AddFinance_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

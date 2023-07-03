@@ -17,7 +17,6 @@ namespace GUI.GUI
         public RemoveHosteliteForm()
         {
             InitializeComponent();
-            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void RemoveHosteliteForm_Load(object sender, EventArgs e)

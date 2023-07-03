@@ -17,10 +17,15 @@ namespace GUI.GUI
         public ViewHosteliteForm()
         {
             InitializeComponent();
-            this.StartPosition = FormStartPosition.CenterScreen;
-            List<User> sortedUserList = UserDL.GetSortedList();
-
             
+        }
+
+
+        private void ViewHostelite()
+        {
+            List<User> sortedUserList = UserDL.GetUserList();
+
+
             dataGridView1.Columns.Add("Name", "Name");
             dataGridView1.Columns.Add("RollNumber", "Roll Number");
             dataGridView1.Columns.Add("CNIC", "CNIC");
@@ -31,17 +36,17 @@ namespace GUI.GUI
             dataGridView1.Columns["CNIC"].Width = 200;
             dataGridView1.Columns["City"].Width = 190;
 
-            
+
             foreach (User user in sortedUserList)
             {
                 if (user is Hostelite)
                 {
                     Hostelite hostelite = (Hostelite)user;
 
-                    
+
                     DataGridViewRow row = new DataGridViewRow();
 
-                    
+
                     DataGridViewCell nameCell = new DataGridViewTextBoxCell();
                     nameCell.Value = user.GetUsername();
                     row.Cells.Add(nameCell);
@@ -58,13 +63,12 @@ namespace GUI.GUI
                     cityCell.Value = hostelite.GetCity();
                     row.Cells.Add(cityCell);
 
-                    
+
                     dataGridView1.Rows.Add(row);
                 }
                 dataGridView1.ReadOnly = true;
             }
         }
-
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
@@ -75,6 +79,11 @@ namespace GUI.GUI
             this.Hide();
             Form f = new AdminForm();
             f.Show();
+        }
+
+        private void ViewHosteliteForm_Load(object sender, EventArgs e)
+        {
+            ViewHostelite();
         }
     }
 }

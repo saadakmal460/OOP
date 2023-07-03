@@ -15,7 +15,6 @@ namespace GUI.GUI
         public FinancialRecordForm()
         {
             InitializeComponent();
-            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void linkPayemntRecord_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

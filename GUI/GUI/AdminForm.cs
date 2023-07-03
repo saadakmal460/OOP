@@ -15,7 +15,6 @@ namespace GUI.GUI
         public AdminForm()
         {
             InitializeComponent();
-            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -94,6 +93,39 @@ namespace GUI.GUI
             Form f = new SearchHosteliteForm();
             f.Show();
             this.Close();
+        }
+
+        private void AdminForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAllotedRooms_Click(object sender, EventArgs e)
+        {
+            Form f = new ViewAllotedRooms();
+            f.Show();
+            this.Close();
+        }
+
+        private void btnMess_Click(object sender, EventArgs e)
+        {
+            Form f = new MessForm();
+            f.Show();
+            this.Close();
+        }
+
+        private void btnComplaints_Click(object sender, EventArgs e)
+        {
+            Form f = new ViewComplaintsForm();
+            f.Show();
+            this.Close();
+        }
+
+        private void btnNotices_Click(object sender, EventArgs e)
+        {
+            Form f = new NoticesForm();
+            f.Show();
+            this.Hide();
         }
     }
 }
