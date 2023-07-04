@@ -64,7 +64,8 @@ namespace GUI
             string password = txtPassword.Text;
             User user = new User(name, password);
             string role = user.returnRole();
-            
+
+            ExtraBL.SetRole(role);
             if(role == "admin")
             {
                 Form f = new AdminForm();
@@ -76,7 +77,10 @@ namespace GUI
 
             else if(role == "hostelite")
             {
-                MessageBox.Show("hostelite is valid");
+                ExtraBL.SetName(name);
+                Form f = new HosteliteForm();
+                f.Show();
+                this.Hide();
             }
 
             else if(role == null)

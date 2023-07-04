@@ -62,9 +62,18 @@ namespace GUI.GUI
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Form f = new MessForm();
-            f.Show();
+            if (ExtraBL.GetRole() == "admin")
+            {
+                this.Close();
+                Form f = new MessForm();
+                f.Show();
+            }
+            else if (ExtraBL.GetRole() == "hostelite")
+            {
+                this.Close();
+                Form f = new HosteliteForm();
+                f.Show();
+            }
         }
 
         private void ViewMessForm_Load(object sender, EventArgs e)
