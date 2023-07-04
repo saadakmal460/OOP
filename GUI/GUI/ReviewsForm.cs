@@ -55,9 +55,9 @@ namespace GUI.GUI
 
                 pictureBox.Image = starPath;
                 pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
-                pictureBox.Location = new Point(picX, picY+count); 
+                pictureBox.Location = new Point(picX, picY + count);
                 pictureBox.Size = new Size(139, 26);
-                
+
 
                 Controls.Add(newLabel);
                 Controls.Add(reviewLabel);
@@ -69,30 +69,33 @@ namespace GUI.GUI
         public Image returnPath(string GetRating)
         {
             Image starPath = null;
-                if(int.Parse(GetRating) == 1)
+            if (GetRating != null)
+            {
+                if (int.Parse(GetRating) == 1)
                 {
-                    starPath = Image.FromFile("C:\\Users\\Saad\\Downloads\\1s.png");
+                    starPath = Image.FromFile("C:\\Users\\Saad\\Downloads\\1star.png");
                 }
 
                 else if (int.Parse(GetRating) == 2)
                 {
-                    starPath = Image.FromFile("C:\\Users\\Saad\\Downloads\\2s.png");
+                    starPath = Image.FromFile("C:\\Users\\Saad\\Downloads\\2star.png");
                 }
 
                 else if (int.Parse(GetRating) == 3)
                 {
-                    starPath = Image.FromFile("C:\\Users\\Saad\\Downloads\\3s.png");
+                    starPath = Image.FromFile("C:\\Users\\Saad\\Downloads\\3stars.png");
                 }
 
                 else if (int.Parse(GetRating) == 4)
                 {
-                    starPath = Image.FromFile("C:\\Users\\Saad\\Downloads\\4s.png");
+                    starPath = Image.FromFile("C:\\Users\\Saad\\Downloads\\4stars.png");
                 }
 
                 else if (int.Parse(GetRating) == 5)
                 {
                     starPath = Image.FromFile("C:\\Users\\Saad\\Downloads\\5s.png");
                 }
+            }
             return starPath;
         }
 

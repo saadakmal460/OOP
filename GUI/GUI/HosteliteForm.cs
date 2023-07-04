@@ -69,5 +69,19 @@ namespace GUI.GUI
             f.Show();
             this.Close();
         }
+
+        private void btnReviews_Click(object sender, EventArgs e)
+        {
+            Form f = new AddReviewForm();
+            f.Show();
+            this.Hide();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Form f = new LoginFrom();
+            f.Show();
+            this.Hide();
+        }
     }
 }

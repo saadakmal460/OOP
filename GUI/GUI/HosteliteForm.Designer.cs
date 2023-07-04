@@ -30,6 +30,7 @@ namespace GUI.GUI
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnReviews = new System.Windows.Forms.Button();
             this.btnNotice = new System.Windows.Forms.Button();
@@ -37,10 +38,7 @@ namespace GUI.GUI
             this.btnAllotedRooms = new System.Windows.Forms.Button();
             this.btnMess = new System.Windows.Forms.Button();
             this.btnComplaints = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblUname = new System.Windows.Forms.Label();
             this.lblCnic = new System.Windows.Forms.Label();
@@ -51,6 +49,8 @@ namespace GUI.GUI
             this.lblUCnic = new System.Windows.Forms.Label();
             this.lblUcity = new System.Windows.Forms.Label();
             this.lblURoom = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -73,6 +73,22 @@ namespace GUI.GUI
             this.panel1.Size = new System.Drawing.Size(297, 730);
             this.panel1.TabIndex = 2;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(0, 590);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(300, 73);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Remove Registration";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.SystemColors.MenuHighlight;
@@ -85,6 +101,7 @@ namespace GUI.GUI
             this.btnBack.TabIndex = 8;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnReviews
             // 
@@ -101,6 +118,7 @@ namespace GUI.GUI
             this.btnReviews.Text = "Reviews and Ratings";
             this.btnReviews.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReviews.UseVisualStyleBackColor = false;
+            this.btnReviews.Click += new System.EventHandler(this.btnReviews_Click);
             // 
             // btnNotice
             // 
@@ -188,22 +206,6 @@ namespace GUI.GUI
             this.btnComplaints.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnComplaints.UseVisualStyleBackColor = false;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(0, 590);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(300, 73);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Remove Registration";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
@@ -215,30 +217,6 @@ namespace GUI.GUI
             this.lblTitle.Size = new System.Drawing.Size(258, 39);
             this.lblTitle.TabIndex = 4;
             this.lblTitle.Text = "Hostelite Profile\r\n";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox2.Image = global::GUI.Properties.Resources.pp;
-            this.pictureBox2.Location = new System.Drawing.Point(318, 98);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(141, 115);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 10;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox1.Image = global::GUI.Properties.Resources.Hms_PhotoRoom1;
-            this.pictureBox1.Location = new System.Drawing.Point(50, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(153, 127);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -360,6 +338,31 @@ namespace GUI.GUI
             this.lblURoom.Size = new System.Drawing.Size(21, 29);
             this.lblURoom.TabIndex = 20;
             this.lblURoom.Text = "\"";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::GUI.Properties.Resources.pp;
+            this.pictureBox2.Location = new System.Drawing.Point(318, 98);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(141, 115);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox1.Image = global::GUI.Properties.Resources.Hms_PhotoRoom1;
+            this.pictureBox1.Location = new System.Drawing.Point(50, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(153, 127);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // HosteliteForm
             // 
