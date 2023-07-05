@@ -10,7 +10,7 @@ namespace Buisness_Application.DL
 
         public static void RemoveANotice(List<Notices> n, int i)
         {
-            n.RemoveAt(i - 1);
+            n.RemoveAt(i);
         }
         public static void LoadNoticesFromFile(string path)
         {
