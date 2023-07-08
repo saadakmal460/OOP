@@ -25,16 +25,27 @@ namespace PacManGUI.GameGL
             this.direction = direction;
             this.GameObjectType = type;
         }
-        public GameCell CheckCell(GameGrid grid)
+        public override GameCell MoveGhost(GameGrid grid)
         {
 
-
+            GameCell currentCell = this.CurrentCell;
             if (direction == GameDirection.Up)
             {
                 GameCell next = grid.getCell(CurrentCell.X - 1, CurrentCell.Y);
+
+                if (next.CurrentGameObject.GameObjectType == GameObjectType.PLAYER)
+                {
+                    Game.SetFlag();
+                }
                 if (next.CurrentGameObject.GameObjectType != GameObjectType.WALL)
                 {
-                    return next;
+                    if (next != null)
+                    {
+                        currentCell.setGameObject(Game.getCurrentObject(next));
+                        CurrentCell = next;
+                        return next;
+                    }
+                    
                 }
                 else if (next.CurrentGameObject.GameObjectType == GameObjectType.WALL)
                 {
@@ -45,9 +56,20 @@ namespace PacManGUI.GameGL
             if (direction == GameDirection.Down)
             {
                 GameCell next = grid.getCell(CurrentCell.X + 1, CurrentCell.Y);
+
+                if (next.CurrentGameObject.GameObjectType == GameObjectType.PLAYER)
+                {
+                    Game.SetFlag();
+                }
                 if (next.CurrentGameObject.GameObjectType != GameObjectType.WALL)
                 {
-                    return next;
+                    if (next != null)
+                    {
+                        currentCell.setGameObject(Game.getCurrentObject(next));
+                        CurrentCell = next;
+                        return next;
+                    }
+                    
                 }
                 else if (next.CurrentGameObject.GameObjectType == GameObjectType.WALL)
                 {
@@ -57,21 +79,14 @@ namespace PacManGUI.GameGL
 
             }
 
+            
+            
+
             return null;
 
 
         }
 
-        public override GameCell MoveGhost(GameGrid grid)
-        {
-            GameCell nextCell = CheckCell(grid);
-            GameCell currentCell = this.CurrentCell;
-            if (nextCell != null)
-            {
-                currentCell.setGameObject(Game.getCurrentObject(nextCell));
-                CurrentCell = nextCell;
-            }
-            return nextCell;
-        }
+        
     }
 }

@@ -10,18 +10,30 @@ namespace PacMan.GameGL
 {
     class GamePacManPlayer : GameObject
     {
+        
         public GamePacManPlayer(Image image,GameCell startCell):base (GameObjectType.PLAYER,image) {
             this.CurrentCell = startCell;
         }
         public GameCell move(GameDirection direction) {
+            
+            
             GameCell currentCell = this.CurrentCell;
-            GameCell nextCell= currentCell.nextCell(direction);
+            GameCell nextCell = currentCell.nextCell(direction);
+
+            if(nextCell.CurrentGameObject.GameObjectType == GameObjectType.REWARD)
+            {
+                Game.AddScore();
+                
+            }
+            
             this.CurrentCell = nextCell;
+            
             if (currentCell != nextCell) 
             {
                 currentCell.setGameObject(Game.getBlankGameObject());
-
             }
+
+            
             return nextCell;
         }
 

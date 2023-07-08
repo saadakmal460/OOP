@@ -10,17 +10,39 @@ namespace PacMan.GameGL
 {
     public class Game
     {
-        public static GameObject getBlankGameObject(){
+        static int score = 0;
+        static bool flag = true;
+        public static GameObject getBlankGameObject()
+        {
             GameObject blankGameObject = new GameObject(GameObjectType.NONE, PacManGUI.Properties.Resources.simplebox);
             return blankGameObject;
         }
 
         public static GameObject getCurrentObject(GameCell c)
         {
-            
+
             GameObject Object = new GameObject(c.CurrentGameObject.GameObjectType, c.CurrentGameObject.Image);
-            
+
             return Object;
+        }
+
+        public static void AddScore()
+        {
+            score++;
+
+        }
+
+        public static void SetFlag()
+        {
+            flag = false;
+        }
+        public static bool GetFlag()
+        {
+            return flag;
+        }
+        public static int ReturnScore()
+        { 
+            return score; 
         }
         public static Image getGameObjectImage(char displayCharacter)
         {
@@ -39,7 +61,8 @@ namespace PacMan.GameGL
             {
                 img = PacManGUI.Properties.Resources.pallet;
             }
-            if (displayCharacter == 'P' || displayCharacter == 'p') {
+            if (displayCharacter == 'P' || displayCharacter == 'p')
+            {
                 img = PacManGUI.Properties.Resources.pacman_open;
             }
 

@@ -11,6 +11,7 @@ namespace PacManGUI.GameGL
 {
     class HorizontalGhost : Ghost
     {
+        GameCell previous;
         public HorizontalGhost(char DisplayCharacter, GameCell cell, GameObjectType type, GameDirection direction) : base(DisplayCharacter, type)
         {
             this.DisplayCharacter = DisplayCharacter;
@@ -27,18 +28,34 @@ namespace PacManGUI.GameGL
             this.GameObjectType = type;
         }
 
-        public GameCell CheckCell(GameGrid grid)
+        public override GameCell MoveGhost(GameGrid grid)
         {
-
+            GameCell currentCell = this.CurrentCell;
+            
             if (direction == GameDirection.Left)
             {
-                GameCell next = grid.getCell(CurrentCell.X, CurrentCell.Y - 1);
+                GameCell nextCell = grid.getCell(CurrentCell.X, CurrentCell.Y - 1);
                 
-                if (next.CurrentGameObject.GameObjectType != GameObjectType.WALL)
+
+                if (nextCell.CurrentGameObject.GameObjectType == GameObjectType.PLAYER)
                 {
-                    return next;
+                    Game.SetFlag();
                 }
-                else if (next.CurrentGameObject.GameObjectType == GameObjectType.WALL)
+                if (nextCell.CurrentGameObject.GameObjectType != GameObjectType.WALL)
+                {
+                   
+                    if (nextCell != null)
+                    {
+                        
+                        currentCell.setGameObject(Game.getCurrentObject(nextCell));
+                        CurrentCell = nextCell;
+                        return nextCell;
+                    }
+
+                }
+                
+                
+                else if (nextCell.CurrentGameObject.GameObjectType == GameObjectType.WALL)
                 {
                     direction = GameDirection.Right;
                 }
@@ -46,12 +63,29 @@ namespace PacManGUI.GameGL
 
             if (direction == GameDirection.Right)
             {
-                GameCell next = grid.getCell(CurrentCell.X, CurrentCell.Y + 1);
-                if (next.CurrentGameObject.GameObjectType != GameObjectType.WALL)
+                GameCell nextCell = grid.getCell(CurrentCell.X, CurrentCell.Y + 1);
+
+                if (nextCell.CurrentGameObject.GameObjectType == GameObjectType.PLAYER)
                 {
-                    return next;
+                    Game.SetFlag();
                 }
-                else if (next.CurrentGameObject.GameObjectType == GameObjectType.WALL)
+                if (nextCell.CurrentGameObject.GameObjectType != GameObjectType.WALL)
+                {
+                    if (nextCell != null)
+                    {
+                       
+                        currentCell.setGameObject(Game.getCurrentObject(nextCell));
+                        CurrentCell = nextCell;
+                        return nextCell;
+                    }
+                    if (nextCell.CurrentGameObject.GameObjectType == GameObjectType.PLAYER)
+                    {
+                        Game.SetFlag();
+                    }
+
+                }
+                
+                else if (nextCell.CurrentGameObject.GameObjectType == GameObjectType.WALL)
                 {
 
                     direction = GameDirection.Left;
@@ -64,17 +98,7 @@ namespace PacManGUI.GameGL
 
         }
 
-        public override GameCell MoveGhost(GameGrid grid)
-        {
-            GameCell nextCell = CheckCell(grid);
-            GameCell currentCell = this.CurrentCell;
-            if (nextCell != null)
-            {
-                currentCell.setGameObject(Game.getCurrentObject(nextCell));
-                CurrentCell = nextCell;
-            }
-            return nextCell;
-        }
+       
         
     }
 }
