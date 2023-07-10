@@ -64,6 +64,18 @@
     <Compile Include="DL\ChallanDL.cs" />
     <Compile Include="DL\ComplaintsDL.cs" />
     <Compile Include="DL\FinanceDL.cs" />
+    <Compile Include="GUI\AddExpenseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AddExpenseForm.Designer.cs">
+      <DependentUpon>AddExpenseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AddRevenueForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AddRevenueForm.Designer.cs">
+      <DependentUpon>AddRevenueForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FeeStatusForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -263,6 +275,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\AddExpenseForm.resx">
+      <DependentUpon>AddExpenseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AddRevenueForm.resx">
+      <DependentUpon>AddRevenueForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FeeStatusForm.resx">
       <DependentUpon>FeeStatusForm.cs</DependentUpon>
     </EmbeddedResource>

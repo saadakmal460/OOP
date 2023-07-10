@@ -3,3 +3,5 @@ fee,100000,No,Revenue
 water,12323,1,Expense
 water,123233,1,Expense
 efewfewg,1313,No,Revenue
+electri,10000,17,Expense
+qqddec,11111,Yes,Revenue
