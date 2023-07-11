@@ -1,7 +1,7 @@
 ﻿
 namespace GUI.GUI
 {
-    partial class RemoveHosteliteForm
+    partial class RemoveRevenueForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,21 +29,17 @@ namespace GUI.GUI
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RemoveHosteliteForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RemoveRevenueForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtUsename = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
-            this.lblNotFound = new System.Windows.Forms.Label();
-            this.checkBoxYes = new System.Windows.Forms.CheckBox();
-            this.checkBoxNo = new System.Windows.Forms.CheckBox();
-            this.lblMessage = new System.Windows.Forms.Label();
+            this.cbExpense = new System.Windows.Forms.ComboBox();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.btnFind = new System.Windows.Forms.Button();
-            this.lblDeleted = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblErrorLine = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -54,10 +50,10 @@ namespace GUI.GUI
             this.panel1.Controls.Add(this.btnBack);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.lblTitle);
-            this.panel1.Location = new System.Drawing.Point(0, 1);
+            this.panel1.Location = new System.Drawing.Point(1, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(354, 730);
-            this.panel1.TabIndex = 2;
+            this.panel1.TabIndex = 4;
             // 
             // btnBack
             // 
@@ -102,138 +98,87 @@ namespace GUI.GUI
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.label7.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label7.Location = new System.Drawing.Point(632, 38);
+            this.label7.Location = new System.Drawing.Point(602, 35);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(277, 48);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Delete Record";
-            // 
-            // txtUsename
-            // 
-            this.txtUsename.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.txtUsename.Location = new System.Drawing.Point(707, 174);
-            this.txtUsename.Name = "txtUsename";
-            this.txtUsename.Size = new System.Drawing.Size(270, 22);
-            this.txtUsename.TabIndex = 34;
+            this.label7.Size = new System.Drawing.Size(334, 48);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Remove Revenue";
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblName.Location = new System.Drawing.Point(404, 176);
+            this.lblName.Location = new System.Drawing.Point(407, 202);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(262, 20);
+            this.lblName.Size = new System.Drawing.Size(168, 20);
             this.lblName.TabIndex = 33;
-            this.lblName.Text = "Enter name of hostelite to delete";
+            this.lblName.Text = "Select Revenue Title";
+            this.lblName.Click += new System.EventHandler(this.lblName_Click);
             // 
-            // lblNotFound
+            // cbExpense
             // 
-            this.lblNotFound.AutoSize = true;
-            this.lblNotFound.ForeColor = System.Drawing.Color.Crimson;
-            this.lblNotFound.Location = new System.Drawing.Point(704, 213);
-            this.lblNotFound.Name = "lblNotFound";
-            this.lblNotFound.Size = new System.Drawing.Size(118, 17);
-            this.lblNotFound.TabIndex = 53;
-            this.lblNotFound.Text = "Record not found";
-            this.lblNotFound.Visible = false;
-            // 
-            // checkBoxYes
-            // 
-            this.checkBoxYes.AutoSize = true;
-            this.checkBoxYes.Location = new System.Drawing.Point(640, 337);
-            this.checkBoxYes.Name = "checkBoxYes";
-            this.checkBoxYes.Size = new System.Drawing.Size(54, 21);
-            this.checkBoxYes.TabIndex = 56;
-            this.checkBoxYes.Text = "Yes";
-            this.checkBoxYes.UseVisualStyleBackColor = true;
-            this.checkBoxYes.Visible = false;
-            // 
-            // checkBoxNo
-            // 
-            this.checkBoxNo.AutoSize = true;
-            this.checkBoxNo.Location = new System.Drawing.Point(774, 337);
-            this.checkBoxNo.Name = "checkBoxNo";
-            this.checkBoxNo.Size = new System.Drawing.Size(48, 21);
-            this.checkBoxNo.TabIndex = 57;
-            this.checkBoxNo.Text = "No";
-            this.checkBoxNo.UseVisualStyleBackColor = true;
-            this.checkBoxNo.Visible = false;
-            // 
-            // lblMessage
-            // 
-            this.lblMessage.AutoSize = true;
-            this.lblMessage.BackColor = System.Drawing.Color.Transparent;
-            this.lblMessage.Font = new System.Drawing.Font("Roboto", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMessage.Location = new System.Drawing.Point(519, 284);
-            this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(468, 29);
-            this.lblMessage.TabIndex = 58;
-            this.lblMessage.Text = "Are you sure you wan to delete this record";
-            this.lblMessage.Visible = false;
+            this.cbExpense.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbExpense.FormattingEnabled = true;
+            this.cbExpense.Location = new System.Drawing.Point(625, 198);
+            this.cbExpense.Name = "cbExpense";
+            this.cbExpense.Size = new System.Drawing.Size(252, 24);
+            this.cbExpense.TabIndex = 34;
             // 
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.Crimson;
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDelete.Location = new System.Drawing.Point(901, 446);
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(797, 309);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(86, 42);
-            this.btnDelete.TabIndex = 59;
+            this.btnDelete.Size = new System.Drawing.Size(95, 40);
+            this.btnDelete.TabIndex = 39;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Visible = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // btnFind
+            // label1
             // 
-            this.btnFind.BackColor = System.Drawing.Color.Green;
-            this.btnFind.FlatAppearance.BorderSize = 0;
-            this.btnFind.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFind.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnFind.Location = new System.Drawing.Point(899, 239);
-            this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(78, 42);
-            this.btnFind.TabIndex = 60;
-            this.btnFind.Text = "Find";
-            this.btnFind.UseVisualStyleBackColor = false;
-            this.btnFind.Click += new System.EventHandler(this.button1_Click);
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Crimson;
+            this.label1.Location = new System.Drawing.Point(622, 225);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(116, 17);
+            this.label1.TabIndex = 44;
+            this.label1.Text = "Select an option!!";
+            this.label1.Visible = false;
             // 
-            // lblDeleted
+            // lblErrorLine
             // 
-            this.lblDeleted.AutoSize = true;
-            this.lblDeleted.ForeColor = System.Drawing.Color.Green;
-            this.lblDeleted.Location = new System.Drawing.Point(898, 491);
-            this.lblDeleted.Name = "lblDeleted";
-            this.lblDeleted.Size = new System.Drawing.Size(107, 17);
-            this.lblDeleted.TabIndex = 61;
-            this.lblDeleted.Text = "Record Deleted";
-            this.lblDeleted.Visible = false;
+            this.lblErrorLine.AutoSize = true;
+            this.lblErrorLine.ForeColor = System.Drawing.Color.Green;
+            this.lblErrorLine.Location = new System.Drawing.Point(794, 352);
+            this.lblErrorLine.Name = "lblErrorLine";
+            this.lblErrorLine.Size = new System.Drawing.Size(182, 17);
+            this.lblErrorLine.TabIndex = 45;
+            this.lblErrorLine.Text = "Record Deleted Sucessfully";
+            this.lblErrorLine.Visible = false;
             // 
-            // RemoveHosteliteForm
+            // RemoveRevenueForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1207, 728);
-            this.Controls.Add(this.lblDeleted);
-            this.Controls.Add(this.btnFind);
+            this.Controls.Add(this.lblErrorLine);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.lblMessage);
-            this.Controls.Add(this.checkBoxNo);
-            this.Controls.Add(this.checkBoxYes);
-            this.Controls.Add(this.lblNotFound);
-            this.Controls.Add(this.txtUsename);
+            this.Controls.Add(this.cbExpense);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel1);
             this.MaximumSize = new System.Drawing.Size(1225, 775);
             this.MinimumSize = new System.Drawing.Size(1225, 775);
-            this.Name = "RemoveHosteliteForm";
+            this.Name = "RemoveRevenueForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RemoveHosteliteForm";
-            this.Load += new System.EventHandler(this.RemoveHosteliteForm_Load);
+            this.Text = "RemoveRevenueForm";
+            this.Load += new System.EventHandler(this.RemoveRevenueForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -249,14 +194,10 @@ namespace GUI.GUI
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtUsename;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Label lblNotFound;
-        private System.Windows.Forms.CheckBox checkBoxYes;
-        private System.Windows.Forms.CheckBox checkBoxNo;
-        private System.Windows.Forms.Label lblMessage;
+        private System.Windows.Forms.ComboBox cbExpense;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnFind;
-        private System.Windows.Forms.Label lblDeleted;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblErrorLine;
     }
 }

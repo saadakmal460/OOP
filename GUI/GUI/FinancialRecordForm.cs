@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Buisness_Application.BL;
+using GUI.DL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,14 +28,26 @@ namespace GUI.GUI
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Form f = new AdminForm();
-            f.Show();
+            if (ExtraBL.GetRole() == "admin")
+            {
+                this.Close();
+                Form f = new AdminForm();
+                f.Show();
+            }
+
+            else if (ExtraBL.GetRole() == "Finance")
+            {
+                this.Close();
+                Form f = new FinanceForm();
+                f.Show();
+            }
+
+
         }
 
         private void FinancialRecordForm_Load(object sender, EventArgs e)
         {
-
+            ExtraBL.SetFlag(true);
         }
 
         private void linkAddHostelite_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

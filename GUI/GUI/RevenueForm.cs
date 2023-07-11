@@ -1,5 +1,6 @@
 ﻿using Buisness_Application.BL;
 using Buisness_Application.DL;
+using GUI.DL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -95,8 +96,22 @@ namespace GUI.GUI
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
-            Form f = new ViewReportForm();
-            f.Show();
+            if (ExtraBL.GetRole() == "admin")
+            {
+                Form f = new ViewReportForm();
+                f.Show();
+            }
+            else if(ExtraBL.GetRole() == "Finance" && !ExtraBL.GetFlag())
+            {
+                Form f = new FinanceForm();
+                f.Show();
+            }
+            else
+            {
+                Form f = new ViewReportForm();
+                f.Show();
+            }
+            
         }
 
         private void RevenueForm_Load(object sender, EventArgs e)

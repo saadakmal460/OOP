@@ -1,5 +1,6 @@
 ﻿using Buisness_Application.BL;
 using Buisness_Application.DL;
+using GUI.DL;
 using GUI.GUI;
 using System;
 using System.Collections.Generic;
@@ -79,6 +80,13 @@ namespace GUI
             {
                 ExtraBL.SetName(name);
                 Form f = new HosteliteForm();
+                f.Show();
+                this.Hide();
+            }
+
+            else if(role == "Finance")
+            {
+                Form f = new FinanceForm();
                 f.Show();
                 this.Hide();
             }

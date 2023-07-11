@@ -228,11 +228,11 @@ namespace GUI.GUI
             this.lblTitle.BackColor = System.Drawing.Color.White;
             this.lblTitle.Font = new System.Drawing.Font("Roboto", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblTitle.Location = new System.Drawing.Point(598, 24);
+            this.lblTitle.Location = new System.Drawing.Point(350, 23);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(420, 39);
+            this.lblTitle.Size = new System.Drawing.Size(283, 39);
             this.lblTitle.TabIndex = 3;
-            this.lblTitle.Text = "Hostel Managment System";
+            this.lblTitle.Text = "Admin Dashboard\r\n";
             // 
             // panel2
             // 
@@ -395,6 +395,7 @@ namespace GUI.GUI
             // 
             this.panel8.BackColor = System.Drawing.Color.White;
             this.panel8.Controls.Add(this.panel4);
+            this.panel8.Controls.Add(this.lblTitle);
             this.panel8.Location = new System.Drawing.Point(298, 1);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(949, 727);
@@ -484,7 +485,6 @@ namespace GUI.GUI
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel8);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -510,6 +510,7 @@ namespace GUI.GUI
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -518,7 +519,6 @@ namespace GUI.GUI
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

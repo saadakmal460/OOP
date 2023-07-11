@@ -29,7 +29,7 @@ namespace GUI.GUI
             {
                 if(name == ExtraBL.GetName() && i.GetUsername() == ExtraBL.GetName() && password == i.GetPassword() && checkBox1.Checked)
                 {
-                    UserDL.RemoveUserFromList(ExtraBL.GetName());
+                    UserDL.RemoveUserFromList(i.GetUsername());
                     flag = true;
                     break;
                     

@@ -21,13 +21,13 @@ namespace GUI.GUI
 
         private void RemoveHosteliteForm_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             bool flag = CheckName();
-            if(flag)
+            if (flag)
             {
                 ShowContents();
             }
@@ -36,6 +36,7 @@ namespace GUI.GUI
                 lblNotFound.Visible = true;
             }
         }
+
 
 
         private void ShowContents()
@@ -86,5 +87,7 @@ namespace GUI.GUI
             Form f = new AdminForm();
             f.Show();
         }
+
+        
     }
 }

@@ -41,15 +41,15 @@ namespace GUI.GUI
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pannel1k = new System.Windows.Forms.Panel();
-            this.pannel5k = new System.Windows.Forms.Panel();
-            this.panel10k = new System.Windows.Forms.Panel();
-            this.panel100k = new System.Windows.Forms.Panel();
-            this.panel1M = new System.Windows.Forms.Panel();
             this.pannelE1M = new System.Windows.Forms.Panel();
             this.panelE100K = new System.Windows.Forms.Panel();
             this.panelE10K = new System.Windows.Forms.Panel();
             this.panelE1k = new System.Windows.Forms.Panel();
             this.panelE1 = new System.Windows.Forms.Panel();
+            this.pannel5k = new System.Windows.Forms.Panel();
+            this.panel10k = new System.Windows.Forms.Panel();
+            this.panel100k = new System.Windows.Forms.Panel();
+            this.panel1M = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -171,42 +171,6 @@ namespace GUI.GUI
             this.pannel1k.TabIndex = 11;
             this.pannel1k.Visible = false;
             // 
-            // pannel5k
-            // 
-            this.pannel5k.BackColor = System.Drawing.Color.Green;
-            this.pannel5k.Location = new System.Drawing.Point(550, 511);
-            this.pannel5k.Name = "pannel5k";
-            this.pannel5k.Size = new System.Drawing.Size(18, 86);
-            this.pannel5k.TabIndex = 12;
-            this.pannel5k.Visible = false;
-            // 
-            // panel10k
-            // 
-            this.panel10k.BackColor = System.Drawing.Color.Green;
-            this.panel10k.Location = new System.Drawing.Point(550, 441);
-            this.panel10k.Name = "panel10k";
-            this.panel10k.Size = new System.Drawing.Size(18, 159);
-            this.panel10k.TabIndex = 13;
-            this.panel10k.Visible = false;
-            // 
-            // panel100k
-            // 
-            this.panel100k.BackColor = System.Drawing.Color.Green;
-            this.panel100k.Location = new System.Drawing.Point(550, 381);
-            this.panel100k.Name = "panel100k";
-            this.panel100k.Size = new System.Drawing.Size(18, 219);
-            this.panel100k.TabIndex = 14;
-            this.panel100k.Visible = false;
-            // 
-            // panel1M
-            // 
-            this.panel1M.BackColor = System.Drawing.Color.Green;
-            this.panel1M.Location = new System.Drawing.Point(550, 319);
-            this.panel1M.Name = "panel1M";
-            this.panel1M.Size = new System.Drawing.Size(18, 278);
-            this.panel1M.TabIndex = 15;
-            this.panel1M.Visible = false;
-            // 
             // pannelE1M
             // 
             this.pannelE1M.BackColor = System.Drawing.Color.Red;
@@ -251,6 +215,42 @@ namespace GUI.GUI
             this.panelE1.Size = new System.Drawing.Size(18, 36);
             this.panelE1.TabIndex = 12;
             this.panelE1.Visible = false;
+            // 
+            // pannel5k
+            // 
+            this.pannel5k.BackColor = System.Drawing.Color.Green;
+            this.pannel5k.Location = new System.Drawing.Point(550, 511);
+            this.pannel5k.Name = "pannel5k";
+            this.pannel5k.Size = new System.Drawing.Size(18, 86);
+            this.pannel5k.TabIndex = 12;
+            this.pannel5k.Visible = false;
+            // 
+            // panel10k
+            // 
+            this.panel10k.BackColor = System.Drawing.Color.Green;
+            this.panel10k.Location = new System.Drawing.Point(550, 441);
+            this.panel10k.Name = "panel10k";
+            this.panel10k.Size = new System.Drawing.Size(18, 159);
+            this.panel10k.TabIndex = 13;
+            this.panel10k.Visible = false;
+            // 
+            // panel100k
+            // 
+            this.panel100k.BackColor = System.Drawing.Color.Green;
+            this.panel100k.Location = new System.Drawing.Point(550, 381);
+            this.panel100k.Name = "panel100k";
+            this.panel100k.Size = new System.Drawing.Size(18, 219);
+            this.panel100k.TabIndex = 14;
+            this.panel100k.Visible = false;
+            // 
+            // panel1M
+            // 
+            this.panel1M.BackColor = System.Drawing.Color.Green;
+            this.panel1M.Location = new System.Drawing.Point(550, 319);
+            this.panel1M.Name = "panel1M";
+            this.panel1M.Size = new System.Drawing.Size(18, 278);
+            this.panel1M.TabIndex = 15;
+            this.panel1M.Visible = false;
             // 
             // GraphicalAnalysisForm
             // 
@@ -302,14 +302,14 @@ namespace GUI.GUI
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel pannel1k;
-        private System.Windows.Forms.Panel pannel5k;
-        private System.Windows.Forms.Panel panel10k;
-        private System.Windows.Forms.Panel panel100k;
-        private System.Windows.Forms.Panel panel1M;
         private System.Windows.Forms.Panel pannelE1M;
         private System.Windows.Forms.Panel panelE100K;
         private System.Windows.Forms.Panel panelE10K;
         private System.Windows.Forms.Panel panelE1k;
         private System.Windows.Forms.Panel panelE1;
+        private System.Windows.Forms.Panel pannel5k;
+        private System.Windows.Forms.Panel panel10k;
+        private System.Windows.Forms.Panel panel100k;
+        private System.Windows.Forms.Panel panel1M;
     }
 }

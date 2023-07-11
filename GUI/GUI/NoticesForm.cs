@@ -44,5 +44,10 @@ namespace GUI.GUI
             Form f = new DelteNoticeForm();
             f.Show();
         }
+
+        private void NoticesForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

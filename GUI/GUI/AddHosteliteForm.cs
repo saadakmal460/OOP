@@ -97,11 +97,13 @@ namespace GUI.GUI
 
             if (flag && flag2 && flag3 && flag4 && flag5 && flag6)
             {
+                lblErrorLine.Visible = true;
+                lblErrorLine.Text = "Data saved Sucessfully";
+                lblErrorLine.ForeColor = Color.Green;
                 Hostelite h = new Hostelite(name, cnic, city, rollNumber, password, "hostelite", roomNumber);
                 UserDL.AdddInList(h);
                 UserDL.StoreUsersInFile(ExtraBL.GetUsersPath());
-                lblErrorLine.Text = "Data saved Sucessfully";
-                lblErrorLine.ForeColor = Color.Green;
+                
             }
             else
             {
