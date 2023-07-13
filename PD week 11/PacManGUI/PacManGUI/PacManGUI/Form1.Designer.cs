@@ -72,6 +72,7 @@ namespace PacManGUI
             this.ClientSize = new System.Drawing.Size(1540, 764);
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Black;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";

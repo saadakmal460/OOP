@@ -10,12 +10,14 @@ namespace PacManGUI.GameGL
 {
     class VerticalGhost : Ghost
     {
+        GameObject previousGameObject;
         public VerticalGhost(char DisplayCharacter, GameCell cell, GameObjectType type, GameDirection direction) : base(DisplayCharacter, type)
         {
             this.DisplayCharacter = DisplayCharacter;
             this.CurrentCell = cell;
             this.direction = direction;
             this.GameObjectType = type;
+            
         }
 
         public VerticalGhost(Image img, GameCell cell, GameObjectType type, GameDirection direction) : base(img, type)
@@ -24,6 +26,7 @@ namespace PacManGUI.GameGL
             this.CurrentCell = cell;
             this.direction = direction;
             this.GameObjectType = type;
+            previousGameObject = new GameObject(GameObjectType.NONE, Properties.Resources.simplebox);
         }
         public override GameCell MoveGhost(GameGrid grid)
         {
@@ -35,17 +38,18 @@ namespace PacManGUI.GameGL
 
                 if (next.CurrentGameObject.GameObjectType == GameObjectType.PLAYER)
                 {
-                    Game.SetFlag();
+                    Game.SetFlag(true);
                 }
                 if (next.CurrentGameObject.GameObjectType != GameObjectType.WALL)
                 {
                     if (next != null)
                     {
-                        currentCell.setGameObject(Game.getCurrentObject(next));
+                        currentCell.setGameObject(previousGameObject);
+                        previousGameObject = next.CurrentGameObject;
                         CurrentCell = next;
                         return next;
                     }
-                    
+
                 }
                 else if (next.CurrentGameObject.GameObjectType == GameObjectType.WALL)
                 {
@@ -59,17 +63,18 @@ namespace PacManGUI.GameGL
 
                 if (next.CurrentGameObject.GameObjectType == GameObjectType.PLAYER)
                 {
-                    Game.SetFlag();
+                    Game.SetFlag(true);
                 }
                 if (next.CurrentGameObject.GameObjectType != GameObjectType.WALL)
                 {
                     if (next != null)
                     {
-                        currentCell.setGameObject(Game.getCurrentObject(next));
+                        currentCell.setGameObject(previousGameObject);
+                        previousGameObject = next.CurrentGameObject;
                         CurrentCell = next;
                         return next;
                     }
-                    
+
                 }
                 else if (next.CurrentGameObject.GameObjectType == GameObjectType.WALL)
                 {

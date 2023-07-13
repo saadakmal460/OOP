@@ -10,6 +10,7 @@ namespace PacManGUI.GameGL
 {
     class RandomGhost : Ghost
     {
+        GameObject previousGameObject;
         Random r = new Random();
         public RandomGhost(char DisplayCharacter, GameCell cell, GameObjectType type, GameDirection direction) : base(DisplayCharacter, type)
         {
@@ -17,6 +18,7 @@ namespace PacManGUI.GameGL
             this.CurrentCell = cell;
             this.direction = direction;
             this.GameObjectType = type;
+            
         }
 
         public RandomGhost(Image img, GameCell cell, GameObjectType type, GameDirection direction) : base(img, type)
@@ -25,6 +27,7 @@ namespace PacManGUI.GameGL
             this.CurrentCell = cell;
             this.direction = direction;
             this.GameObjectType = type;
+            this.previousGameObject = new GameObject(GameObjectType.NONE, Properties.Resources.simplebox);
         }
 
 
@@ -39,14 +42,16 @@ namespace PacManGUI.GameGL
 
                 if (next.CurrentGameObject.GameObjectType == GameObjectType.PLAYER)
                 {
-                    Game.SetFlag();
+                    Game.SetFlag(true);
                 }
                 if (next.CurrentGameObject.GameObjectType != GameObjectType.WALL)
                 {
                     if (next != null)
                     {
-                        currentCell.setGameObject(Game.getCurrentObject(next));
+                        currentCell.setGameObject(previousGameObject);
+                        previousGameObject = next.CurrentGameObject;
                         CurrentCell = next;
+                        
                         return next;
                     }
                     
@@ -57,13 +62,14 @@ namespace PacManGUI.GameGL
                 GameCell next = gameGrid.getCell(CurrentCell.X + 1, CurrentCell.Y);
                 if (next.CurrentGameObject.GameObjectType == GameObjectType.PLAYER)
                 {
-                    Game.SetFlag();
+                    Game.SetFlag(true);
                 }
                 if (next.CurrentGameObject.GameObjectType != GameObjectType.WALL)
                 {
                     if (next != null)
                     {
-                        currentCell.setGameObject(Game.getCurrentObject(next));
+                        currentCell.setGameObject(previousGameObject);
+                        previousGameObject = next.CurrentGameObject;
                         CurrentCell = next;
                         return next;
                     }
@@ -76,13 +82,14 @@ namespace PacManGUI.GameGL
 
                 if (next.CurrentGameObject.GameObjectType == GameObjectType.PLAYER)
                 {
-                    Game.SetFlag();
+                    Game.SetFlag(true);
                 }
                 if (next.CurrentGameObject.GameObjectType != GameObjectType.WALL)
                 {
                     if (next != null)
                     {
-                        currentCell.setGameObject(Game.getCurrentObject(next));
+                        currentCell.setGameObject(previousGameObject);
+                        previousGameObject = next.CurrentGameObject;
                         CurrentCell = next;
                         return next;
                     }
@@ -94,13 +101,14 @@ namespace PacManGUI.GameGL
                 GameCell next = gameGrid.getCell(CurrentCell.X, CurrentCell.Y + 1);
                 if (next.CurrentGameObject.GameObjectType == GameObjectType.PLAYER)
                 {
-                    Game.SetFlag();
+                    Game.SetFlag(true);
                 }
                 if (next.CurrentGameObject.GameObjectType != GameObjectType.WALL)
                 {
                     if (next != null)
                     {
-                        currentCell.setGameObject(Game.getCurrentObject(next));
+                        currentCell.setGameObject(previousGameObject);
+                        previousGameObject = next.CurrentGameObject;
                         CurrentCell = next;
                         return next;
                     }

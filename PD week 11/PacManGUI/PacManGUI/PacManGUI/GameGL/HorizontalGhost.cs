@@ -11,9 +11,10 @@ namespace PacManGUI.GameGL
 {
     class HorizontalGhost : Ghost
     {
-        GameCell previous;
+        GameObject previousGameObject;
         public HorizontalGhost(char DisplayCharacter, GameCell cell, GameObjectType type, GameDirection direction) : base(DisplayCharacter, type)
         {
+
             this.DisplayCharacter = DisplayCharacter;
             this.CurrentCell = cell;
             this.direction = direction;
@@ -22,10 +23,12 @@ namespace PacManGUI.GameGL
 
         public HorizontalGhost(Image img, GameCell cell, GameObjectType type, GameDirection direction) : base(img, type)
         {
+             
             this.Image = img;
             this.CurrentCell = cell;
             this.direction = direction;
             this.GameObjectType = type;
+            previousGameObject = new GameObject(GameObjectType.NONE, Properties.Resources.simplebox);
         }
 
         public override GameCell MoveGhost(GameGrid grid)
@@ -35,20 +38,24 @@ namespace PacManGUI.GameGL
             if (direction == GameDirection.Left)
             {
                 GameCell nextCell = grid.getCell(CurrentCell.X, CurrentCell.Y - 1);
+
+
                 
 
                 if (nextCell.CurrentGameObject.GameObjectType == GameObjectType.PLAYER)
                 {
-                    Game.SetFlag();
+                    nextCell.CurrentGameObject.GameObjectType = GameObjectType.NONE;
+                    Game.SetFlag(true);
                 }
                 if (nextCell.CurrentGameObject.GameObjectType != GameObjectType.WALL)
                 {
-                   
+
                     if (nextCell != null)
                     {
-                        
-                        currentCell.setGameObject(Game.getCurrentObject(nextCell));
+                        currentCell.setGameObject(previousGameObject);
+                        this.previousGameObject = nextCell.CurrentGameObject;
                         CurrentCell = nextCell;
+
                         return nextCell;
                     }
 
@@ -67,21 +74,21 @@ namespace PacManGUI.GameGL
 
                 if (nextCell.CurrentGameObject.GameObjectType == GameObjectType.PLAYER)
                 {
-                    Game.SetFlag();
+                    nextCell.CurrentGameObject.GameObjectType = GameObjectType.NONE;
+                    Game.SetFlag(true);
                 }
                 if (nextCell.CurrentGameObject.GameObjectType != GameObjectType.WALL)
                 {
+                    
                     if (nextCell != null)
                     {
-                       
-                        currentCell.setGameObject(Game.getCurrentObject(nextCell));
+                        currentCell.setGameObject(previousGameObject);
+                        this.previousGameObject = nextCell.CurrentGameObject;
                         CurrentCell = nextCell;
+
                         return nextCell;
                     }
-                    if (nextCell.CurrentGameObject.GameObjectType == GameObjectType.PLAYER)
-                    {
-                        Game.SetFlag();
-                    }
+
 
                 }
                 
@@ -93,6 +100,7 @@ namespace PacManGUI.GameGL
 
             }
 
+            
             return null;
 
 

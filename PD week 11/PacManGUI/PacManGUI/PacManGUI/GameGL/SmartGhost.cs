@@ -10,6 +10,8 @@ namespace PacManGUI.GameGL
 {
     class SmartGhost : Ghost
     {
+        GameObject previousGameObject;
+
         GamePacManPlayer pacman;
         public SmartGhost(Image img, GameCell cell, GameObjectType type, GameDirection direction , GamePacManPlayer pacman) : base(img, type)
         {
@@ -18,6 +20,7 @@ namespace PacManGUI.GameGL
             this.direction = direction;
             this.GameObjectType = type;
             this.pacman = pacman;
+            this.previousGameObject = new GameObject(GameObjectType.NONE, Properties.Resources.simplebox);
         }
         public SmartGhost(char DisplayCharacter, GameCell cell, GameObjectType type, GameDirection direction , GamePacManPlayer pacman) : base(DisplayCharacter, type)
         {
@@ -62,14 +65,15 @@ namespace PacManGUI.GameGL
 
                 if (next.CurrentGameObject.GameObjectType == GameObjectType.PLAYER)
                 {
-                    Game.SetFlag();
+                    Game.SetFlag(true);
                 }
                 if (next.CurrentGameObject.GameObjectType != GameObjectType.WALL)
                 {
 
                     if (next != null)
                     {
-                        currentCell.setGameObject(Game.getCurrentObject(next));
+                        currentCell.setGameObject(previousGameObject);
+                        previousGameObject = next.CurrentGameObject;
                         CurrentCell = next;
                         return next;
                     }
@@ -83,7 +87,7 @@ namespace PacManGUI.GameGL
 
                 if (next.CurrentGameObject.GameObjectType == GameObjectType.PLAYER)
                 {
-                    Game.SetFlag();
+                    Game.SetFlag(true);
                 }
 
                 if (next.CurrentGameObject.GameObjectType != GameObjectType.WALL)
@@ -91,7 +95,8 @@ namespace PacManGUI.GameGL
 
                     if (next != null)
                     {
-                        currentCell.setGameObject(Game.getCurrentObject(next));
+                        currentCell.setGameObject(previousGameObject);
+                        previousGameObject = next.CurrentGameObject;
                         CurrentCell = next;
                         return next;
                     }
@@ -106,14 +111,15 @@ namespace PacManGUI.GameGL
 
                 if (next.CurrentGameObject.GameObjectType == GameObjectType.PLAYER)
                 {
-                    Game.SetFlag();
+                    Game.SetFlag(true);
                 }
                 if (next.CurrentGameObject.GameObjectType != GameObjectType.WALL)
                 {
 
                     if (next != null)
                     {
-                        currentCell.setGameObject(Game.getCurrentObject(next));
+                        currentCell.setGameObject(previousGameObject);
+                        previousGameObject = next.CurrentGameObject;
                         CurrentCell = next;
                         return next;
                     }
@@ -128,14 +134,15 @@ namespace PacManGUI.GameGL
 
                 if (next.CurrentGameObject.GameObjectType == GameObjectType.PLAYER)
                 {
-                    Game.SetFlag();
+                    Game.SetFlag(true);
                 }
                 if (next.CurrentGameObject.GameObjectType != GameObjectType.WALL)
                 {
 
                     if (next != null)
                     {
-                        currentCell.setGameObject(Game.getCurrentObject(next));
+                        currentCell.setGameObject(previousGameObject);
+                        previousGameObject = next.CurrentGameObject;
                         CurrentCell = next;
                         return next;
                     }

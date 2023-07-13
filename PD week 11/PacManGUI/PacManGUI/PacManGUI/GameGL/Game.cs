@@ -11,7 +11,7 @@ namespace PacMan.GameGL
     public class Game
     {
         static int score = 0;
-        static bool flag = true;
+        static bool flag;
         public static GameObject getBlankGameObject()
         {
             GameObject blankGameObject = new GameObject(GameObjectType.NONE, PacManGUI.Properties.Resources.simplebox);
@@ -32,9 +32,9 @@ namespace PacMan.GameGL
 
         }
 
-        public static void SetFlag()
+        public static void SetFlag(bool f)
         {
-            flag = false;
+            flag = f;
         }
         public static bool GetFlag()
         {

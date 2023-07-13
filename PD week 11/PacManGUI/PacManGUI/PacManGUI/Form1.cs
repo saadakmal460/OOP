@@ -113,17 +113,22 @@ namespace PacManGUI
                 gameLoop.Enabled = false;
                 MessageBox.Show("You Win");
             }
-            if(!Game.GetFlag())
+
+            if(Game.GetFlag())
             {
+                /*Code for generating new pacman*/
+                //GameCell start = new GameCell(8, 8, grid);
+                //GamePacManPlayer p = new GamePacManPlayer(Properties.Resources.pacman_open , start);
+                //pacman = p;
+                //Game.SetFlag(false);
                 gameLoop.Enabled = false;
                 MessageBox.Show("You Loose");
             }
 
-        }
-        private void ScoreCheck()
-        {
             
+
         }
+        
 
     }
 }

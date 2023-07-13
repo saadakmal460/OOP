@@ -11,7 +11,7 @@ namespace PacMan.GameGL
         int cols;
         
         public GameGrid(String fileName, int rows, int cols ) {
-            //Numbers of rows and cols should load from the text file
+            
             this.rows = rows;
             this.cols = cols;
             cells = new GameCell[rows, cols];
