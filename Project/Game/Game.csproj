@@ -65,6 +65,7 @@
     <Compile Include="GameGL\GameCell.cs" />
     <Compile Include="GameGL\GameDirection.cs" />
     <Compile Include="GameGL\GameEnemy.cs" />
+    <Compile Include="GameGL\GameEnemyBoss.cs" />
     <Compile Include="GameGL\GameEnemyHorizontal.cs" />
     <Compile Include="GameGL\GameEnemyRandom.cs" />
     <Compile Include="GameGL\GameEnemySmart.cs" />
@@ -158,6 +159,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bullet2Bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laserBlue13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laserRed13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\[removal.ai]_a57f3c40-39d6-465a-83fc-9df6986f68e8-heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transparent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boss1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laserGreen02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
