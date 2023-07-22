@@ -9,10 +9,11 @@ namespace Game.GameGL
 {
     class GamePLayer : GameObject
     {
-        
+        bool flag = true;
         public GamePLayer(Image image , GameCell startCell) : base(GameObjectType.PLAYER, image)
         {
             this.CurrentCell = startCell;
+            flag = true;
         }
         public GameCell move(GameDirection direction)
         {
@@ -26,6 +27,12 @@ namespace Game.GameGL
 
             }
 
+            if (CurrentCell.CurrentGameObject.GameObjectType == GameObjectType.EnemyFire)
+            {
+                SetPlayerFlag(false);
+
+            }
+
             this.CurrentCell = nextCell;
 
             if (currentCell != nextCell)
@@ -35,6 +42,15 @@ namespace Game.GameGL
 
 
             return nextCell;
+        }
+
+        public void SetPlayerFlag(bool flag)
+        {
+            this.flag = flag;
+        }
+        public bool GetFlag()
+        {
+            return flag;
         }
     }
 }

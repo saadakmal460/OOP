@@ -34,7 +34,7 @@ namespace Game.GameGL
 
         void loadGrid(string fileName)
         {
-            MessageBox.Show(this.cols.ToString());
+            
             StreamReader fp = new StreamReader(fileName);
             string record;
             for (int row = 0; row < this.rows; row++)

@@ -12,16 +12,19 @@ namespace Game.GameGL
         static int score = 0;
         static bool flag = true;
         static bool FireFlag = true;
+        static bool boss = true;
         
         public static GameObject getBlankGameObject()
         {
-            GameObject blankGameObject = new GameObject(GameObjectType.NONE, Properties.Resources.simplebox);
+            GameObject blankGameObject = new GameObject(GameObjectType.NONE, Properties.Resources.transparent);
             return blankGameObject;
         }
 
+
+        
         public static void SetFireFlag(bool flag)
         {
-            FireFlag = flag;
+            FireFlag = false;
         }
         public static bool GetFireFlag()
         {
@@ -35,6 +38,16 @@ namespace Game.GameGL
             return Object;
         }
 
+
+        public static void BossFlag(bool f)
+        {
+            flag = f;
+        }
+
+        public static bool GetBossFlag()
+        {
+            return flag;
+        }
         public static void AddScore()
         {
             score++;
@@ -55,15 +68,15 @@ namespace Game.GameGL
         }
         public static Image getGameObjectImage(char displayCharacter)
         {
-            Image img = Properties.Resources.simplebox;
+            Image img = Properties.Resources.transparent;
             if (displayCharacter == '|' || displayCharacter == '%')
             {
-                img = Properties.Resources.vertical2;
+                img = Properties.Resources.transparent;
             }
 
             if (displayCharacter == '#')
             {
-                img = Properties.Resources.horizontal2;
+                img = Properties.Resources.transparent;
             }
             if(displayCharacter == 'p')
             {
@@ -75,7 +88,7 @@ namespace Game.GameGL
             }
             if(displayCharacter == 'b')
             {
-                img = Properties.Resources.boss;
+                img = Properties.Resources.boss1;
             }
             if(displayCharacter == 'c')
             {

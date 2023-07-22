@@ -27,6 +27,7 @@ namespace Game.GameGL
             this.GameObjectType = type;
         }
 
+
         public override GameCell MoveGhost(GameGrid grid)
         {
             GameCell currentCell = this.CurrentCell;
@@ -55,7 +56,6 @@ namespace Game.GameGL
 
                 if (nextCell.CurrentGameObject.GameObjectType == GameObjectType.Fire)
                 {
-                    MessageBox.Show("hello");
                     SetFlag2();
                 }
 
@@ -69,9 +69,9 @@ namespace Game.GameGL
             {
                 GameCell nextCell = grid.getCell(CurrentCell.X, CurrentCell.Y + 1);
 
-                if (nextCell.CurrentGameObject.GameObjectType == GameObjectType.PLAYER)
+                if (CurrentCell.CurrentGameObject.GameObjectType == GameObjectType.Fire)
                 {
-                    GameClass.SetFlag();
+                    SetFlag2();
                 }
                 if (nextCell.CurrentGameObject.GameObjectType != GameObjectType.WALL)
                 {
@@ -82,16 +82,8 @@ namespace Game.GameGL
                         CurrentCell = nextCell;
                         return nextCell;
                     }
-                    if (nextCell.CurrentGameObject.GameObjectType == GameObjectType.PLAYER)
-                    {
-                        GameClass.SetFlag();
-                    }
+                    
 
-                }
-
-                if(nextCell.CurrentGameObject.GameObjectType == GameObjectType.Fire)
-                {
-                    SetFlag2();
                 }
 
                 else if (nextCell.CurrentGameObject.GameObjectType == GameObjectType.WALL)

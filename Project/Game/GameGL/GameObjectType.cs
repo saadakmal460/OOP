@@ -13,6 +13,7 @@ namespace Game.GameGL
         ENEMY,
         REWARD,
         NONE,
-        Fire
+        Fire,
+        EnemyFire
     }
 }

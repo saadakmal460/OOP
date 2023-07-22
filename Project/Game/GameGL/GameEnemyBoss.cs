@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 
 namespace Game.GameGL
 {
-    class GameEnemyRandom : GameEnemy
+    class GameEnemyBoss : GameEnemy
     {
         Random r = new Random();
-        public GameEnemyRandom(char DisplayCharacter, GameCell cell, GameObjectType type, GameDirection direction) : base(DisplayCharacter, type)
+        int count = 0;
+        public GameEnemyBoss(char DisplayCharacter, GameCell cell, GameObjectType type, GameDirection direction) : base(DisplayCharacter, type)
         {
             this.DisplayCharacter = DisplayCharacter;
             this.CurrentCell = cell;
@@ -18,7 +19,7 @@ namespace Game.GameGL
             this.GameObjectType = type;
         }
 
-        public GameEnemyRandom(Image img, GameCell cell, GameObjectType type, GameDirection direction) : base(img, type)
+        public GameEnemyBoss(Image img, GameCell cell, GameObjectType type, GameDirection direction) : base(img, type)
         {
             this.Image = img;
             this.CurrentCell = cell;
@@ -30,18 +31,23 @@ namespace Game.GameGL
         public override GameCell MoveGhost(GameGrid gameGrid)
         {
 
-            int value = r.Next(4);
+            int value = r.Next(3);
             GameCell currentCell = this.CurrentCell;
             if (value == 0)
             {
                 GameCell next = gameGrid.getCell(CurrentCell.X - 1, CurrentCell.Y);
 
-                
+
                 if (next.CurrentGameObject.GameObjectType == GameObjectType.Fire)
                 {
-                    SetFlag2();
+                    count++;
+                    if (count >= 10)
+                    {
+                        SetFlag2();
+                        GameClass.BossFlag(false);
+                    }
                 }
-                if (next.CurrentGameObject.GameObjectType != GameObjectType.WALL )
+                if (next.CurrentGameObject.GameObjectType != GameObjectType.WALL)
                 {
                     if (next != null)
                     {
@@ -51,18 +57,24 @@ namespace Game.GameGL
                     }
 
                 }
-                
+
             }
+            
             else if (value == 1)
             {
-                GameCell next = gameGrid.getCell(CurrentCell.X + 1, CurrentCell.Y);
-                
+                GameCell next = gameGrid.getCell(CurrentCell.X, CurrentCell.Y - 1);
+
+
                 if (next.CurrentGameObject.GameObjectType == GameObjectType.Fire)
                 {
-                    SetFlag2();
+                    count++;
+                    if (count >= 10)
+                    {
+                        SetFlag2();
+                        GameClass.BossFlag(false);
+                    }
                 }
-
-                if (next.CurrentGameObject.GameObjectType != GameObjectType.WALL && next.X <=6)
+                if (next.CurrentGameObject.GameObjectType != GameObjectType.WALL)
                 {
                     if (next != null)
                     {
@@ -71,38 +83,22 @@ namespace Game.GameGL
                         return next;
                     }
                 }
-                
+
             }
 
             else if (value == 2)
             {
-                GameCell next = gameGrid.getCell(CurrentCell.X, CurrentCell.Y - 1);
-
-                
-                if (next.CurrentGameObject.GameObjectType == GameObjectType.Fire)
-                {
-                    SetFlag2();
-                }
-                if (next.CurrentGameObject.GameObjectType != GameObjectType.WALL)
-                {
-                    if (next != null)
-                    {
-                        currentCell.setGameObject(GameClass.getBlankGameObject());
-                        CurrentCell = next;
-                        return next;
-                    }
-                }
-                
-            }
-
-            else if (value == 3)
-            {
                 GameCell next = gameGrid.getCell(CurrentCell.X, CurrentCell.Y + 1);
-                
+
 
                 if (next.CurrentGameObject.GameObjectType == GameObjectType.Fire)
                 {
-                    SetFlag2();
+                    count++;
+                    if (count >= 10)
+                    {
+                        SetFlag2();
+                        GameClass.BossFlag(false);
+                    }
                 }
                 if (next.CurrentGameObject.GameObjectType != GameObjectType.WALL)
                 {
@@ -113,7 +109,7 @@ namespace Game.GameGL
                         return next;
                     }
                 }
-                
+
             }
 
             return null;

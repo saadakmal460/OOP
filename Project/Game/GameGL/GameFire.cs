@@ -10,7 +10,7 @@ namespace Game.GameGL
 {
     class GameFire : GameObject
     {
-        GameDirection direction;
+
         bool flag = true;
         bool flag2 = true;
         public GameFire(char DisplayCharacter, GameObjectType type, GameCell cell) : base(type, DisplayCharacter)
@@ -19,10 +19,9 @@ namespace Game.GameGL
             this.GameObjectType = type;
         }
 
-        public GameFire(Image img, GameObjectType type, GameDirection direction, GameCell cell) : base(type, img)
+        public GameFire(Image img, GameObjectType type, GameCell cell) : base(type, img)
         {
             this.CurrentCell = cell;
-            this.direction = direction;
             this.GameObjectType = type;
             this.Image = img;
         }
@@ -34,10 +33,6 @@ namespace Game.GameGL
             GameCell currentCell = this.CurrentCell;
             GameCell nextCell = grid.getCell(CurrentCell.X + 1, CurrentCell.Y);
 
-            if (nextCell.CurrentGameObject.GameObjectType == GameObjectType.PLAYER)
-            {
-                GameClass.SetFlag();
-            }
             if (nextCell.CurrentGameObject.GameObjectType != GameObjectType.WALL)
             {
                 if (nextCell != null)
@@ -48,13 +43,12 @@ namespace Game.GameGL
                     return nextCell;
                 }
             }
-
-            
             if (nextCell.CurrentGameObject.GameObjectType == GameObjectType.WALL)
             {
                 SetFlag();
 
             }
+
             return null;
 
         }
@@ -64,9 +58,11 @@ namespace Game.GameGL
 
             GameCell nextCell = grid.getCell(CurrentCell.X - 1, CurrentCell.Y);
 
-            if (nextCell.CurrentGameObject.GameObjectType == GameObjectType.PLAYER)
+            if (nextCell.CurrentGameObject.GameObjectType == GameObjectType.ENEMY)
             {
-                GameClass.SetFlag();
+
+                SetFlag2();
+
             }
             if (nextCell.CurrentGameObject.GameObjectType != GameObjectType.WALL)
             {
@@ -84,9 +80,9 @@ namespace Game.GameGL
             if (nextCell.CurrentGameObject.GameObjectType == GameObjectType.WALL)
             {
                 SetFlag();
-                
+
             }
-            
+
             return null;
 
 
