@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Buisness_Application.BL.Admin">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABIAAGABAkAAAAAAAgAgAACIAAAgAA=</HashCode>
+      <FileName>BL\Admin.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="userList" />
+      <Field Name="menu" />
+      <Field Name="notices" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Buisness_Application.BL.Challan">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAQAAAAQAAAAAAAAAACBCEQBAAgAAAAAAABABAAAA=</HashCode>
+      <FileName>BL\Challan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Buisness_Application.BL.Complaints">
+    <Position X="10.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAEIAACAAAAQAAABAA=</HashCode>
+      <FileName>BL\Complaints.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Buisness_Application.BL.Expense">
+    <Position X="10.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAACAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BL\Expense.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Buisness_Application.BL.Finance">
+    <Position X="8.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAACAEEAAAAQBgAAAEAAAAAAAAAAABAEAAA=</HashCode>
+      <FileName>BL\Finance.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="challanList" />
+      <Field Name="recordList" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Buisness_Application.BL.FinancialRecord">
+    <Position X="8.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAACACAAAABigEQAAAAAAAAAAA=</HashCode>
+      <FileName>BL\FinancialRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Buisness_Application.BL.Hostelite">
+    <Position X="13.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UAAAQAJAEAAAgAEokAAADQAAEAgAgQAAAAEABABAAAA=</HashCode>
+      <FileName>BL\Hostelite.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="payFee" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="complaints" />
+      <Field Name="reviews" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Buisness_Application.BL.Mess">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAgAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>BL\Mess.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Buisness_Application.BL.Notices">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEQAAAAAAAAAAAAAAAAAACoAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BL\Notices.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Buisness_Application.BL.PayFee">
+    <Position X="16" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAQAAAAEQAAABCBCAABAAgAAAAAAAEAAAAAA=</HashCode>
+      <FileName>BL\PayFee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Buisness_Application.BL.Revenue">
+    <Position X="6.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAABAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>BL\Revenue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Buisness_Application.BL.Reviews">
+    <Position X="16" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QABAARAAAAAAAAAAAAAAAAAAAQAEIAAAAAAAQAAABAA=</HashCode>
+      <FileName>BL\Reviews.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Buisness_Application.BL.User">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ARAAAAAAAAAAAAgAABAABBEAAAAAAAAAAAAAhgAAAAA=</HashCode>
+      <FileName>BL\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Buisness_Application.BL.Validations">
+    <Position X="2.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAABABAAAABAEAIAAABAAAAAAAAQBgIAAAAAAIkAAAA=</HashCode>
+      <FileName>BL\Validations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

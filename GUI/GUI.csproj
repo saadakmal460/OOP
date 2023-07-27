@@ -64,6 +64,18 @@
     <Compile Include="DL\ChallanDL.cs" />
     <Compile Include="DL\ComplaintsDL.cs" />
     <Compile Include="DL\FinanceDL.cs" />
+    <Compile Include="GUI\AddChalanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AddChalanForm.Designer.cs">
+      <DependentUpon>AddChalanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AddComplaintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AddComplaintForm.Designer.cs">
+      <DependentUpon>AddComplaintForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\AddExpenseForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +195,12 @@
     <Compile Include="GUI\PayFeeForm.Designer.cs">
       <DependentUpon>PayFeeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\RemoveExpenseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RemoveExpenseForm.Designer.cs">
+      <DependentUpon>RemoveExpenseForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\RemoveHosteliteForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +212,12 @@
     </Compile>
     <Compile Include="GUI\RemoveRegistrationForm.Designer.cs">
       <DependentUpon>RemoveRegistrationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RemoveRevenueForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RemoveRevenueForm.Designer.cs">
+      <DependentUpon>RemoveRevenueForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\RevenueForm.cs">
       <SubType>Form</SubType>
@@ -275,6 +299,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\AddChalanForm.resx">
+      <DependentUpon>AddChalanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AddComplaintForm.resx">
+      <DependentUpon>AddComplaintForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\AddExpenseForm.resx">
       <DependentUpon>AddExpenseForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -332,11 +362,17 @@
     <EmbeddedResource Include="GUI\PayFeeForm.resx">
       <DependentUpon>PayFeeForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RemoveExpenseForm.resx">
+      <DependentUpon>RemoveExpenseForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\RemoveHosteliteForm.resx">
       <DependentUpon>RemoveHosteliteForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\RemoveRegistrationForm.resx">
       <DependentUpon>RemoveRegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RemoveRevenueForm.resx">
+      <DependentUpon>RemoveRevenueForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\RevenueForm.resx">
       <DependentUpon>RevenueForm.cs</DependentUpon>
@@ -387,6 +423,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -516,6 +553,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\5s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expense.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\843410.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expensewhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\revenue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic-revenue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7037649w.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

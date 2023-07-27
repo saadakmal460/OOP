@@ -1,1 +1,2 @@
 saad,3,good
+saad,3,Nice hostel

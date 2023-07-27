@@ -1,5 +1,5 @@
 Monday,Sabzi
-Tuesday,
+Tuesday,biryani
 Wednesday,sabzi
 Thursday,Daal
 Friday,Pulao

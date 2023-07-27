@@ -48,7 +48,7 @@ namespace Buisness_Application.BL
         private static Challan challan;
         private static string FinancialRecordName ;
         private static Finance finance;
-
+        private static string role;
        
         public static Finance GetFinance()
         {
@@ -58,7 +58,11 @@ namespace Buisness_Application.BL
         {
             finance = f;
         }
-
+        public static void SetRole(string r)
+        {
+            role = r;
+        }
+        
 
         public static string GetUsersPath()
         {
@@ -289,9 +293,11 @@ namespace Buisness_Application.BL
         public static string GetRole()
         {
             
-            return user.returnRole();
+            return role;
 
         }
+
+        
         public static User GetUser()
         {
             return user;

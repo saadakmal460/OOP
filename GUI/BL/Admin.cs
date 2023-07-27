@@ -11,6 +11,7 @@ namespace Buisness_Application.BL
     {
         private string contact;
         private static List<Notices> notices = new List<Notices>();
+        private static List<User> userList = new List<User>();
         private static List<Mess> menu = new List<Mess>()
         {
             new Mess("Monday", "Biryani"),
@@ -29,6 +30,16 @@ namespace Buisness_Application.BL
             this.contact = contact;
         }
 
+
+        public static List<User> GetUserList()
+        {
+            return userList;
+        }
+
+        public static void AdddInList(User user)
+        {
+            userList.Add(user);
+        }
 
         public static void AddNotices(Notices n)
         {
