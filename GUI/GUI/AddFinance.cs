@@ -56,7 +56,7 @@ namespace GUI.GUI
             if (flag && flag2 && flag3)
             {
                 Finance f = new Finance(name, password, "Finance", employeeNo);
-                UserDL.AdddInList(f);
+                Admin.AdddInList(f);
                 UserDL.StoreUsersInFile(ExtraBL.GetUsersPath());
 
                 lblErrorLine.Text = "Data saved Sucessfully";

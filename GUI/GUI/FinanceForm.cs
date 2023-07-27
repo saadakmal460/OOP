@@ -93,5 +93,12 @@ namespace GUI.DL
             f.Show();
             this.Hide();
         }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form f = new AddChalanForm();
+            f.Show();
+            this.Close();
+        }
     }
 }

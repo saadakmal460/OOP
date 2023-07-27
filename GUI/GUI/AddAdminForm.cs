@@ -57,7 +57,7 @@ namespace GUI.GUI
             if (flag && flag2 && flag3)
             {
                 Admin a = new Admin(name, password, contact, "admin");
-                UserDL.AdddInList(a);
+                Admin.AdddInList(a);
                 UserDL.StoreUsersInFile(ExtraBL.GetUsersPath());
                 
                 lblErrorLine.Text = "Data saved Sucessfully";

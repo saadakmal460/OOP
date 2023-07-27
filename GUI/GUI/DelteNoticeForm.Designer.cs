@@ -31,9 +31,9 @@ namespace GUI.GUI
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DelteNoticeForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblTitle = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.comboBoxTitle = new System.Windows.Forms.ComboBox();
@@ -53,17 +53,6 @@ namespace GUI.GUI
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(354, 730);
             this.panel1.TabIndex = 4;
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblTitle.Location = new System.Drawing.Point(51, 353);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(253, 24);
-            this.lblTitle.TabIndex = 3;
-            this.lblTitle.Text = "Hostel Managment System";
             // 
             // btnBack
             // 
@@ -90,6 +79,17 @@ namespace GUI.GUI
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblTitle.Location = new System.Drawing.Point(51, 353);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(253, 24);
+            this.lblTitle.TabIndex = 3;
+            this.lblTitle.Text = "Hostel Managment System";
             // 
             // label7
             // 
@@ -133,7 +133,7 @@ namespace GUI.GUI
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(95, 40);
             this.btnClear.TabIndex = 23;
-            this.btnClear.Text = "Clear";
+            this.btnClear.Text = "Delete";
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 

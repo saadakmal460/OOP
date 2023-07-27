@@ -31,7 +31,7 @@ namespace GUI.GUI
         {
             Form f = new AddHosteliteForm();
             f.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -44,14 +44,14 @@ namespace GUI.GUI
         private void linkViewHostelite_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Form f = new ViewHosteliteForm();
-            this.Hide();
+            this.Close();
             f.Show();
         }
 
         private void linkUpdateRecord_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Form f = new UpdateRecordForm();
-            this.Hide();
+            this.Close();
             f.Show();
         }
 
@@ -85,7 +85,7 @@ namespace GUI.GUI
         {
             Form f = new ReviewsForm();
             f.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -125,7 +125,7 @@ namespace GUI.GUI
         {
             Form f = new NoticesForm();
             f.Show();
-            this.Hide();
+            this.Close();
         }
     }
 }

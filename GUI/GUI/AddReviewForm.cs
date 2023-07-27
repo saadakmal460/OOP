@@ -62,7 +62,7 @@ namespace GUI.GUI
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             Form f = new HosteliteForm();
             f.Show();
         }

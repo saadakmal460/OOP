@@ -1,7 +1,7 @@
 ﻿
 namespace GUI.GUI
 {
-    partial class AddReviewForm
+    partial class AddComplaintForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,20 +29,18 @@ namespace GUI.GUI
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddReviewForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddComplaintForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBoxRating = new System.Windows.Forms.ComboBox();
             this.btnClear = new System.Windows.Forms.Button();
-            this.btnConfirm = new System.Windows.Forms.Button();
-            this.txtReview = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblError = new System.Windows.Forms.Label();
             this.lblErrorLine = new System.Windows.Forms.Label();
+            this.btnConfirm = new System.Windows.Forms.Button();
+            this.lblComplaint = new System.Windows.Forms.Label();
+            this.txtComplaint = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -53,10 +51,10 @@ namespace GUI.GUI
             this.panel1.Controls.Add(this.btnBack);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.lblTitle);
-            this.panel1.Location = new System.Drawing.Point(1, 1);
+            this.panel1.Location = new System.Drawing.Point(0, -1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(354, 730);
-            this.panel1.TabIndex = 4;
+            this.panel1.TabIndex = 7;
             // 
             // btnBack
             // 
@@ -101,20 +99,11 @@ namespace GUI.GUI
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.label7.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label7.Location = new System.Drawing.Point(592, 37);
+            this.label7.Location = new System.Drawing.Point(598, 32);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(254, 48);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Add Reviews";
-            // 
-            // comboBoxRating
-            // 
-            this.comboBoxRating.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxRating.FormattingEnabled = true;
-            this.comboBoxRating.Location = new System.Drawing.Point(627, 179);
-            this.comboBoxRating.Name = "comboBoxRating";
-            this.comboBoxRating.Size = new System.Drawing.Size(128, 24);
-            this.comboBoxRating.TabIndex = 16;
+            this.label7.Size = new System.Drawing.Size(289, 48);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Add Compalint";
             // 
             // btnClear
             // 
@@ -122,12 +111,25 @@ namespace GUI.GUI
             this.btnClear.FlatAppearance.BorderSize = 0;
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(476, 463);
+            this.btnClear.Location = new System.Drawing.Point(470, 409);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(95, 40);
-            this.btnClear.TabIndex = 49;
+            this.btnClear.TabIndex = 54;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // lblErrorLine
+            // 
+            this.lblErrorLine.AutoSize = true;
+            this.lblErrorLine.ForeColor = System.Drawing.Color.Crimson;
+            this.lblErrorLine.Location = new System.Drawing.Point(812, 452);
+            this.lblErrorLine.Name = "lblErrorLine";
+            this.lblErrorLine.Size = new System.Drawing.Size(247, 17);
+            this.lblErrorLine.TabIndex = 53;
+            this.lblErrorLine.Text = "Data was not saved! Check you inputs";
+            this.lblErrorLine.Visible = false;
+            this.lblErrorLine.Click += new System.EventHandler(this.lblErrorLine_Click);
             // 
             // btnConfirm
             // 
@@ -135,90 +137,66 @@ namespace GUI.GUI
             this.btnConfirm.FlatAppearance.BorderSize = 0;
             this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirm.ForeColor = System.Drawing.Color.White;
-            this.btnConfirm.Location = new System.Drawing.Point(817, 463);
+            this.btnConfirm.Location = new System.Drawing.Point(815, 409);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(95, 40);
-            this.btnConfirm.TabIndex = 48;
+            this.btnConfirm.TabIndex = 52;
             this.btnConfirm.Text = "Confirm";
             this.btnConfirm.UseVisualStyleBackColor = false;
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
-            // txtReview
+            // lblComplaint
             // 
-            this.txtReview.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.txtReview.Location = new System.Drawing.Point(627, 279);
-            this.txtReview.Multiline = true;
-            this.txtReview.Name = "txtReview";
-            this.txtReview.Size = new System.Drawing.Size(285, 112);
-            this.txtReview.TabIndex = 47;
+            this.lblComplaint.AutoSize = true;
+            this.lblComplaint.ForeColor = System.Drawing.Color.Crimson;
+            this.lblComplaint.Location = new System.Drawing.Point(622, 294);
+            this.lblComplaint.Name = "lblComplaint";
+            this.lblComplaint.Size = new System.Drawing.Size(58, 17);
+            this.lblComplaint.TabIndex = 51;
+            this.lblComplaint.Text = "Invalid !!";
+            this.lblComplaint.Visible = false;
+            this.lblComplaint.Click += new System.EventHandler(this.lblNotice_Click);
             // 
-            // label2
+            // txtComplaint
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label2.Location = new System.Drawing.Point(472, 279);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 20);
-            this.label2.TabIndex = 46;
-            this.label2.Text = "Enter review";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.txtComplaint.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.txtComplaint.Location = new System.Drawing.Point(625, 172);
+            this.txtComplaint.Multiline = true;
+            this.txtComplaint.Name = "txtComplaint";
+            this.txtComplaint.Size = new System.Drawing.Size(285, 112);
+            this.txtComplaint.TabIndex = 50;
+            this.txtComplaint.TextChanged += new System.EventHandler(this.txtNotice_TextChanged);
             // 
-            // label3
+            // label1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label3.Location = new System.Drawing.Point(411, 179);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(164, 20);
-            this.label3.TabIndex = 50;
-            this.label3.Text = "Select Rating(Stars)";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label1.Location = new System.Drawing.Point(416, 197);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(133, 20);
+            this.label1.TabIndex = 49;
+            this.label1.Text = "Enter complaint";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // lblError
-            // 
-            this.lblError.AutoSize = true;
-            this.lblError.BackColor = System.Drawing.SystemColors.Control;
-            this.lblError.ForeColor = System.Drawing.Color.Crimson;
-            this.lblError.Location = new System.Drawing.Point(814, 506);
-            this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(0, 17);
-            this.lblError.TabIndex = 51;
-            this.lblError.Visible = false;
-            // 
-            // lblErrorLine
-            // 
-            this.lblErrorLine.AutoSize = true;
-            this.lblErrorLine.BackColor = System.Drawing.SystemColors.Control;
-            this.lblErrorLine.ForeColor = System.Drawing.Color.Crimson;
-            this.lblErrorLine.Location = new System.Drawing.Point(624, 394);
-            this.lblErrorLine.Name = "lblErrorLine";
-            this.lblErrorLine.Size = new System.Drawing.Size(58, 17);
-            this.lblErrorLine.TabIndex = 52;
-            this.lblErrorLine.Text = "Invalid !!\r\n";
-            this.lblErrorLine.Visible = false;
-            // 
-            // AddReviewForm
+            // AddComplaintForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1207, 728);
-            this.Controls.Add(this.lblErrorLine);
-            this.Controls.Add(this.lblError);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.lblErrorLine);
             this.Controls.Add(this.btnConfirm);
-            this.Controls.Add(this.txtReview);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBoxRating);
+            this.Controls.Add(this.lblComplaint);
+            this.Controls.Add(this.txtComplaint);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel1);
             this.MaximumSize = new System.Drawing.Size(1225, 775);
             this.MinimumSize = new System.Drawing.Size(1225, 775);
-            this.Name = "AddReviewForm";
+            this.Name = "AddComplaintForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AddReviewForm";
-            this.Load += new System.EventHandler(this.AddReviewForm_Load);
+            this.Text = "AddComplaintForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -234,13 +212,11 @@ namespace GUI.GUI
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBoxRating;
         private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.Button btnConfirm;
-        private System.Windows.Forms.TextBox txtReview;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lblError;
         private System.Windows.Forms.Label lblErrorLine;
+        private System.Windows.Forms.Button btnConfirm;
+        private System.Windows.Forms.Label lblComplaint;
+        private System.Windows.Forms.TextBox txtComplaint;
+        private System.Windows.Forms.Label label1;
     }
 }

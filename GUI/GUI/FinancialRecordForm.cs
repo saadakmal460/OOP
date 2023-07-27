@@ -24,7 +24,7 @@ namespace GUI.GUI
             Form f = new ViewReportForm();
             f.Show();
             this.Close();
-        }
+        } 
 
         private void btnBack_Click(object sender, EventArgs e)
         {
@@ -54,7 +54,7 @@ namespace GUI.GUI
         {
             Form f = new GraphicalAnalysisForm();
             f.Show();
-            this.Hide();
+            this.Close();
         }
     }
 }

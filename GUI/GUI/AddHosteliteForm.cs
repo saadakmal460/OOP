@@ -101,7 +101,7 @@ namespace GUI.GUI
                 lblErrorLine.Text = "Data saved Sucessfully";
                 lblErrorLine.ForeColor = Color.Green;
                 Hostelite h = new Hostelite(name, cnic, city, rollNumber, password, "hostelite", roomNumber);
-                UserDL.AdddInList(h);
+                Admin.AdddInList(h);
                 UserDL.StoreUsersInFile(ExtraBL.GetUsersPath());
                 
             }
@@ -115,7 +115,7 @@ namespace GUI.GUI
         {
             Form f = new AdminForm();
             f.Show();
-            this.Visible = false;
+            this.Close();
         }
 
         private void Clear()

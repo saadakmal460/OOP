@@ -21,7 +21,9 @@ namespace GUI.GUI
 
         private void btnNotices_Click(object sender, EventArgs e)
         {
-            
+            this.Close();
+            Form f = new PayFeeForm();
+            f.Show();
         }
 
         private void HosteliteForm_Load(object sender, EventArgs e)
@@ -31,7 +33,7 @@ namespace GUI.GUI
 
         private void ShowInfo(string name)
         {
-            foreach(User i in UserDL.GetUserList())
+            foreach(User i in Admin.GetUserList())
             {
                 if (i is Hostelite)
                 {
@@ -74,14 +76,28 @@ namespace GUI.GUI
         {
             Form f = new AddReviewForm();
             f.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
             Form f = new LoginFrom();
             f.Show();
-            this.Hide();
+            this.Close();
+        }
+
+        private void btnComplaints_Click(object sender, EventArgs e)
+        {
+            Form f = new AddComplaintForm();
+            f.Show();
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form f = new RemoveRegistrationForm();
+            f.Show();
+            this.Close();
         }
     }
 }

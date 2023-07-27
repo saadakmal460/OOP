@@ -35,9 +35,9 @@ namespace GUI.GUI
             this.btnReviews = new System.Windows.Forms.Button();
             this.btnNotice = new System.Windows.Forms.Button();
             this.btnPayFee = new System.Windows.Forms.Button();
-            this.btnAllotedRooms = new System.Windows.Forms.Button();
             this.btnMess = new System.Windows.Forms.Button();
             this.btnComplaints = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblUname = new System.Windows.Forms.Label();
@@ -50,10 +50,9 @@ namespace GUI.GUI
             this.lblUcity = new System.Windows.Forms.Label();
             this.lblURoom = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -64,7 +63,6 @@ namespace GUI.GUI
             this.panel1.Controls.Add(this.btnReviews);
             this.panel1.Controls.Add(this.btnNotice);
             this.panel1.Controls.Add(this.btnPayFee);
-            this.panel1.Controls.Add(this.btnAllotedRooms);
             this.panel1.Controls.Add(this.btnMess);
             this.panel1.Controls.Add(this.btnComplaints);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -81,13 +79,14 @@ namespace GUI.GUI
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(0, 590);
+            this.button1.Location = new System.Drawing.Point(-3, 554);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(300, 73);
             this.button1.TabIndex = 9;
             this.button1.Text = "Remove Registration";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnBack
             // 
@@ -111,7 +110,7 @@ namespace GUI.GUI
             this.btnReviews.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReviews.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReviews.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnReviews.Location = new System.Drawing.Point(3, 520);
+            this.btnReviews.Location = new System.Drawing.Point(0, 472);
             this.btnReviews.Name = "btnReviews";
             this.btnReviews.Size = new System.Drawing.Size(300, 73);
             this.btnReviews.TabIndex = 7;
@@ -128,7 +127,7 @@ namespace GUI.GUI
             this.btnNotice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNotice.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNotice.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNotice.Location = new System.Drawing.Point(-3, 450);
+            this.btnNotice.Location = new System.Drawing.Point(-3, 394);
             this.btnNotice.Name = "btnNotice";
             this.btnNotice.Size = new System.Drawing.Size(330, 73);
             this.btnNotice.TabIndex = 6;
@@ -156,22 +155,6 @@ namespace GUI.GUI
             this.btnPayFee.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPayFee.UseVisualStyleBackColor = false;
             this.btnPayFee.Click += new System.EventHandler(this.btnNotices_Click);
-            // 
-            // btnAllotedRooms
-            // 
-            this.btnAllotedRooms.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnAllotedRooms.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
-            this.btnAllotedRooms.FlatAppearance.BorderSize = 0;
-            this.btnAllotedRooms.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAllotedRooms.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAllotedRooms.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAllotedRooms.Location = new System.Drawing.Point(-3, 380);
-            this.btnAllotedRooms.Name = "btnAllotedRooms";
-            this.btnAllotedRooms.Size = new System.Drawing.Size(330, 73);
-            this.btnAllotedRooms.TabIndex = 5;
-            this.btnAllotedRooms.Text = "Check Bills";
-            this.btnAllotedRooms.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAllotedRooms.UseVisualStyleBackColor = false;
             // 
             // btnMess
             // 
@@ -205,6 +188,19 @@ namespace GUI.GUI
             this.btnComplaints.Text = "Add Complaint";
             this.btnComplaints.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnComplaints.UseVisualStyleBackColor = false;
+            this.btnComplaints.Click += new System.EventHandler(this.btnComplaints_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox1.Image = global::GUI.Properties.Resources.Hms_PhotoRoom1;
+            this.pictureBox1.Location = new System.Drawing.Point(50, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(153, 127);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // lblTitle
             // 
@@ -352,18 +348,6 @@ namespace GUI.GUI
             this.pictureBox2.TabIndex = 10;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox1.Image = global::GUI.Properties.Resources.Hms_PhotoRoom1;
-            this.pictureBox1.Location = new System.Drawing.Point(50, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(153, 127);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // HosteliteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -389,8 +373,8 @@ namespace GUI.GUI
             this.Text = "HosteliteForm";
             this.Load += new System.EventHandler(this.HosteliteForm_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -403,7 +387,6 @@ namespace GUI.GUI
         private System.Windows.Forms.Button btnReviews;
         private System.Windows.Forms.Button btnNotice;
         private System.Windows.Forms.Button btnPayFee;
-        private System.Windows.Forms.Button btnAllotedRooms;
         private System.Windows.Forms.Button btnMess;
         private System.Windows.Forms.Button btnComplaints;
         private System.Windows.Forms.PictureBox pictureBox1;
